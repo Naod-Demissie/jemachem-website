@@ -23,7 +23,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="w-full flex items-center justify-between py-4 px-8 fixed top-0 left-0 z-50 bg-transparent shadow-none">
+    <nav className="w-full flex items-center justify-between py-4 px-8 absolute top-0 left-0 z-50 bg-transparent shadow-none">
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/">
