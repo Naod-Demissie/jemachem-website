@@ -18,7 +18,6 @@ export default function Header() {
   const socialLinks = [
     { href: "https://t.me/Jemachem", icon: "/telegram.svg", alt: "Telegram" },
     { href: "https://www.tiktok.com/@jemachemtrading", icon: "/tiktok.svg", alt: "TikTok" },
-    { href: "https://facebook.com", icon: "/facebook.svg", alt: "Facebook" },
     { href: "mailto:jemachemtrading@gmail.com", icon: "/email.svg", alt: "Email" },
   ];
 
@@ -42,7 +41,7 @@ export default function Header() {
       <div className="hidden md:flex gap-8 text-white font-medium text-lg">
         <Link href="/" className="hover:underline">Home</Link>
         <Link href="/about" className="hover:underline">About</Link>
-        <Link href="/services" className="hover:underline">Services</Link>
+        <Link href="/products" className="hover:underline">Products</Link>
         <Link href="/partners" className="hover:underline">Partners</Link>
         <Link href="/contact" className="hover:underline">Contact</Link>
       </div>

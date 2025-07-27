@@ -19,7 +19,7 @@ const Hero78 = () => {
           </Button>
         </div>
       </div>
-      <div className="pointer-events-non  e absolute inset-0 z-20 h-full w-full bg-[url('https://deifkwefumgah.cloudfront.net/shadcnblocks/block/patterns/noise.png')] bg-repeat opacity-30" />
+      <div className="pointer-events-none absolute inset-0 z-20 h-full w-full bg-[url('https://deifkwefumgah.cloudfront.net/shadcnblocks/block/patterns/noise.png')] bg-repeat opacity-30" />
     </section>
   );
 };

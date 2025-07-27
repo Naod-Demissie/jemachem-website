@@ -1,20 +1,20 @@
 "use client";
 
-import { ChevronRight, Zap } from "lucide-react";
+import { ChevronRight, Factory, Leaf, TestTube } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const HeroProducts = () => {
   return (
-    <section className="py-28 bg-background">
-      <div className="container text-center">
-        <h1 className="mb-4 text-4xl font-semibold">
+    <section className="py-16 sm:py-20 lg:py-28 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="mb-4 text-3xl sm:text-4xl font-semibold">
           Our Core Chemical Solutions
         </h1>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto px-4">
           Explore our wide range of trusted industrial, agricultural, and laboratory chemicals—imported with precision and delivered with care.
         </p>
 
-        <div className="grid gap-6 pt-14 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 pt-10 sm:pt-14 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
           {/* Industrial Chemicals Card */}
           <a
             href="/products/industrial"
@@ -26,18 +26,18 @@ const HeroProducts = () => {
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Zap className="h-5 w-5" />
+            <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
+              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
+                <Factory className="h-4 w-4 sm:h-5 sm:w-5" />
                 Industrial Grade
               </span>
-              <div className="flex flex-col gap-4 text-left">
-                <h4 className="text-2xl font-semibold">
+              <div className="flex flex-col gap-3 sm:gap-4 text-left">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
                   Powering manufacturing and production efficiency.
                 </h4>
-                <p className="flex items-center gap-1 font-medium">
+                <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
                 </p>
               </div>
             </div>
@@ -54,23 +54,18 @@ const HeroProducts = () => {
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Avatar className="size-6 rounded-full">
-                  <AvatarImage
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp"
-                    alt="placeholder"
-                  />
-                </Avatar>
+            <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
+              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
+                <Leaf className="h-4 w-4 sm:h-5 sm:w-5" />
                 Farm-Ready
               </span>
-              <div className="flex flex-col gap-4 text-left">
-                <h4 className="text-2xl font-semibold">
+              <div className="flex flex-col gap-3 sm:gap-4 text-left">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
                   Maximize yield with precision agrochemicals.
                 </h4>
-                <p className="flex items-center gap-1 font-medium">
+                <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
                 </p>
               </div>
             </div>
@@ -87,18 +82,18 @@ const HeroProducts = () => {
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Zap className="h-5 w-5" />
+            <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
+              <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
+                <TestTube className="h-4 w-4 sm:h-5 sm:w-5" />
                 Lab Certified
               </span>
-              <div className="flex flex-col gap-4 text-left">
-                <h4 className="text-2xl font-semibold">
+              <div className="flex flex-col gap-3 sm:gap-4 text-left">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
                   High-purity reagents for scientific breakthroughs.
                 </h4>
-                <p className="flex items-center gap-1 font-medium">
+                <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4" />
                 </p>
               </div>
             </div>
