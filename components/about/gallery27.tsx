@@ -10,45 +10,39 @@ import {
 
 const teamMembers = [
   {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person1.jpeg",
-    title: "Joana Doe",
-    designation: "Creative Director",
+    src: "/teams/4.jpeg",
+    title: "Aymen Muhaba",
+    designation: "General Manager",
   },
   {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person2.jpeg",
-    title: "John Smith",
-    designation: "Lead Developer",
+    src: "/teams/1.jpeg",
+    title: "Abel Mekuria",
+    designation: "Operations Manager",
   },
   {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person3.jpeg",
-    title: "Alice Johnson",
-    designation: "Project Manager",
+    src: "/teams/3.jpeg",
+    title: "Sara Teshome",
+    designation: "Logistics Lead",
   },
   {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person4.jpeg",
-    title: "Robert Brown",
-    designation: "UX Designer",
-  },
-  {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person5.jpeg",
-    title: "Emily White",
-    designation: "Marketing Specialist",
+    src: "/teams/2.jpeg",
+    title: "Lidya Bekele",
+    designation: "Quality Control",
   },
 ];
 
 const Gallery27 = () => {
   return (
-    <section className="py-32">
-      <div className="container">
-        <div className="mb-4  inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
-          <p className="text-sm font-normal text-white">OUR TEAMS</p>
+    <section className="py-32 bg-black text-white">
+      <div className="container max-w-7xl mx-auto">
+        <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
+          <p className="text-sm font-normal text-white">OUR TEAM</p>
         </div>
-        <h1 className="font-calSans text-6xl">The Team Behind Our Success</h1>
-        <p className="mt-3 max-w-xl text-muted-foreground">
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magnam veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliqui
+        <h1 className="font-calSans text-5xl text-white">The Team Behind Our Success</h1>
+        <p className="mt-3 max-w-xl text-gray-300 text-center mx-auto">
+          These are the people handling the day-to-day—coordinating imports,
+          tracking shipments, talking to suppliers, and making sure everything
+          runs smoothly.
         </p>
         <Carousel
           opts={{

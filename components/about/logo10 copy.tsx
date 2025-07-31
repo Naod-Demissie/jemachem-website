@@ -69,19 +69,15 @@ const Logos10 = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 lg:py-32">
-      <div className="container px-4 mx-auto">
-        <div className="text-center max-w-4xl mx-auto">
-        {/* <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16"> */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight">
-          {/* <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight mb-4 md:mb-6"> */}
-            Trusted by Leading{" "}
-            <span className="text-muted-foreground/60">
-              Industries
-            </span>{" "}
-            Across Ethiopia
-          </h2>
-        </div>
+    <section className="py-32">
+      <div className="container">
+        <h1 className="text-foreground my-6 max-w-4xl text-4xl font-medium tracking-tighter md:text-6xl">
+          Discover how our tools have unlocked new{" "}
+          <span className="text-muted-foreground/40">
+            levels of creativity{" "}
+          </span>
+          and efficiency
+        </h1>
 
         <div className="relative mx-auto flex items-center justify-center pt-8">
           <Carousel

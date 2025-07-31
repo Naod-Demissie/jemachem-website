@@ -25,9 +25,11 @@ export default function About() {
                 <p className="text-sm font-normal text-white">ABOUT US</p>
               </div>
             </div>
-            <p className="text-4xl font-medium md:text-5xl">
-              Get in touch with us
-            </p>
+            <h2 className="text-4xl font-semibold tracking-tight md:text-3xl lg:text-4xl">
+              Powering Ethiopia's Growth
+              <br />
+              One Chemical at a Time.
+            </h2>
           </div>
         </div>
       </section>
@@ -35,8 +37,9 @@ export default function About() {
         <About8 />
         <Feature16 />
         <Timeline4 />
-        <Logos10 />
         <Gallery27 />
+        <Logos10 />
+
         <Cta11 />
       </div>
     </>

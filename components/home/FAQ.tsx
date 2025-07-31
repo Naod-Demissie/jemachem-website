@@ -56,12 +56,7 @@ const Faq = ({
       answer:
         "We follow strict protocols for chemical handling, transportation, and warehousing in line with GHS and national safety regulations.",
     },
-    {
-      id: "faq-7",
-      question: "Can I request a quote or product catalog?",
-      answer:
-        "Absolutely. You can request a quote or our latest product catalog by contacting our sales team via phone, email, or our website contact form.",
-    },
+
     {
       id: "faq-8",
       question: "Do you offer delivery services?",

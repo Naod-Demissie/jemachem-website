@@ -5,7 +5,7 @@ const Feature16 = () => {
     <section className="py-32 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14 lg:mb-20">
-          <div className="mb-4 inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
+          <div className="mb-4  inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
             <p className="text-sm font-normal text-white">OUR VALUES</p>
           </div>
           <h2 className="text-3xl font-medium text-white lg:text-4xl">
@@ -18,12 +18,12 @@ const Feature16 = () => {
               <Timer className="size-6 text-white" />
             </span>
             <h3 className="mb-4 text-xl font-medium text-white text-left">
-              On-Time Delivery
+              Performance
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              We understand that timing is critical. Our well-coordinated
-              logistics and strong supply chain partnerships ensure that your
-              chemicals are delivered promptly—every time, without exception.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+              beatae tenetur totam aut blanditis ipsa quaerat neque eaque, atque
+              doloremque! Eligendi.
             </p>
           </div>
           <div className="w-full max-w-[400px] h-[350px] rounded-lg bg-[#0c0c0c] p-6 flex flex-col hover:scale-101 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 ease-in-out cursor-pointer">
@@ -31,13 +31,12 @@ const Feature16 = () => {
               <ZoomIn className="size-6 text-white" />
             </span>
             <h3 className="mb-4 text-xl font-medium text-white text-left">
-              Uncompromised Quality
+              Quality
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              Our products undergo rigorous quality control and adhere to
-              international standards. From industrial solvents to laboratory
-              reagents, we deliver consistent performance and purity you can
-              trust.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+              beatae tenetur totam aut blanditis ipsa quaerat neque eaque, atque
+              doloremque! Eligendi.
             </p>
           </div>
           <div className="w-full max-w-[400px] h-[350px] rounded-lg bg-[#0c0c0c] p-6 flex flex-col hover:scale-101 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 ease-in-out cursor-pointer">
@@ -45,12 +44,12 @@ const Feature16 = () => {
               <Zap className="size-6 text-white" />
             </span>
             <h3 className="mb-4 text-xl font-medium text-white text-left">
-              Forward Thinking
+              Innovation
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              We don’t just follow trends—we set them. By embracing cutting-edge
-              sourcing, eco-friendly packaging, and digital service tools, we’re
-              shaping a smarter and more sustainable future for chemical supply.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+              beatae tenetur totam aut blanditis ipsa quaerat neque eaque, atque
+              doloremque! Eligendi.
             </p>
           </div>
         </div>
