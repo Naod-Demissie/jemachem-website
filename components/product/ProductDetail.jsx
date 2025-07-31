@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { ArrowLeft, Package, MapPin, Building2, Info } from 'lucide-react'
 
 const ProductDetail = ({ product, onBack }) => {
@@ -57,15 +56,6 @@ const ProductDetail = ({ product, onBack }) => {
       {/* Product Details Section */}
       <section className="py-16" style={{ backgroundColor: "#0c0c0c" }}>
         <div className="container mx-auto px-4 max-w-7xl">
-          {/* Back Button */}
-          <Button 
-            onClick={onBack}
-            variant="outline" 
-            className="mb-6 group bg-[#141416] border-[#272729] text-white hover:bg-[#272729]"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-            Back to Products
-          </Button>
 
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
