@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="pt-20 dark relative flex h-svh max-h-[1400px] w-full overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/80 after:content-[''] md:h-svh">
       <div className="relative z-30 m-auto flex max-w-[46.25rem] flex-col items-center justify-center gap-6 px-5">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2  text-white text-sm font-medium">
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 py-1 text-white text-sm font-medium">
           <span>✨</span>
           <span>High Quality, Fair Price</span>
         </div>

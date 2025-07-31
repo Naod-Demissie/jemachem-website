@@ -1,17 +1,20 @@
 "use client";
 
 import { ChevronRight, Factory, Leaf, TestTube } from "lucide-react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
-const HeroProducts = () => {
+const Products = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-background">
+    <section className="dark py-16 sm:py-20 lg:py-28 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="mb-4 text-3xl sm:text-4xl font-semibold">
+        <div className=" mb-3 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
+          <p className="text-sm font-normal text-muted-foreground">PRODUCTS</p>
+        </div>
+        <h1 className="mb-4 text-3xl text-white sm:text-4xl font-semibold">
           Our Core Chemical Solutions
         </h1>
-        <p className="text-muted-foreground max-w-xl mx-auto px-4">
-          Explore our wide range of trusted industrial, agricultural, and laboratory chemicals—imported with precision and delivered with care.
+        <p className="text-white max-w-2xl mx-auto px-4">
+          Explore our wide range of trusted industrial, agricultural, and
+          laboratory chemicals—imported with precision and delivered with care.
         </p>
 
         <div className="grid gap-6 pt-10 sm:pt-14 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
@@ -49,7 +52,7 @@ const HeroProducts = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
             <img
-              src="/agrochemicals.jpg"
+              src="/agro-chemicals.jpg"
               alt="Agrochemicals"
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -104,4 +107,4 @@ const HeroProducts = () => {
   );
 };
 
-export { HeroProducts };
+export { Products };

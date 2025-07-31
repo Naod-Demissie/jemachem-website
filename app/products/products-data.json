@@ -1,0 +1,343 @@
+{
+  "chemicals": [
+    {
+      "item": "Calcium hypochlorite 70%",
+      "packaging": "45 k.g",
+      "brand": "Dodhia",
+      "country": "India",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWgPpQR-tdj6SASChN6vSxJ9QhbR1vv4xN1g&s"
+    },
+    {
+      "item": "Hydrochloric acid (HCL) 35%",
+      "packaging": ["35 K.G", "40 K.G"],
+      "brand": ["Pursuit", "Siddhart"],
+      "country": "India",
+      "imageURL": "https://cdn11.bigcommerce.com/s-ckefyv33gd/images/stencil/1280x1280/products/5599/201657/2509_1662714072__99130.1702655984.png?c=1"
+    },
+    {
+      "item": "Citric Acid Monohydrous",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "imageURL": "https://cdn.globalso.com/tianjiachem/Citric-acid-monohydrate-1.png"
+    },
+    {
+      "item": "Ethanol (alcohol) 96%",
+      "packaging": "250 k.g",
+      "brand": null,
+      "country": "India",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2021/1/LF/WN/TU/44370216/ethanol.jpg"
+    },
+    {
+      "item": "Nitric acid 68%",
+      "packaging": "35 k.g",
+      "brand": "Ankitraj",
+      "country": "India",
+      "imageURL": "https://i0.wp.com/chemstock.ae/wp-content/uploads/Industrial%20Chemicals/Nitric%20Acid%20-%20Chemstock.webp"
+    },
+    {
+      "item": "Sodium sulphate anhydrous",
+      "packaging": "50 k.g",
+      "brand": null,
+      "country": "China",
+      "imageURL": "https://image.made-in-china.com/365f3j00KAMPqkUhEHcr/Hot-Sale-Sodium-Sulphate-Anhydrous-High-Quality.webp"
+    },
+    {
+      "item": "Formaldehyde 37%",
+      "packaging": "35 k.g",
+      "brand": "Pursuit",
+      "country": "India",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2025/2/487026826/XR/DM/MX/234872121/formaldehyde-250x250.jpg"
+    },
+    {
+      "item": "Soda ash light",
+      "packaging": "25 kg",
+      "brand": "GG",
+      "country": ["India", "China"],
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6YV8Xj4XLLwDiSD0HpjojwF0rEw-C2f8PxQ&s"
+    },
+    {
+      "item": "Caustic soda flakes 99%",
+      "packaging": "25k.g",
+      "brand": null,
+      "country": "China",
+      "imageURL": "https://image.made-in-china.com/2f0j00fvAildaJMEkm/China-Factory-Supplier-Caustic-Soda-Flakes-Sodium-Hydroxide-99-CAS-1310-73-2.webp"
+    },
+    {
+      "item": "SLES 70%",
+      "packaging": "170k.g",
+      "brand": null,
+      "country": "China",
+      "imageURL": "https://image.made-in-china.com/2f0j00smSWYVAKyHcp/Sodium-Lauryl-Ether-Sulfate-SLES-70-China-Professional-Supplier.webp"
+    },
+    {
+      "item": "Acetic Acid 99.7%",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2024/11/465531885/GY/SI/LQ/4117053/whatsapp-image-2024-08-09-at-4-04-20-pm-2-500x500.jpeg"
+    },
+    {
+      "item": "Activated carbon",
+      "imageURL": "https://www.gopani.com/wp-content/uploads/2018/06/Granular.png"
+    },
+    {
+      "item": "Activated Bleaching earth",
+      "imageURL": "https://www.chinabentonite.net/uploads/202027611/activated-bleaching-earth-used-for-oil56300111356.jpg"
+    },
+    {
+      "item": "Aluminum sulfate",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2024/3/405546835/HF/RU/BP/2322410/aluminium-sulphate.jpeg"
+    },
+    {
+      "item": "Ammonium Sulphate",
+      "imageURL": "https://image.chukouplus.com/themes/simplebootx/Upload/W_715/upload/5f9bcaa0090f2.jpg?x-oss-process=image/format,webp,image/resize,m_pad,h_800,w_800,color_FFFFFF&1"
+    },
+    {
+      "item": "Antifoaming agent",
+      "imageURL": "https://m.media-amazon.com/images/I/41LCzGHo0OL._UF350,350_QL50_.jpg"
+    },
+    {
+      "item": "Antiscalant",
+      "imageURL": "https://www.hatenboer-water.com/wp-content/uploads/2023/10/Antiscalant-chemical-scaled.jpeg"
+    },
+    {
+      "item": "Antiscalant RO",
+      "imageURL": "https://5.imimg.com/data5/EZ/ID/OB/SELLER-91591502/ro-antiscalant.jpg"
+    },
+    {
+      "item": "Ascorbic acid",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLAX-pgJARqlADGMqLNAGt7r2CuGCuO9bIgZ9kksv53hUGLar4b7FYKWONFN44Fye2nYU&usqp=CAU"
+    },
+    {
+      "item": "Boric Acid 99.5",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm82CvgTNjaNDN8ruOYQPIzwAdm1ti-2vK-A&s"
+    },
+    {
+      "item": "Calcium Chloride 77% Food Grade",
+      "imageURL": "https://cpimg.tistatic.com/04965243/b/4/Calcium-Chloride-Flakes-77-Food-Grade.jpg"
+    },
+    {
+      "item": "Caustic Soda pearl",
+      "imageURL": "https://image.made-in-china.com/202f0j00MVwoDPACwluO/Caustic-Soda-Flakes-Pearls-Sodium-Hydroxide-Naoh-Industry-Grade-99-.webp"
+    },
+    {
+      "item": "Calcium carbonate",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnfJWfJl3lOh5r9h2Crwh174Vl4v0IonLdT4IdVXepm90Z5cOcSOKdpun_1AgQuhKhB7U&usqp=CAU"
+    },
+    {
+      "item": "Citric Acid both mono and anhydrous",
+      "imageURL": "https://image.made-in-china.com/202f0j00eqfVzDkPEdcZ/Citric-Acid-Anhydrous-Technical-Grade.jpg"
+    },
+    {
+      "item": "Corn Starch",
+      "imageURL": "https://www.bakersauthority.com/cdn/shop/files/PhotoRoom_20230727_121111.jpg?v=1690477826"
+    },
+    {
+      "item": "Copper Sulphate",
+      "imageURL": "https://www.homeland.ie/cdn/shop/files/30COPSUL1_COPPERSULPHATETUB_01.jpg?v=1712737309"
+    },
+    {
+      "item": "Dolomite",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbGkQgaO0Z1ebh_VWix5V9nKbS144qnXI2Eg&s"
+    },
+    {
+      "item": "Glycerin",
+      "imageURL": "https://5.imimg.com/data5/ANDROID/Default/2023/2/IA/TX/BH/157623674/product-jpeg.jpg"
+    },
+    {
+      "item": "HDPE",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKo-YY5fAxG350EByI8xsvEoLwHNScrzaXPw&s"
+    },
+	{
+      "item": "LDPE",
+      "imageURL": "https://image.made-in-china.com/202f0j00gOatMCEWqcpz/Low-Density-Polyethylene-Resin-LDPE-Granules-Plastic-Raw-Material.webp"
+    },
+    {
+      "item": "Hydrogen Peroxide 50%",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2020/12/QS/QX/JU/11241995/hydrogen-peroxide.jpg"
+    },
+    {
+      "item": "Industrial sodium chloride",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO2_9VIp11S8q5mQNWWSha9awuRImAo65cLw&s"
+    },
+    {
+      "item": "LABSA 96%",
+      "imageURL": "https://image.made-in-china.com/202f0j00UzckigHsqfuL/Linear-Alkyl-Benzene-Sulfonic-Acid-LABSA-96-CAS-27176-87-0.webp"
+    },
+    {
+      "item": "Lime (Foreign/local)",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRegTX8f6IL5bw3YoN6ZkN9p9jYM_kkhpKsAQ&s"
+    },
+    {
+      "item": "Liquid Detergent",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48W7nafzjLJp-6XQB_Bk4_HyfXq92XLqGpw&s"
+    },
+    {
+      "item": "Master batch",
+      "imageURL": "https://masterbatchmanufacturer.com/wp-content/uploads/2023/09/Masterbatch-20230926001.jpg"
+    },
+    {
+      "item": "Mica powder",
+      "imageURL": "https://image.made-in-china.com/202f0j00hBZQreiGZCpm/Mica-Powder-Industrial-Grade-DT0325-.jpg"
+    },
+    {
+      "item": "Paraffin",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdchuDd_IAwtFHIjibj_80WX2WQEzGnFhWCQ&s"
+    },
+    {
+      "item": "Perfume",
+      "imageURL": "https://5.imimg.com/data5/ANDROID/Default/2022/11/RV/ME/US/22721981/product-jpeg-500x500.jpg"
+    },
+    {
+      "item": "Phosphoric Acid",
+      "imageURL": "https://5.imimg.com/data5/HC/LB/JQ/SELLER-62747970/phosphoric-acid-85--500x500.png"
+    },
+    {
+      "item": "Phosphoric Acid 85% Food Grade",
+      "imageURL": "https://essentialproducts.co.za/wp-content/uploads/2024/02/Phosphoric_Acid1-jpg.webp"
+    },
+    {
+      "item": "Poly aluminum chloride",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY_5KTtY3tkohUC3LWXndi9M4QHAsV6E7gDw&s"
+    },
+    {
+      "item": "PP Raffia",
+      "imageURL": "https://image.made-in-china.com/202f0j00CyIhBeDchRga/Resin-PP-Raffia-Grade-Granules-Virgin-Homopolymer-Polypropylene-Granules-PP-Raw-Material-Natural-White-Globalplastics-Nl.webp"
+    },
+    {
+      "item": "SLES 70%",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6C65He2Ajxxe5UWIWbG8nFZNuzobdRntl-Q&s"
+    },
+    {
+      "item": "Soap Noodles",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT21b2FlZoDOnmYkTchO3ilK7y2vn8-PxZN0A&s"
+    },
+    {
+      "item": "Soda Ash light/dense",
+      "imageURL": "https://image.made-in-china.com/202f0j00DmjhzPYKELqM/High-Quality-Soda-Ash-Light-Dense-Factory-Supply-with-Low-Price.webp"
+    },
+    {
+      "item": "Sodium Bicarbonate 99%",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWciW4_kRScMzHrJS7K6SW9Z6qss7gcvRO0w&s"
+    },
+    {
+      "item": "Sodium Meta bisulphite 99%",
+      "imageURL": "https://5.imimg.com/data5/IOS/Default/2025/3/497939941/CP/FE/MU/185817000/product-jpeg-500x500.png"
+    },
+    {
+      "item": "Sodium benzoate",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeH9q7ws3cIHB7zJ84C83-PfOf6tWU_HF9-w&s"
+    },
+    {
+      "item": "Sodium hydroxide",
+      "imageURL": "https://flalab.com/wp-content/uploads/2020/05/Sodium-Hydroxide-2lbs.jpg"
+    },
+    {
+      "item": "Sodium hydrosulphite 85%",
+      "imageURL": "https://kamrach.com/images/detailed/15/Sodium-Hydrosulphite-85_.jpg"
+    },
+    {
+      "item": "Sodium hypochlorite 10%",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2021/4/XP/HQ/CL/11760208/10-to-12-10-litre-sodium-hypochlorite.jpg"
+    },
+    {
+      "item": "Softener",
+      "imageURL": "https://5.imimg.com/data5/YY/CR/MY-33269983/textile-fabric-softener-500x500.jpg"
+    },
+        {
+      "item": "Stiffener",
+      "imageURL": "https://5.imimg.com/data5/XI/AX/MY-39153510/liquid-dish-wash-in-bulk-quantity-500x500.jpg"
+    },
+    {
+      "item": "Sulfuric Acid 98%",
+      "imageURL": "https://vnk.com.my/wp-content/uploads/2020/08/IMG20200821104600-scaled.jpg"
+    },
+    {
+      "item": "Tetra chloroethylene 99%",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq8lWVYQ_UZ_ZeA8a5PdsHYxppi8epsCxrzmEaArcfgNYcI-qE5-wB6NXNCBtdfDflp4Y&usqp=CAU"
+    },
+    {
+      "item": "TDI",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2025/4/501465856/NJ/GK/QL/122454698/toluene-diisocyanate-tdi-500x500.png"
+    },
+    {
+      "item": "Titanium Dioxide",
+      "imageURL": "https://m.media-amazon.com/images/I/6123bzevslL._AC_SL1200_.jpg"
+    },
+    {
+      "item": "Tri sodium citrate",
+      "imageURL": "https://www.ibuychemikals.com/prdimg/full/Tri-Sodium%20Citrate%20(Dihydrate)%20LR%20500GM.jpg"
+    },
+    {
+      "item": "Wetting Agent",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2025/2/492260290/BV/JW/SD/46592967/50-kg-textile-wetting-agent-500x500.jpg"
+    },
+    {
+      "item": "Zeolite",
+      "imageURL": "https://m.media-amazon.com/images/I/61SrEsx5QxL.jpg"
+    },
+
+    {
+      "item": "EDTA",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXiOMpJPBlisLhLHLBGnMFI1H9L8nyiPD82g&s"
+    },
+    {
+      "item": "Industrial salt",
+      "imageURL": "https://image.made-in-china.com/2f0j00BprclqbhnWoM/Industry-Salt-in-Big-Bags-99-7-Sodium-Chloride-1200kg.webp"
+    },
+    {
+      "item": "Sodium silicate",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2022/9/SD/HP/IQ/41907846/liquid-sodium-silicate.jpg"
+    },
+    {
+      "item": "Bentonite powder",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2021/6/QU/OS/VZ/93809568/bentonite-powder-500x500.jpg"
+    },
+    {
+      "item": "Acetic acid glacial",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2022/1/MS/LL/WZ/145100825/90-glacial-acetic-acid.jpg"
+    },
+    {
+      "item": "Perchloro ethylene",
+      "imageURL": "https://cpimg.tistatic.com/08046251/b/7/PERCHLOROETHYLENE-PERC-.jpg"
+    },
+    {
+      "item": "PET resin",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGoGWHXcsLXjplT4XBVjBQ7wKMrD8vOP4Zw&s"
+    },
+    {
+      "item": "Ammonia solution",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2022/6/HU/KY/DY/3040849/liquid-ammonia-solution.jpg"
+    },
+    {
+      "item": "Optical Brightener",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXkKaMWa9HGHO7W2Rb3v96Gu-HoVvUMjDRg&s"
+    },
+    {
+      "item": "Poly acramide",
+      "imageURL": "https://image.made-in-china.com/202f0j00HRhcKeSZAzro/Poly-Acrylamide-PAM-CAS-9003-05-8-Polyacrylamide-for-Water-Treatment.webp"
+    },
+    {
+      "item": "Xantangum",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT63ltlZPeXqpYbFDEyhebe21uGLaeXC8jHDw&s"
+    },
+    {
+      "item": "Ferric Chloride",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQT8SLvixTuXbD7fbbLi6C3RoLh5WwfF9ag&s"
+    },
+    {
+      "item": "Hydrated Lime",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4zlHR23jU6cUr637_ya2arNYYfS2oioHNw&s"
+    },
+    {
+      "item": "Quick lime",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3nm-5BDSXsQbCFS_16HfwizIfOMYBbP2Lg&s"
+    },
+    {
+      "item": "Sodium permanganate",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2024/5/421777474/OI/YX/EV/31690877/sodium-permanganate-powder-500x500.jpeg"
+    },
+    {
+      "item": "Softner un concentrated",
+      "imageURL": "https://ionicproductsltd.com/wp-content/uploads/2021/01/11Q-Premium-Fabric-Softener_5L_Final-Image-1.jpg"
+    }
+  ]
+}

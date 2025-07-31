@@ -3,11 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,12 +29,6 @@ export default function Header() {
     },
   ];
 
-  const isActive = (path: string) => {
-    if (path === "/" && pathname === "/") return true;
-    if (path !== "/" && pathname.startsWith(path)) return true;
-    return false;
-  };
-
   return (
     <nav className="w-full flex items-center justify-between py-4 px-8 absolute top-0 left-0 z-50 bg-transparent shadow-none">
       {/* Logo */}
@@ -48,44 +40,16 @@ export default function Header() {
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex gap-8 text-white font-medium text-lg">
-        <Link 
-          href="/" 
-          className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-              : ""
-          }`}
-        >
+        <Link href="/" className="hover:underline">
           Home
         </Link>
-        <Link 
-          href="/about" 
-          className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/about") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-              : ""
-          }`}
-        >
+        <Link href="/about" className="hover:underline">
           About
         </Link>
-        <Link 
-          href="/products" 
-          className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/products") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-              : ""
-          }`}
-        >
+        <Link href="/products" className="hover:underline">
           Products
         </Link>
-        <Link 
-          href="/contact" 
-          className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/contact") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-              : ""
-          }`}
-        >
+        <Link href="/contact" className="hover:underline">
           Contact
         </Link>
       </div>
@@ -141,46 +105,33 @@ export default function Header() {
           <div className="flex flex-col h-full">
             {/* Mobile Navigation Links */}
             <div className="flex flex-col items-center justify-center flex-1 gap-8 text-white font-medium text-xl">
-              <Link 
-                href="/" 
-                className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-                    : ""
-                }`}
-                onClick={closeMenu}
-              >
+              <Link href="/" className="hover:underline" onClick={closeMenu}>
                 Home
               </Link>
               <Link
                 href="/about"
-                className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/about") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-                    : ""
-                }`}
+                className="hover:underline"
                 onClick={closeMenu}
               >
                 About
               </Link>
               <Link
-                href="/products"
-                className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/products") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-                    : ""
-                }`}
+                href="/services"
+                className="hover:underline"
                 onClick={closeMenu}
               >
-                Products
+                Services
+              </Link>
+              <Link
+                href="/partners"
+                className="hover:underline"
+                onClick={closeMenu}
+              >
+                Partners
               </Link>
               <Link
                 href="/contact"
-                className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/contact") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
-                    : ""
-                }`}
+                className="hover:underline"
                 onClick={closeMenu}
               >
                 Contact
