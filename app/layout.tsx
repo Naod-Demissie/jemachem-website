@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 
 import "./globals.css";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
-// const poppins = Poppins({
-//   weight: "400",
-//   variable: "--font-sans",
-//   subsets: ["latin"],
-// });
-
-const poppins = Inter({
-  weight: "400",
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>
         <Footer />
