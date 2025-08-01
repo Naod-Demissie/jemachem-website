@@ -58,10 +58,10 @@ const Logos = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-balance lg:text-3xl">
-            Trusted by leading companies worldwide.
+            Trusted by leading companies.
             <br />
             <span className="text-muted-foreground">
-              Partnering with industry leaders and innovators.
+              Partnering with industry leaders.
             </span>
           </h2>
         </div>

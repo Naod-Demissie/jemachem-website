@@ -3,6 +3,7 @@
 import { ChevronRight, Factory, Leaf, TestTube } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Products = () => {
   const ref = useRef(null);
@@ -53,9 +54,11 @@ const Products = () => {
             href="/products/industrial"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
-            <img
+            <Image
               src="/industrial-chemicals.jpg"
               alt="Industrial Chemicals"
+              width={400}
+              height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
@@ -84,9 +87,11 @@ const Products = () => {
             href="/products/agro"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
-            <img
+            <Image
               src="/agro-chemicals.jpg"
               alt="Agrochemicals"
+              width={400}
+              height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
@@ -115,9 +120,11 @@ const Products = () => {
             href="/products/laboratory"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
-            <img
+            <Image
               src="/laboratory-chemicals.png"
               alt="Laboratory Chemicals"
+              width={400}
+              height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
