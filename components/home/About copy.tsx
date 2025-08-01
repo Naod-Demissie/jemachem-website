@@ -1,10 +1,6 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
-interface AboutProps {
+interface About3Props {
   achievementsTitle?: string;
   achievementsDescription?: string;
   achievements?: Array<{
@@ -24,31 +20,18 @@ const About = ({
   achievementsTitle = "Trusted by Ethiopia's Leading Sectors",
   achievementsDescription = "Delivering high-quality industrial, agricultural, and laboratory chemicals to meet the demands of science, farming, and manufacturing across Ethiopia.",
   achievements = defaultAchievements,
-}: AboutProps = {}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+}: About3Props = {}) => {
   return (
-    <section ref={ref} className="py-32">
+    <section className="py-32">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* About Header Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 1.0, ease: "easeOut" }}
-          className=" mb-3 inline-flex items-start gap-2 bg-black/10 backdrop-blur-sm border border-black/20 rounded-full px-2 text-black text-sm font-medium"
-        >
+        <div className=" mb-3 inline-flex items-start gap-2 bg-black/10 backdrop-blur-sm border border-black/20 rounded-full px-2 text-black text-sm font-medium">
           <p className="text-sm font-normal text-muted-foreground">ABOUT US</p>
-        </motion.div>
+        </div>
 
         {/* Why We Began Section */}
         <div className="mb-20 grid gap-14 lg:grid-cols-4 xl:grid-cols-4">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-            className="md:col-span-2 xl:col-span-2"
-          >
+          <div className="md:col-span-2 xl:col-span-2">
             <h2 className="mb-8 text-4xl font-bold">Why We Began</h2>
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
               In a country where agriculture and industry are the backbone of
@@ -64,53 +47,31 @@ const About = ({
               ourselves on building long-term relationships through quality,
               reliability, and tailored solutions.
             </p>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
-            className="md:col-span-2"
-          >
+          </div>
+          <div className="md:col-span-2">
             <img
               src="/office.jpg"
               alt="Our Warehouse"
               className="h-full w-full rounded-xl object-cover"
             />
-          </motion.div>
+          </div>
         </div>
 
         {/* Achievements Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.9 }}
-          className="mx-auto max-w-5xl"
-        >
+        <div className="mx-auto max-w-5xl">
           <div className="rounded-2xl bg-gray-300/50 p-8 md:p-12 lg:p-16">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 1.2 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl mb-4">
                 {achievementsTitle}
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
                 {achievementsDescription}
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
               {achievements.map((item, idx) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ 
-                    duration: 1.0, 
-                    ease: "easeOut", 
-                    delay: 1.5 + (idx * 0.15) 
-                  }}
+                <div
                   className="flex flex-col items-center justify-center text-center"
                   key={item.label + idx}
                 >
@@ -120,11 +81,11 @@ const About = ({
                   <p className="text-sm font-medium text-muted-foreground md:text-base">
                     {item.label}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

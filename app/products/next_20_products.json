@@ -1,0 +1,205 @@
+{
+  "chemicals": [
+    {
+      "id": "calcium-chloride-77-food-grade",
+      "item": "Calcium Chloride 77% Food Grade",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "food-grade",
+      "description": "Food grade calcium chloride with 77% purity. Used as a firming agent, preservative, and electrolyte in food processing and beverages.",
+      "imageURL": "https://cpimg.tistatic.com/04965243/b/4/Calcium-Chloride-Flakes-77-Food-Grade.jpg"
+    },
+    {
+      "id": "caustic-soda-pearl",
+      "item": "Caustic Soda pearl",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "industrial",
+      "description": "High-quality caustic soda pearls (sodium hydroxide) for industrial applications. Used in soap manufacturing, paper production, and chemical processing.",
+      "imageURL": "https://image.made-in-china.com/202f0j00MVwoDPACwluO/Caustic-Soda-Flakes-Pearls-Sodium-Hydroxide-Naoh-Industry-Grade-99-.webp"
+    },
+    {
+      "id": "calcium-carbonate",
+      "item": "Calcium carbonate",
+      "packaging": "50 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Fine grade calcium carbonate for various industrial uses, including as a filler in plastics, paints, and paper, and in construction materials.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnfJWfJl3lOh5r9h2Crwh174Vl4v0IonLdT4IdVXepm90Z5cOcSOKdpun_1AgQuhKhB7U&usqp=CAU"
+    },
+    {
+      "id": "citric-acid-both-mono-and-anhydrous",
+      "item": "Citric Acid both mono and anhydrous",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "food-grade",
+      "description": "Versatile citric acid available in both monohydrous and anhydrous forms. Widely used as an acidulant, flavor enhancer, and preservative in food, beverage, and pharmaceutical industries.",
+      "imageURL": "https://image.made-in-china.com/202f0j00eqfVzDkPEdcZ/Citric-Acid-Anhydrous-Technical-Grade.jpg"
+    },
+    {
+      "id": "corn-starch",
+      "item": "Corn Starch",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "India",
+      "category": "food-grade",
+      "description": "High-quality corn starch for food and industrial applications. Used as a thickening agent, binder, and stabilizer in various products.",
+      "imageURL": "https://www.bakersauthority.com/cdn/shop/files/PhotoRoom_20230727_121111.jpg?v=1690477826"
+    },
+    {
+      "id": "copper-sulphate",
+      "item": "Copper Sulphate",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "India",
+      "category": "agrochemical",
+      "description": "Technical grade copper sulphate for agricultural and industrial uses. Effective as a fungicide, algaecide, and in electroplating.",
+      "imageURL": "https://www.homeland.ie/cdn/shop/files/30COPSUL1_COPPERSULPHATETUB_01.jpg?v=1712737309"
+    },
+    {
+      "id": "dolomite",
+      "item": "Dolomite",
+      "packaging": "50 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Natural dolomite powder for various industrial applications, including as a flux in metallurgy, a filler in paints, and in agriculture for soil conditioning.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbGkQgaO0Z1ebh_VWix5V9nKbS144qnXI2Eg&s"
+    },
+    {
+      "id": "glycerin",
+      "item": "Glycerin",
+      "packaging": "250 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "High purity glycerin for pharmaceutical, cosmetic, and food industries. Used as a humectant, solvent, and sweetener.",
+      "imageURL": "https://5.imimg.com/data5/ANDROID/Default/2023/2/IA/TX/BH/157623674/product-jpeg.jpg"
+    },
+    {
+      "id": "hdpe",
+      "item": "HDPE",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "polymers",
+      "description": "High-density polyethylene (HDPE) granules for plastic manufacturing. Known for its strength, durability, and resistance to chemicals, ideal for various molded products.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKo-YY5fAxG350EByI8xsvEoLwHNScrzaXPw&s"
+    },
+    {
+      "id": "ldpe",
+      "item": "LDPE",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "polymers",
+      "description": "Low-density polyethylene (LDPE) granules for flexible plastic applications. Offers excellent flexibility, toughness, and transparency, suitable for films, bags, and packaging.",
+      "imageURL": "https://image.made-in-china.com/202f0j00gOatMCEWqcpz/Low-Density-Polyethylene-Resin-LDPE-Granules-Plastic-Raw-Material.webp"
+    },
+    {
+      "id": "hydrogen-peroxide-50",
+      "item": "Hydrogen Peroxide 50%",
+      "packaging": "35 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Concentrated hydrogen peroxide solution (50%) for various industrial applications, including bleaching, disinfection, and as an oxidizing agent.",
+      "imageURL": "https://5.imimg.com/data5/SELLER/Default/2020/12/QS/QX/JU/11241995/hydrogen-peroxide.jpg"
+    },
+    {
+      "id": "industrial-sodium-chloride",
+      "item": "Industrial sodium chloride",
+      "packaging": "50 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "High-grade industrial sodium chloride (salt) for various applications, including water treatment, chemical manufacturing, and de-icing.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO2_9VIp11S8q5mQNWWSha9awuRImAo65cLw&s"
+    },
+    {
+      "id": "labsa-96",
+      "item": "LABSA 96%",
+      "packaging": "210 kg",
+      "brand": null,
+      "country": "China",
+      "category": "industrial",
+      "description": "Linear Alkyl Benzene Sulphonic Acid (LABSA) with 96% purity. A key ingredient in the production of detergents and cleaning agents due to its excellent surfactant properties.",
+      "imageURL": "https://image.made-in-china.com/202f0j00UzckigHsqfuL/Linear-Alkyl-Benzene-Sulfonic-Acid-LABSA-96-CAS-27176-87-0.webp"
+    },
+    {
+      "id": "lime-foreign-local",
+      "item": "Lime (Foreign/local)",
+      "packaging": "50 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "High-quality lime (calcium oxide/hydroxide) sourced both locally and internationally. Used in construction, agriculture, and water treatment for pH adjustment and purification.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRegTX8f6IL5bw3YoN6ZkN9p9jYM_kkhpKsAQ&s"
+    },
+    {
+      "id": "liquid-detergent",
+      "item": "Liquid Detergent",
+      "packaging": "200 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Concentrated liquid detergent for industrial and commercial cleaning applications. Effectively removes grease and grime from various surfaces.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48W7nafzjLJp-6XQB_Bk4_HyfXq92XLqGpw&s"
+    },
+    {
+      "id": "master-batch",
+      "item": "Master batch",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "India",
+      "category": "polymers",
+      "description": "High-quality masterbatch for coloring and enhancing plastic products. Provides consistent color dispersion and improves material properties.",
+      "imageURL": "https://masterbatchmanufacturer.com/wp-content/uploads/2023/09/Masterbatch-20230926001.jpg"
+    },
+    {
+      "id": "mica-powder",
+      "item": "Mica powder",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Fine grade mica powder for various industrial applications, including paints, coatings, plastics, and cosmetics. Provides excellent insulation and aesthetic properties.",
+      "imageURL": "https://image.made-in-china.com/202f0j00hBZQreiGZCpm/Mica-Powder-Industrial-Grade-DT0325-.jpg"
+    },
+    {
+      "id": "paraffin",
+      "item": "Paraffin",
+      "packaging": "25 kg",
+      "brand": null,
+      "country": "China",
+      "category": "industrial",
+      "description": "High-purity paraffin wax for various industrial and commercial uses, including candle making, coatings, and as a lubricant.",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdchuDd_IAwtFHIjibj_80WX2WQEzGnFhWCQ&s"
+    },
+    {
+      "id": "perfume",
+      "item": "Perfume",
+      "packaging": "1 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Concentrated perfume compounds for use in various products, including detergents, soaps, and personal care items. Provides long-lasting fragrance.",
+      "imageURL": "https://5.imimg.com/data5/ANDROID/Default/2022/11/RV/ME/US/22721981/product-jpeg-500x500.jpg"
+    },
+    {
+      "id": "phosphoric-acid",
+      "item": "Phosphoric Acid",
+      "packaging": "35 kg",
+      "brand": null,
+      "country": "India",
+      "category": "industrial",
+      "description": "Technical grade phosphoric acid for industrial applications, including rust removal, water treatment, and as an additive in various chemical processes.",
+      "imageURL": "https://5.imimg.com/data5/HC/LB/JQ/SELLER-62747970/phosphoric-acid-85--500x500.png"
+    }
+  ]
+}
+

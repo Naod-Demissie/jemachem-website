@@ -12,59 +12,45 @@ const Logos10 = () => {
   const logos = [
     {
       id: "logo-1",
-      description: "Logo 1",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/astro-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Partner 1",
+      image: "/partners/1.png",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-2",
-      description: "Logo 2",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-1.svg",
-      className: "h-7 w-auto",
+      description: "Partner 2",
+      image: "/partners/2.jpeg",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-3",
-      description: "Logo 3",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-2.svg",
-      className: "h-7 w-auto",
+      description: "Partner 3",
+      image: "/partners/3.jpeg",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-4",
-      description: "Logo 4",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-3.svg",
-      className: "h-7 w-auto",
+      description: "Partner 4",
+      image: "/partners/4.png",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-5",
-      description: "Logo 5",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-4.svg",
-      className: "h-7 w-auto",
+      description: "Partner 5",
+      image: "/partners/5.jpeg",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-6",
-      description: "Logo 6",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-5.svg",
-      className: "h-5 w-auto",
+      description: "Partner 6",
+      image: "/partners/6.png",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
     {
       id: "logo-7",
-      description: "Logo 7",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-6.svg",
-      className: "h-7 w-auto",
-    },
-    {
-      id: "logo-8",
-      description: "Logo 8",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-7.svg",
-      className: "h-7 w-auto",
+      description: "Partner 7",
+      image: "/partners/7.png",
+      className: "h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16",
     },
   ];
 
@@ -73,7 +59,7 @@ const Logos10 = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-4xl mx-auto">
         {/* <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16"> */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight">
+          <h2 className="text-3xl md:text-xl lg:text-4xl xl:text-4xl font-semibold tracking-tight">
           {/* <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight mb-4 md:mb-6"> */}
             Trusted by Leading{" "}
             <span className="text-muted-foreground/60">
@@ -98,7 +84,7 @@ const Logos10 = () => {
                     <img
                       src={logo.image}
                       alt={logo.description}
-                      className={logo.className}
+                      className={`${logo.className} object-contain transition-opacity hover:opacity-70`}
                     />
                   </div>
                 </CarouselItem>

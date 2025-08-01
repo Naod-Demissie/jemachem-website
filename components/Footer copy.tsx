@@ -89,43 +89,35 @@ const Footer = ({
   copyright = "© 2025 JemaChem Trading. All rights reserved.",
 }: FooterProps) => {
   return (
-    <section className="py-16 border-t relative bg-[url('/footer-image.jpg')] bg-cover bg-center bg-no-repeat">
+    <section className="py-12 border-t relative bg-[url('/footer-image.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-black/92"></div>
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="flex w-full flex-col justify-between gap-12 lg:flex-row lg:items-start lg:text-left">
-          {/* Logo and Description Section */}
-          <div className="flex w-full flex-col justify-between gap-8 lg:items-start items-center text-center lg:text-left lg:w-2/5">
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8">
-              {/* Logo */}
-              <div className="flex items-center justify-center lg:justify-start">
-                <a href={logo.url} className="flex items-center">
-                  <img
-                    src="/logo.png"
-                    alt="JemaChem Logo"
-                    className="w-[190px] h-auto"
-                  />
-                </a>
-              </div>
-              
-              {/* Description and Social Links */}
-              <div className="flex flex-col items-center lg:items-start gap-4">
-                <p className="text-gray-300 text-sm leading-relaxed max-w-md text-center lg:text-left">
+      <div className="container mx-auto flex flex-col items-center justify-center relative z-10">
+        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
+          <div className="flex w-full flex-col justify-between gap-6 lg:items-start items-center text-center lg:text-left">
+            {/* Logo */}
+            <div className="flex items-center gap-5 lg:justify-start justify-center">
+              <a href={logo.url} className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="JemaChem Logo"
+                  className="w-[180px]"
+                />
+              </a>
+              <div className="flex flex-col items-start gap-2 justify-start">
+                <p className="text-gray-300 max-w-[70%] text-sm mx-auto lg:mx-0">
                   {description}
                 </p>
-                
-                {/* Social Links */}
-                <ul className="flex items-center justify-center lg:justify-start space-x-4">
+                <ul className="text-gray-300 flex items-center justify-center lg:justify-start space-x-6">
                   {socialLinks.map((social, idx) => (
                     <li
                       key={idx}
-                      className="hover:text-white text-gray-300 transition-colors duration-200"
+                      className="hover:text-white font-medium transition-colors"
                     >
                       <a
                         href={social.href}
                         aria-label={social.label}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-200"
                       >
                         {social.icon}
                       </a>
@@ -135,19 +127,17 @@ const Footer = ({
               </div>
             </div>
           </div>
-
-          {/* Navigation Links Section */}
-          <div className="grid w-full gap-8 md:grid-cols-3 lg:gap-12 lg:w-3/5">
+          <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
             {sections.map((section, sectionIdx) => (
-              <div key={sectionIdx} className="text-center lg:text-left">
-                <h3 className="mb-6 font-bold text-white text-lg">{section.title}</h3>
+              <div key={sectionIdx}>
+                <h3 className="mb-4 font-bold text-white">{section.title}</h3>
                 <ul className="text-gray-300 space-y-3 text-sm">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
-                      className="hover:text-white font-medium transition-colors duration-200"
+                      className="hover:text-white font-medium transition-colors"
                     >
-                      <a href={link.href} className="hover:underline">{link.name}</a>
+                      <a href={link.href}>{link.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -155,10 +145,8 @@ const Footer = ({
             ))}
           </div>
         </div>
-        
-        {/* Copyright Section */}
-        <div className="text-gray-300 mt-12 flex flex-col justify-between gap-4 border-t border-gray-700/50 py-8 text-xs font-medium md:flex-row md:items-center md:text-left">
-          <p className="order-2 lg:order-1 text-center lg:text-left">{copyright}</p>
+        <div className="text-gray-300 mt-8 flex flex-col justify-between gap-4 border-t border-gray-700 py-8 text-xs font-medium md:flex-row md:items-center md:text-left">
+          <p className="order-2 lg:order-1">{copyright}</p>
         </div>
       </div>
     </section>

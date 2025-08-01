@@ -94,8 +94,8 @@ const Footer = ({
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="flex w-full flex-col justify-between gap-12 lg:flex-row lg:items-start lg:text-left">
           {/* Logo and Description Section */}
-          <div className="flex w-full flex-col justify-between gap-8 lg:items-start items-center text-center lg:text-left lg:w-2/5">
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8">
+          <div className="flex w-full flex-col justify-between gap-8 lg:items-start items-center text-center lg:text-left lg:w-1/3">
+            <div className="flex flex-col items-center lg:items-start gap-6">
               {/* Logo */}
               <div className="flex items-center justify-center lg:justify-start">
                 <a href={logo.url} className="flex items-center">
@@ -107,7 +107,7 @@ const Footer = ({
                 </a>
               </div>
               
-              {/* Description and Social Links */}
+              {/* Description */}
               <div className="flex flex-col items-center lg:items-start gap-4">
                 <p className="text-gray-300 text-sm leading-relaxed max-w-md text-center lg:text-left">
                   {description}
@@ -137,7 +137,7 @@ const Footer = ({
           </div>
 
           {/* Navigation Links Section */}
-          <div className="grid w-full gap-8 md:grid-cols-3 lg:gap-12 lg:w-3/5">
+          <div className="grid w-full gap-8 md:grid-cols-3 lg:gap-12 lg:w-2/3">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx} className="text-center lg:text-left">
                 <h3 className="mb-6 font-bold text-white text-lg">{section.title}</h3>

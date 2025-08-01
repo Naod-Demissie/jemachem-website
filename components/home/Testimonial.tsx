@@ -76,9 +76,9 @@ const Testimonial = () => {
           <h2 className="text-center text-3xl font-semibold lg:text-4xl text-white">
             Meet our happy clients
           </h2>
-          <p className="text-center lg:text-lg text-white">
+          {/* <p className="text-center lg:text-lg text-white">
             Join a global network of thought leaders, product developers,
-          </p>
+          </p> */}
         </div>
         <div className="mt-16 space-y-4">
           <Carousel

@@ -1,55 +1,25 @@
 "use client";
 
 import { ChevronRight, Factory, Leaf, TestTube } from "lucide-react";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const Products = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section ref={ref} className="dark py-16 sm:py-20 lg:py-28 bg-black">
+    <section className="dark py-16 sm:py-20 lg:py-28 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 1.0, ease: "easeOut" }}
-          className=" mb-3 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium"
-        >
+        <div className=" mb-3 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
           <p className="text-sm font-normal text-muted-foreground">PRODUCTS</p>
-        </motion.div>
-        
-        <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-          className="mb-4 text-3xl text-white sm:text-4xl font-semibold"
-        >
+        </div>
+        <h1 className="mb-4 text-3xl text-white sm:text-4xl font-semibold">
           Our Core Chemical Solutions
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 1.0, ease: "easeOut", delay: 0.6 }}
-          className="text-white max-w-2xl mx-auto px-4"
-        >
+        </h1>
+        <p className="text-white max-w-2xl mx-auto px-4">
           Explore our wide range of trusted industrial, agricultural, and
           laboratory chemicals—imported with precision and delivered with care.
-        </motion.p>
+        </p>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.9 }}
-          className="grid gap-6 pt-10 sm:pt-14 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto"
-        >
+        <div className="grid gap-6 pt-10 sm:pt-14 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
           {/* Industrial Chemicals Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 1.0, ease: "easeOut", delay: 1.2 }}
+          <a
             href="/products/industrial"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
@@ -74,13 +44,10 @@ const Products = () => {
                 </p>
               </div>
             </div>
-          </motion.a>
+          </a>
 
           {/* Agrochemicals Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 1.0, ease: "easeOut", delay: 1.4 }}
+          <a
             href="/products/agro"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
@@ -105,13 +72,10 @@ const Products = () => {
                 </p>
               </div>
             </div>
-          </motion.a>
+          </a>
 
           {/* Laboratory Chemicals Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 1.0, ease: "easeOut", delay: 1.6 }}
+          <a
             href="/products/laboratory"
             className="group relative overflow-hidden rounded-xl shadow-lg"
           >
@@ -136,8 +100,8 @@ const Products = () => {
                 </p>
               </div>
             </div>
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   );
