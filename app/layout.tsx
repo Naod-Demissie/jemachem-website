@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   description:
     "Jemachem Trading - Ethiopia's premier importer, supplier, and distributor of industrial, agro, and laboratory chemicals and equipment. Delivering quality solutions for Ethiopia's growing industries with reliable products and exceptional service.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/jemachem-company-logo.webp",
+    shortcut: "/jemachem-company-logo.webp",
+    apple: "/jemachem-company-logo.webp",
   },
 };
 

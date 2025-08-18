@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="pt-20 dark relative flex h-svh max-h-[1400px] w-full overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/80 after:content-[''] md:h-svh">
+    <section className="pt-20 dark relative flex h-svh max-h-[1400px] w-full overflow-hidden bg-[url('/hero-bg.webp')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/80 after:content-[''] md:h-svh">
       <div className="relative z-30 m-auto flex max-w-[46.25rem] flex-col items-center justify-center gap-6 px-5">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -16,8 +16,8 @@ const Hero = () => {
           <span>✨</span>
           <span>High Quality, Fair Price</span>
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -26,8 +26,8 @@ const Hero = () => {
           Your <span className="italic text-orange-500">trusted</span> Chemical
           Import Partner in Ethiopia.
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           laboratories with unmatched reliability and expert care.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}

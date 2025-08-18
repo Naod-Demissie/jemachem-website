@@ -13,7 +13,7 @@ interface Cta11Props {
 const Cta11 = ({
   heading = "Call to Action",
   description = "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
-  imageSrc = "/logo.png",
+  imageSrc = "/jemachem-company-logo.webp",
   imageAlt = "Company logo",
   buttonText = "Contact Us",
   buttonHref = "/contact",
@@ -21,7 +21,7 @@ const Cta11 = ({
   return (
     <section className="py-32 bg-black">
       <div className="container mx-auto max-w-7xl px-4">
-        <div 
+        <div
           className="bg-[#0c0c0c] flex w-full flex-col gap-8 overflow-hidden rounded-lg p-8 md:rounded-xl lg:flex-row lg:items-center lg:p-12 mx-auto max-w-7xl"
           style={{ backgroundColor: "#0c0c0c" }}
         >
@@ -40,10 +40,10 @@ const Cta11 = ({
             </Button>
           </div>
           <img
-                    src="/logo.png"
-                    alt="JemaChem Logo"
-                    className="w-[170px]"
-                  />
+            src="/jemachem-company-logo.webp"
+            alt="JemaChem Logo"
+            className="w-[170px]"
+          />
         </div>
       </div>
     </section>

@@ -1,12 +1,86 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { PhoneInput } from "@/components/ui/phone-input";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { AlertCircle, CheckCircle } from "lucide-react";
+
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
+
+const contactSchema = z.object({
+  firstName: z
+    .string()
+    .min(2, { message: "First name must be at least 2 characters" })
+    .max(100, { message: "First name is too long" }),
+  lastName: z
+    .string()
+    .min(2, { message: "Last name must be at least 2 characters" })
+    .max(100, { message: "Last name is too long" }),
+  email: z.string().email({ message: "Please enter a valid email" }),
+  phone: z
+    .string()
+    .min(7, { message: "Please enter a valid phone number" })
+    .max(30, { message: "Phone number is too long" }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters" })
+    .max(2000, { message: "Message is too long" }),
+});
+
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactUs = () => {
+  const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmitStatus("idle");
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(values),
+      });
+
+      // With no-cors, the response is opaque; assume success if no network error thrown
+      setSubmitStatus("success");
+      reset();
+    } catch (err) {
+      setSubmitStatus("error");
+    }
+  };
+
+  const handleCopy = async (key: string, text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied((prev) => ({ ...prev, [key]: true }));
+      setTimeout(() => {
+        setCopied((prev) => ({ ...prev, [key]: false }));
+      }, 1500);
+    } catch (error) {
+      console.error("Copy failed", error);
+    }
+  };
+
   return (
     <>
       {/* Banner Section */}
@@ -100,31 +174,71 @@ const ContactUs = () => {
                 {/* Contact Info */}
                 <div className="space-y-8 text-left">
                   <img
-                    src="/logo.png"
+                    src="/jemachem-company-logo.webp"
                     alt="JemaChem Logo"
                     className="w-[170px]"
                   />
                   <ul className="space-y-4 text-white/80">
                     <li>
                       <strong>Email:</strong>{" "}
-                      <span className="underline">
-                        example@shadcnblocks.com
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleCopy("email", "jemachemtrading@gmail.com")
+                        }
+                        className="underline hover:text-gray-300 cursor-pointer"
+                        title="Click to copy"
+                      >
+                        jemachemtrading@gmail.com
+                      </button>
+                      <span className="ml-2 text-xs text-green-400">
+                        {copied.email ? "Copied" : ""}
                       </span>
                     </li>
                     <li>
-                      <strong>Phone:</strong> +1 (555) 123-4567
+                      <strong>Phone:</strong>{" "}
+                      <div>
+                        <button
+                          type="button"
+                          onClick={() => handleCopy("phone1", "+251914119689")}
+                          className="hover:underline cursor-pointer"
+                          title="Click to copy"
+                        >
+                          +251914119689
+                        </button>
+                        <span className="ml-2 text-xs text-green-400">
+                          {copied.phone1 ? "Copied" : ""}
+                        </span>
+                        <div />
+                        <button
+                          type="button"
+                          onClick={() => handleCopy("phone2", "+251975818880")}
+                          className="hover:underline cursor-pointer"
+                          title="Click to copy"
+                        >
+                          +251975818880
+                        </button>
+                        <span className="ml-2 text-xs text-green-400">
+                          {copied.phone2 ? "Copied" : ""}
+                        </span>
+                      </div>
                     </li>
                     <li>
-                      <strong>Address:</strong> 123 Design Street, UI City
+                      <strong>Address:</strong>{" "}
+                      <div>
+                        <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
+                        <div>Fitawrari Damtew St, Kirkos Sub-City</div>
+                        <div>Addis Ababa, Ethiopia</div>
+                      </div>
                     </li>
                     <li>
-                      <strong>Hours:</strong> Mon–Fri, 9am–5pm EST
+                      <strong>Hours:</strong> Mon–Fri, 8:30am–5:30pm EAT
                     </li>
                   </ul>
                 </div>
 
                 {/* Form */}
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstname" className="text-white">
@@ -133,7 +247,11 @@ const ContactUs = () => {
                       <Input
                         id="firstname"
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("firstName")}
                       />
+                      {errors.firstName && (
+                        <p className="text-red-400 text-sm">{errors.firstName.message}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastname" className="text-white">
@@ -142,7 +260,11 @@ const ContactUs = () => {
                       <Input
                         id="lastname"
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("lastName")}
                       />
+                      {errors.lastName && (
+                        <p className="text-red-400 text-sm">{errors.lastName.message}</p>
+                      )}
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -153,17 +275,26 @@ const ContactUs = () => {
                       type="email"
                       id="email"
                       className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                      {...register("email")}
                     />
+                    {errors.email && (
+                      <p className="text-red-400 text-sm">{errors.email.message}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-white">
                       Phone Number *
                     </Label>
-                    <Input
-                      type="tel"
+                    <PhoneInput
                       id="phone"
+                      placeholder="Placeholder"
+                      defaultCountry="TR"
                       className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                      {...register("phone")}
                     />
+                    {errors.phone && (
+                      <p className="text-red-400 text-sm">{errors.phone.message}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-white">
@@ -174,13 +305,43 @@ const ContactUs = () => {
                       placeholder="Tell us about your inquiry"
                       rows={5}
                       className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                      {...register("message")}
                     />
+                    {errors.message && (
+                      <p className="text-red-400 text-sm">{errors.message.message}</p>
+                    )}
                   </div>
+
+                  {submitStatus === "success" && (
+                    <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950">
+                      <CheckCircle className="size-6 text-green-600 dark:text-green-400" />
+                      <span className="text-sm font-medium text-green-800 dark:text-green-200">
+                        Message sent successfully!
+                      </span>
+                    </div>
+                  )}
+                  {submitStatus === "error" && (
+                    <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 dark:border-red-800 dark:bg-red-950">
+                      <AlertCircle className="size-6 text-red-600 dark:text-red-400" />
+                      <span className="text-sm font-medium text-red-800 dark:text-red-200">
+                        Something went wrong. Please try again.
+                      </span>
+                    </div>
+                  )}
+
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-5 rounded-full shadow-md transition"
                   >
-                    Submit
+                    {isSubmitting ? (
+                      <div className="flex items-center gap-2">
+                        <div className="size-6 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                        Sending...
+                      </div>
+                    ) : (
+                      "Submit"
+                    )}
                   </Button>
                 </form>
               </div>
@@ -192,7 +353,7 @@ const ContactUs = () => {
       {/* Map */}
       <div className="w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.1234567890123!2d38.74737985767171!3d8.994876847278666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNTknNDAuMCJOIDM4wrA0NCc1MC42IkUi!5e0!3m2!1sen!2sus!4v1234567890123"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.3063218156344!2d38.74478347401365!3d8.994701889526934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b851721f92e15%3A0x157d3f29df464ef7!2sJEMACHEM%20TRADING%20Plc!5e1!3m2!1sen!2set!4v1755502640690!5m2!1sen!2set"
           width="100%"
           height="400"
           style={{ border: 0 }}

@@ -1,0 +1,4 @@
+'AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x
+
+
+URL = 'https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec'

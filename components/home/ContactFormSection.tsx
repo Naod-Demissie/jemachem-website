@@ -7,7 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import Script from "next/script";
+import { PhoneInput } from "@/components/ui/phone-input";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 interface ContactInfo {
   icon: React.ReactNode;
@@ -57,63 +60,90 @@ const contactInfo: ContactInfo[] = [
   },
 ];
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+const contactSchema = z.object({
+  firstName: z
+    .string()
+    .min(2, { message: "First name must be at least 2 characters" })
+    .max(100, { message: "First name is too long" }),
+  lastName: z
+    .string()
+    .min(2, { message: "Last name must be at least 2 characters" })
+    .max(100, { message: "Last name is too long" }),
+  email: z.string().email({ message: "Please enter a valid email" }),
+  phone: z
+    .string()
+    .min(7, { message: "Please enter a valid phone number" })
+    .max(30, { message: "Phone number is too long" }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters" })
+    .max(2000, { message: "Message is too long" }),
+});
+
+type ContactFormValues = z.infer<typeof contactSchema>;
+
+const Contact = () => {
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmitStatus("idle");
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(values),
+      });
+
+      // With no-cors, the response is opaque; assume success if no network error thrown
+      setSubmitStatus("success");
+      reset();
+    } catch (error) {
+      setSubmitStatus("error");
+    }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const token = (
-      document.querySelector(
-        "#cf-turnstile input[name='cf-turnstile-response']"
-      ) as HTMLInputElement
-    )?.value;
-
-    if (!token) {
-      setSubmitStatus("error");
-      setIsSubmitting(false);
-      return;
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (error) {
+      console.error("Copy failed", error);
     }
+  };
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    const success = Math.random() > 0.3;
-    setSubmitStatus(success ? "success" : "error");
-    setIsSubmitting(false);
-
-    if (success) {
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        company: "",
-        message: "",
-      });
+  const handleCopy = async (key: string, text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied((prev) => ({ ...prev, [key]: true }));
+      setTimeout(() => {
+        setCopied((prev) => ({ ...prev, [key]: false }));
+      }, 1500);
+    } catch (error) {
+      console.error("Copy failed", error);
     }
   };
 
   return (
     <>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        async
-        defer
-      />
       <section id="contact" className="bg-black py-24">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex justify-center mb-3">
@@ -156,9 +186,49 @@ const Contact = () => {
                           <p className="text-gray-300 mb-2 text-sm">
                             {info.description}
                           </p>
-                          <p className="text-white mb-2 text-sm">
-                            {info.value}
-                          </p>
+                          {info.title === "Email" ? (
+                            <p className="text-white mb-2 text-sm">
+                              <button
+                                type="button"
+                                onClick={() => handleCopy("email", "jemachemtrading@gmail.com")}
+                                className="underline hover:text-gray-300 cursor-pointer"
+                                title="Click to copy"
+                              >
+                                jemachemtrading@gmail.com
+                              </button>
+                              <span className="ml-2 text-xs text-green-400">
+                                {copied.email ? "Copied" : ""}
+                              </span>
+                            </p>
+                          ) : info.title === "Phone" ? (
+                            <div className="text-white mb-2 text-sm">
+                              <button
+                                type="button"
+                                onClick={() => handleCopy("phone1", "+251914119689")}
+                                className="hover:underline cursor-pointer"
+                                title="Click to copy"
+                              >
+                                +251914119689
+                              </button>
+                              <span className="ml-2 text-xs text-green-400">
+                                {copied.phone1 ? "Copied" : ""}
+                              </span>
+                              <br />
+                              <button
+                                type="button"
+                                onClick={() => handleCopy("phone2", "+251975818880")}
+                                className="hover:underline cursor-pointer"
+                                title="Click to copy"
+                              >
+                                +251975818880
+                              </button>
+                              <span className="ml-2 text-xs text-green-400">
+                                {copied.phone2 ? "Copied" : ""}
+                              </span>
+                            </div>
+                          ) : (
+                            <p className="text-white mb-2 text-sm">{info.value}</p>
+                          )}
                         </div>
                       </div>
                     </CardContent>
@@ -181,7 +251,7 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="text-white">
@@ -189,13 +259,12 @@ const Contact = () => {
                         </Label>
                         <Input
                           id="firstName"
-                          value={formData.firstName}
-                          onChange={(e) =>
-                            handleInputChange("firstName", e.target.value)
-                          }
-                          required
                           className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                          {...register("firstName")}
                         />
+                        {errors.firstName && (
+                          <p className="text-red-400 text-sm">{errors.firstName.message}</p>
+                        )}
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName" className="text-white">
@@ -203,13 +272,12 @@ const Contact = () => {
                         </Label>
                         <Input
                           id="lastName"
-                          value={formData.lastName}
-                          onChange={(e) =>
-                            handleInputChange("lastName", e.target.value)
-                          }
-                          required
                           className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                          {...register("lastName")}
                         />
+                        {errors.lastName && (
+                          <p className="text-red-400 text-sm">{errors.lastName.message}</p>
+                        )}
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -219,26 +287,27 @@ const Contact = () => {
                       <Input
                         id="email"
                         type="email"
-                        value={formData.email}
-                        onChange={(e) =>
-                          handleInputChange("email", e.target.value)
-                        }
-                        required
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("email")}
                       />
+                      {errors.email && (
+                        <p className="text-red-400 text-sm">{errors.email.message}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company" className="text-white">
-                        Company
+                      <Label htmlFor="phone" className="text-white">
+                        Phone Number *
                       </Label>
-                      <Input
-                        id="company"
-                        value={formData.company}
-                        onChange={(e) =>
-                          handleInputChange("company", e.target.value)
-                        }
+                      <PhoneInput
+                        id="phone"
+                        placeholder="Placeholder"
+                        defaultCountry="TR"
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("phone")}
                       />
+                      {errors.phone && (
+                        <p className="text-red-400 text-sm">{errors.phone.message}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="message" className="text-white">
@@ -246,21 +315,14 @@ const Contact = () => {
                       </Label>
                       <Textarea
                         id="message"
-                        value={formData.message}
-                        onChange={(e) =>
-                          handleInputChange("message", e.target.value)
-                        }
                         rows={5}
-                        required
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("message")}
                       />
+                      {errors.message && (
+                        <p className="text-red-400 text-sm">{errors.message.message}</p>
+                      )}
                     </div>
-
-                    <div
-                      className="cf-turnstile"
-                      id="cf-turnstile"
-                      data-sitekey="your-cloudflare-sitekey"
-                    ></div>
 
                     {submitStatus === "success" && (
                       <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950">

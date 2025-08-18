@@ -42,47 +42,51 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/">
-          <img src="/logo.png" alt="JemaChem Logo" className="w-[120px]" />
+          <img
+            src="/jemachem-company-logo.webp"
+            alt="JemaChem Logo"
+            className="w-[120px]"
+          />
         </Link>
       </div>
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex gap-8 text-white font-medium text-lg">
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+            isActive("/")
+              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
               : ""
           }`}
         >
           Home
         </Link>
-        <Link 
-          href="/about" 
+        <Link
+          href="/about"
           className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/about") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+            isActive("/about")
+              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
               : ""
           }`}
         >
           About
         </Link>
-        <Link 
-          href="/products" 
+        <Link
+          href="/products"
           className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/products") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+            isActive("/products")
+              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
               : ""
           }`}
         >
           Products
         </Link>
-        <Link 
-          href="/contact" 
+        <Link
+          href="/contact"
           className={`relative pb-2 hover:text-orange-200 transition-colors ${
-            isActive("/contact") 
-              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+            isActive("/contact")
+              ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
               : ""
           }`}
         >
@@ -141,11 +145,11 @@ export default function Header() {
           <div className="flex flex-col h-full">
             {/* Mobile Navigation Links */}
             <div className="flex flex-col items-center justify-center flex-1 gap-8 text-white font-medium text-xl">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+                  isActive("/")
+                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
                     : ""
                 }`}
                 onClick={closeMenu}
@@ -155,8 +159,8 @@ export default function Header() {
               <Link
                 href="/about"
                 className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/about") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+                  isActive("/about")
+                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
                     : ""
                 }`}
                 onClick={closeMenu}
@@ -166,8 +170,8 @@ export default function Header() {
               <Link
                 href="/products"
                 className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/products") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+                  isActive("/products")
+                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
                     : ""
                 }`}
                 onClick={closeMenu}
@@ -177,8 +181,8 @@ export default function Header() {
               <Link
                 href="/contact"
                 className={`relative pb-2 hover:text-orange-200 transition-colors ${
-                  isActive("/contact") 
-                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm" 
+                  isActive("/contact")
+                    ? "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-orange-500 after:rounded-sm"
                     : ""
                 }`}
                 onClick={closeMenu}
