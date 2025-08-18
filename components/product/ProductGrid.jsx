@@ -3,9 +3,9 @@
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-import { Search, Filter } from 'lucide-react'
+import { Search } from 'lucide-react'
 import ProductCard from './ProductCard'
+import Dropdown from '@/components/ui/dropdown'
 import {
   Pagination,
   PaginationContent,
@@ -23,20 +23,56 @@ const ProductGrid = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 12
 
-  const categories = [
-    { value: 'all', label: 'All Categories', count: products.length },
-    { value: 'industrial', label: 'Industrial', count: products.filter(p => p.category === 'industrial').length },
-    { value: 'agrochemical', label: 'Agrochemical', count: products.filter(p => p.category === 'agrochemical').length },
-    { value: 'laboratory', label: 'Laboratory', count: products.filter(p => p.category === 'laboratory').length },
-  ]
+  // Extract all unique categories from products
+  const allCategories = useMemo(() => {
+    const categorySet = new Set();
+    products.forEach(product => {
+      if (product.Category) {
+        const categories = product.Category.split(',').map(cat => cat.trim());
+        categories.forEach(cat => categorySet.add(cat));
+      }
+    });
+    return Array.from(categorySet).sort();
+  }, [products]);
+
+  // Function to convert text to title case
+  const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, (txt) => {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  // Create category options for dropdown
+  const categoryOptions = useMemo(() => {
+    const options = [
+      { value: 'all', label: 'All Categories', count: products.length }
+    ];
+
+    allCategories.forEach(category => {
+      const count = products.filter(product => {
+        if (!product.Category) return false;
+        const productCategories = product.Category.split(',').map(cat => cat.trim());
+        return productCategories.includes(category);
+      }).length;
+      
+      options.push({
+        value: category,
+        label: toTitleCase(category.replace(/\s*CHEMICALS\s*/gi, '').trim()),
+        count
+      });
+    });
+
+    return options;
+  }, [products, allCategories]);
 
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
-      const matchesSearch = product.item.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (product.brand && product.brand.toString().toLowerCase().includes(searchTerm.toLowerCase())) ||
-                           (product.country && product.country.toString().toLowerCase().includes(searchTerm.toLowerCase()))
+      const matchesSearch = product["Product Name"]?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (product["Brand Name"] && product["Brand Name"].toString().toLowerCase().includes(searchTerm.toLowerCase())) ||
+                           (product["Source Country"] && product["Source Country"].toString().toLowerCase().includes(searchTerm.toLowerCase()))
       
-      const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory
+      const matchesCategory = selectedCategory === 'all' || 
+        (product.Category && product.Category.split(',').map(cat => cat.trim()).includes(selectedCategory))
       
       return matchesSearch && matchesCategory
     })
@@ -52,19 +88,6 @@ const ProductGrid = ({ products }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'industrial':
-        return 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-      case 'agrochemical':
-        return 'bg-green-100 text-green-800 hover:bg-green-200'
-      case 'laboratory':
-        return 'bg-purple-100 text-purple-800 hover:bg-purple-200'
-      default:
-        return 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-    }
-  }
-
   // Reset to first page when filters change
   useMemo(() => {
     setCurrentPage(1)
@@ -73,35 +96,30 @@ const ProductGrid = ({ products }) => {
   return (
     <div className="space-y-6">
 
-      {/* Search Bar */}
-      <div className="relative max-w-md mx-auto">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-        <Input
-          type="text"
-          placeholder="Search products, brands, or countries..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 pr-4 py-2 bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-        />
-      </div>
+      {/* Search and Filter Row */}
+      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        {/* Search Bar */}
+        <div className="relative max-w-md w-full">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+          <Input
+            type="text"
+            placeholder="Search products, brands, or countries..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-10 pr-4 py-2 bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+          />
+        </div>
 
-      {/* Category Filters */}
-      <div className="flex flex-wrap justify-center gap-3">
-        {categories.map((category) => (
-          <Badge
-            key={category.value}
-            variant={selectedCategory === category.value ? "default" : "outline"}
-            className={`cursor-pointer px-4 py-2 text-sm font-medium transition-all duration-200 ${
-              selectedCategory === category.value 
-                ? 'bg-orange-500 text-white hover:bg-orange-600'
-                : 'bg-[#141416] border-[#272729] text-white hover:bg-[#272729]'
-            }`}
-            onClick={() => setSelectedCategory(category.value)}
-          >
-            <Filter className="mr-2 h-3 w-3" />
-            {category.label} ({category.count})
-          </Badge>
-        ))}
+        {/* Category Dropdown */}
+        <div className="w-full sm:w-64">
+          <Dropdown
+            options={categoryOptions}
+            value={selectedCategory}
+            onChange={setSelectedCategory}
+            placeholder="Select Category"
+            className="w-full"
+          />
+        </div>
       </div>
 
       {/* Results Summary */}
@@ -111,12 +129,12 @@ const ProductGrid = ({ products }) => {
 
       {/* Product Grid */}
       {currentProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-y-4 gap-x-0 justify-items-center">
           {currentProducts.map((product) => (
             <ProductCard
-              key={product.id}
+              key={product.ID}
               product={product}
-              onViewDetails={(product) => router.push(`/products/${product.id}`)}
+              onViewDetails={(product) => router.push(`/products/${product.ID}`)}
             />
           ))}
         </div>
@@ -162,10 +180,11 @@ const ProductGrid = ({ products }) => {
                     <PaginationLink
                       onClick={() => handlePageChange(page)}
                       isActive={isCurrentPage}
-                      className={`cursor-pointer ${
+                      className={`cursor-pointer w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-200 ${
                         isCurrentPage 
-                          ? 'bg-orange-500 text-white hover:bg-orange-600' 
+                          ? 'bg-orange-500 text-white hover:bg-orange-600 border-orange-500' 
                           : 'text-white hover:text-orange-500'
+                          // : 'text-white hover:text-orange-500 hover:bg-white/10 border-gray-600 hover:border-orange-500'
                       }`}
                     >
                       {page}

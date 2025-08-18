@@ -25,7 +25,7 @@ export default function ProductPage() {
       {/* Products Section */}
       <section className="py-16" style={{ backgroundColor: "#0c0c0c" }}>
         <div className="container mx-auto px-4">
-          <ProductGrid products={productsData.chemicals} />
+          <ProductGrid products={productsData} />
         </div>
       </section>
     </div>

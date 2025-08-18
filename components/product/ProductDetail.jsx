@@ -6,37 +6,47 @@ const ProductDetail = ({ product, onBack }) => {
   if (!product) return null
 
   const getCategoryColor = (category) => {
-    switch (category) {
-      case 'industrial':
-        return 'bg-blue-100 text-blue-800'
-      case 'agrochemical':
-        return 'bg-green-100 text-green-800'
-      case 'laboratory':
-        return 'bg-purple-100 text-purple-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
+    const categoryLower = category.toLowerCase();
+    if (categoryLower.includes('detergent') || categoryLower.includes('cosmetics')) {
+      return 'bg-blue-100 text-blue-800'
+    } else if (categoryLower.includes('food') || categoryLower.includes('beverage') || categoryLower.includes('brewery')) {
+      return 'bg-green-100 text-green-800'
+    } else if (categoryLower.includes('water') || categoryLower.includes('treatment')) {
+      return 'bg-purple-100 text-purple-800'
+    } else if (categoryLower.includes('textile')) {
+      return 'bg-pink-100 text-pink-800'
+    } else if (categoryLower.includes('tannery') || categoryLower.includes('shoes')) {
+      return 'bg-orange-100 text-orange-800'
+    } else if (categoryLower.includes('paint') || categoryLower.includes('pigment') || categoryLower.includes('solvents')) {
+      return 'bg-yellow-100 text-yellow-800'
+    } else {
+      return 'bg-gray-100 text-gray-800'
     }
   }
 
-  const formatPackaging = (packaging) => {
-    if (Array.isArray(packaging)) {
-      return packaging.join(', ')
-    }
-    return packaging || 'Contact for details'
+  const formatCategory = (category) => {
+    return category.replace(/\s*CHEMICALS\s*/gi, '').trim();
   }
+
+  const getCategories = () => {
+    if (!product.Category) return [];
+    return product.Category.split(',').map(cat => cat.trim());
+  }
+
+  const categories = getCategories();
 
   const formatBrand = (brand) => {
-    if (Array.isArray(brand)) {
-      return brand.join(', ')
+    if (!brand || brand.trim() === '') {
+      return 'Various brands available'
     }
-    return brand || 'Various brands available'
+    return brand
   }
 
   const formatCountry = (country) => {
-    if (Array.isArray(country)) {
-      return country.join(', ')
+    if (!country || country.trim() === '') {
+      return 'Multiple origins'
     }
-    return country || 'Multiple origins'
+    return country
   }
 
   return (
@@ -45,11 +55,15 @@ const ProductDetail = ({ product, onBack }) => {
       <section className="pt-20 relative flex min-h-[40vh] w-full overflow-hidden bg-[url('/laboratory-chemicals.png')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/60 after:content-['']">
         <div className="relative z-30 m-auto flex max-w-[46.25rem] flex-col items-center justify-center gap-6 px-5">
           <h1 className="text-white text-center font-sans text-3xl leading-tight md:text-4xl lg:text-5xl max-w-4xl font-extrabold">
-            {product.item}
+            {product["Product Name"]}
           </h1>
-          <Badge className={`${getCategoryColor(product.category)} text-base px-4 py-2`}>
-            {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
-          </Badge>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((category, index) => (
+              <Badge key={index} className={`${getCategoryColor(category)} text-base px-4 py-2`}>
+                {formatCategory(category)}
+              </Badge>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -64,17 +78,21 @@ const ProductDetail = ({ product, onBack }) => {
               <Card className="overflow-hidden" style={{ backgroundColor: "#0c0c0c", borderColor: "#272729" }}>
                 <div className="relative aspect-square">
                   <img
-                    src={product.imageURL}
-                    alt={product.item}
+                    src={`/products/${product["Image Path"]}`}
+                    alt={product["Product Name"]}
                     className="h-full w-full object-cover"
                     onError={(e) => {
                       e.target.src = 'https://via.placeholder.com/600x600?text=No+Image+Available'
                     }}
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className={getCategoryColor(product.category)}>
-                      {product.category}
-                    </Badge>
+                    <div className="flex flex-wrap gap-1">
+                      {categories.slice(0, 2).map((category, index) => (
+                        <Badge key={index} className={getCategoryColor(category)}>
+                          {formatCategory(category)}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -92,7 +110,7 @@ const ProductDetail = ({ product, onBack }) => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    {product.description || 'High-quality chemical product suitable for various industrial, agricultural, and laboratory applications. Contact us for detailed specifications and technical data sheets.'}
+                    {product.Description || 'High-quality chemical product suitable for various industrial, agricultural, and laboratory applications. Contact us for detailed specifications and technical data sheets.'}
                   </p>
                 </CardContent>
               </Card>
@@ -105,26 +123,18 @@ const ProductDetail = ({ product, onBack }) => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex items-start gap-3 p-3 bg-[#141416] rounded-lg border border-[#272729]">
-                      <Package className="h-5 w-5 text-blue-400 mt-0.5" />
+                      <Building2 className="h-5 w-5 text-green-400 mt-0.5" />
                       <div>
-                        <h4 className="font-medium text-white">Packaging</h4>
-                        <p className="text-gray-300 text-sm">{formatPackaging(product.packaging)}</p>
+                        <h4 className="font-medium text-white">Brand</h4>
+                        <p className="text-gray-300 text-sm">{formatBrand(product["Brand Name"])}</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-3 p-3 bg-[#141416] rounded-lg border border-[#272729]">
-                      <Building2 className="h-5 w-5 text-green-400 mt-0.5" />
-                      <div>
-                        <h4 className="font-medium text-white">Brand</h4>
-                        <p className="text-gray-300 text-sm">{formatBrand(product.brand)}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 p-3 bg-[#141416] rounded-lg border border-[#272729] sm:col-span-2">
                       <MapPin className="h-5 w-5 text-red-400 mt-0.5" />
                       <div>
                         <h4 className="font-medium text-white">Country of Origin</h4>
-                        <p className="text-gray-300 text-sm">{formatCountry(product.country)}</p>
+                        <p className="text-gray-300 text-sm">{formatCountry(product["Source Country"])}</p>
                       </div>
                     </div>
                   </div>
@@ -141,8 +151,7 @@ const ProductDetail = ({ product, onBack }) => {
                     <div>
                       <h4 className="font-medium text-orange-400 mb-1">Safety Notice</h4>
                       <p className="text-gray-300 text-sm">
-                        Please ensure proper handling and storage according to safety data sheets. 
-                        Contact our technical team for safety guidelines and handling instructions.
+                        {product["Safety Notice"] || 'Please ensure proper handling and storage according to safety data sheets. Contact our technical team for safety guidelines and handling instructions.'}
                       </p>
                     </div>
                   </div>

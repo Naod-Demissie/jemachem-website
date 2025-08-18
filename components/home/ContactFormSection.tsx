@@ -114,7 +114,7 @@ const Contact = () => {
         async
         defer
       />
-      <section className="bg-black py-24">
+      <section id="contact" className="bg-black py-24">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex justify-center mb-3">
             <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">

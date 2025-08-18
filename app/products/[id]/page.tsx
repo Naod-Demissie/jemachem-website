@@ -5,16 +5,16 @@ import { useParams, useRouter } from "next/navigation";
 import ProductDetail from "@/components/product/ProductDetail";
 import productsData from "../products.json";
 
-// Define the product type based on the JSON structure
+// Define the product type based on the new JSON structure
 type Product = {
-  id: string;
-  item: string;
-  packaging: string | string[];
-  brand: string | string[] | null;
-  country: string | string[];
-  category: string;
-  description: string;
-  imageURL: string;
+  "Product Name": string;
+  ID: string;
+  "Brand Name": string;
+  Category: string;
+  "Image Path": string;
+  Description: string;
+  "Safety Notice": string;
+  "Source Country": string;
 };
 
 export default function ProductDetailPage() {
@@ -25,9 +25,7 @@ export default function ProductDetailPage() {
 
   useEffect(() => {
     const productId = params.id;
-    const foundProduct = productsData.chemicals.find(
-      (p) => p.id === productId
-    );
+    const foundProduct = productsData.find((p) => p.ID === productId);
 
     if (foundProduct) {
       setProduct(foundProduct);
@@ -61,4 +59,4 @@ export default function ProductDetailPage() {
       <ProductDetail product={product} onBack={handleBackToProducts} />
     </div>
   );
-} 
+}

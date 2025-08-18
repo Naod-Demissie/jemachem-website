@@ -1,9 +1,9 @@
-import Gallery27 from "@/components/about/gallery27";
-import { Logos10 } from "@/components/about/logo10";
-import { Timeline4 } from "@/components/about/timeline";
-import { Cta11 } from "@/components/about/cta";
-import { Feature16 } from "@/components/about/features";
-import About8 from "@/components/about/about8";
+import Gallery27 from "@/components/about/TeamMembersCarousel";
+import { Logos10 } from "@/components/about/PartnerLogosCarousel";
+import { Timeline4 } from "@/components/about/ProductCategoriesTimeline";
+import { Cta11 } from "@/components/about/ContactCallToAction";
+import { Feature16 } from "@/components/about/CompanyValuesSection";
+import About8 from "@/components/about/AboutHeroSection";
 
 export default function About() {
   return (

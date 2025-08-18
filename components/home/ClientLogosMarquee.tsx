@@ -2,50 +2,71 @@
 
 const ITEMS = [
   {
-    name: "Partner 1",
-    src: "/partners/1.png",
+    name: "our-partners-abyssinia-integrated-steel",
+    src: "/partners/our-partners-abyssinia-integrated-steel.jpg",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 2",
-    src: "/partners/2.jpeg",
+    name: "our-partners-bahirdar-textile",
+    src: "/partners/our-partners-bahirdar-textile.jpg",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 3",
-    src: "/partners/3.jpeg",
+    name: "our-partners-aarti-steel",
+    src: "/partners/our-partners-aarti-steel.png",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 4",
-    src: "/partners/4.png",
+    name: "our-partners-ovid-construction",
+    src: "/partners/our-partners-ovid-construction.jpeg",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 5",
-    src: "/partners/5.jpeg",
+    name: "our-partners-repi-detergent",
+    src: "/partners/our-partners-repi-detergent.png",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 6",
-    src: "/partners/6.png",
+    name: "our-partners-moha-soft-drinks",
+    src: "/partners/our-partners-moha-soft-drinks.jpeg",
     width: 150,
     height: 100,
     href: "#",
   },
   {
-    name: "Partner 7",
-    src: "/partners/7.png",
+    name: "our-partners-kuriftu-resorts",
+    src: "/partners/our-partners-kuriftu-resorts.png",
+    width: 150,
+    height: 100,
+    href: "#",
+  },
+  {
+    name: "our-partners-ethiopian-pharmaceutical-supply",
+    src: "/partners/our-partners-ethiopian-pharmaceutical-supply.jpg",
+    width: 150,
+    height: 100,
+    href: "#",
+  },
+  {
+    name: "our-partners-abyssinia-kojj-food-complex",
+    src: "/partners/our-partners-abyssinia-kojj-food-complex.jpeg",
+    width: 150,
+    height: 100,
+    href: "#",
+  },
+  {
+    name: "our-partners-buluko-textile",
+    src: "/partners/our-partners-buluko-textile.png",
     width: 150,
     height: 100,
     href: "#",
@@ -71,7 +92,7 @@ const Logos = () => {
             {/* First marquee group */}
             <div className="flex shrink-0 animate-marquee items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
               {ITEMS.map((logo, index) => (
-                <a href={logo.href} target="_blank" key={`first-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
+                <a target="_blank" key={`first-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
                   <img
                     src={logo.src}
                     alt={logo.name}
@@ -85,7 +106,7 @@ const Logos = () => {
             {/* Second marquee group for infinite scroll */}
             <div className="flex shrink-0 animate-marquee items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
               {ITEMS.map((logo, index) => (
-                <a href={logo.href} target="_blank" key={`second-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
+                <a target="_blank" key={`second-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
                   <img
                     src={logo.src}
                     alt={logo.name}

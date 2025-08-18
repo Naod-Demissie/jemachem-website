@@ -43,6 +43,7 @@ const About = ({
 
         {/* Why We Began Section */}
         <div className="mb-20 grid gap-14 lg:grid-cols-4 xl:grid-cols-4">
+          {/* First: Text then Image */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -72,10 +73,44 @@ const About = ({
             className="md:col-span-2"
           >
             <img
-              src="/office.jpg"
+              src="/jemachem-office-1.jpeg"
               alt="Our Warehouse"
               className="h-full w-full rounded-xl object-cover"
             />
+          </motion.div>
+          {/* Second: Image then Paragraph (no h1) */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+            className="md:col-span-2"
+          >
+            <img
+              src="/jemachem-office-2.jpg"
+              alt="Our Warehouse"
+              className="h-full w-full rounded-xl object-cover"
+            />
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+            className="md:col-span-2 xl:col-span-2"
+          >
+            <p className="text-lg font-light leading-relaxed text-muted-foreground">
+              In a country where agriculture and industry are the backbone of
+              the economy, access to high-quality and reliable chemical supplies
+              has always been a challenge. We started this company to close that
+              gap — by importing trusted chemical brands and ensuring timely
+              distribution across Ethiopia.
+              <br />
+              <br />
+              Our goal is to support farmers, industrial producers,
+              laboratories, and educational institutions with essential
+              chemicals that help them grow, innovate, and succeed. We pride
+              ourselves on building long-term relationships through quality,
+              reliability, and tailored solutions.
+            </p>
           </motion.div>
         </div>
 

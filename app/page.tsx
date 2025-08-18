@@ -1,11 +1,11 @@
-import { Hero } from "@/components/home/Hero";
-import { Products } from "@/components/home/Products";
-import { ConnectWithUs } from "@/components/home/ConnectWithUs";
-import { Contact } from "@/components/home/ContactUs";
-import About from "@/components/home/About";
-import { Faq } from "@/components/home/FAQ";
-import Logo from "@/components/home/PartnerLogoTicker";
-import { Testimonial } from "@/components/home/Testimonial";
+import { Hero } from "@/components/home/HomeHeroSection";
+import { Products } from "@/components/home/ProductCategoriesShowcase";
+import { ConnectWithUs } from "@/components/home/SocialMediaConnectSection";
+import { Contact } from "@/components/home/ContactFormSection";
+import About from "@/components/home/CompanyOverviewSection";
+import { Faq } from "@/components/home/FrequentlyAskedQuestions";
+import Logo from "@/components/home/ClientLogosMarquee";
+import { Testimonial } from "@/components/home/ClientTestimonialsCarousel";
 
 export default function Home() {
   return (
