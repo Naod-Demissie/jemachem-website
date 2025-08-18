@@ -180,11 +180,10 @@ const ProductGrid = ({ products }) => {
                     <PaginationLink
                       onClick={() => handlePageChange(page)}
                       isActive={isCurrentPage}
-                      className={`cursor-pointer w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-200 ${
-                        isCurrentPage 
-                          ? 'bg-orange-500 text-white hover:bg-orange-600 border-orange-500' 
-                          : 'text-white hover:text-orange-500'
-                          // : 'text-white hover:text-orange-500 hover:bg-white/10 border-gray-600 hover:border-orange-500'
+                      className={`cursor-pointer transition-all duration-200 flex items-center justify-center ${
+                        isCurrentPage
+                          ? 'w-10 h-10 rounded-full border bg-orange-500 text-white hover:bg-orange-600 border-orange-500'
+                          : 'h-10 px-3 text-white hover:text-orange-500'
                       }`}
                     >
                       {page}

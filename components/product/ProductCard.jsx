@@ -22,8 +22,20 @@ const ProductCard = ({ product, onViewDetails }) => {
     }
   }
 
-  const formatCategory = (category) => {
-    return category.replace(/\s*CHEMICALS\s*/gi, '').trim();
+  const mapCategoryLabel = (category) => {
+    if (!category) return ''
+    const normalized = category.toUpperCase().trim()
+    const base = normalized.replace(/\s*CHEMICALS\s*$/,'')
+    const mapping = {
+      'DETERGENT/COSMETICS': 'Detergents',
+      'FOOD/BEVERAGE/BREWERY': 'Food Grade',
+      'PAINT/PIGMENT AND SOLVENTS': 'Paints',
+      'PLASTIC AND FOAM': 'Plastics',
+      'TANNERY/SHOES': 'Leather',
+      'TEXTILE': 'Textiles',
+      'WATER TREATMENT': 'Water Treatment',
+    }
+    return mapping[base] || category.replace(/\s*CHEMICALS\s*/gi, '').trim()
   }
 
   const getCountryFlag = (country) => {
@@ -79,7 +91,7 @@ const ProductCard = ({ product, onViewDetails }) => {
         <div className="flex flex-wrap gap-2">
           {categories.map((category, index) => (
             <Badge key={index} className={`${getCategoryColor(category)} text-xs px-3 py-1 rounded-full border backdrop-blur-sm`}>
-              {formatCategory(category)}
+              {mapCategoryLabel(category)}
             </Badge>
           ))}
         </div>

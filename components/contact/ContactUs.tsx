@@ -10,6 +10,7 @@ import { PhoneInput } from "@/components/ui/phone-input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { AlertCircle, CheckCircle } from "lucide-react";
 
 const APPS_SCRIPT_URL =
@@ -199,46 +200,55 @@ const ContactUs = () => {
                   <ul className="space-y-4 text-white/80">
                     <li>
                       <strong>Email:</strong>{" "}
-                      <button
-                        type="button"
-                        onClick={() =>
-                          handleCopy("email", "jemachemtrading@gmail.com")
-                        }
-                        className="underline hover:text-gray-300 cursor-pointer"
-                        title="Click to copy"
-                      >
-                        jemachemtrading@gmail.com
-                      </button>
-                      <span className="ml-2 text-xs text-green-400">
-                        {copied.email ? "Copied" : ""}
-                      </span>
+                      <Tooltip {...(copied.email ? { open: true } : {})}>
+                        <TooltipTrigger asChild>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              handleCopy("email", "jemachemtrading@gmail.com")
+                            }
+                            className="underline hover:text-gray-300 cursor-pointer"
+                          >
+                            jemachemtrading@gmail.com
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent side="top">
+                          {copied.email ? "Copied!" : "Click to copy"}
+                        </TooltipContent>
+                      </Tooltip>
                     </li>
                     <li>
                       <strong>Phone:</strong>{" "}
                       <div>
-                        <button
-                          type="button"
-                          onClick={() => handleCopy("phone1", "+251914119689")}
-                          className="hover:underline cursor-pointer"
-                          title="Click to copy"
-                        >
-                          +251914119689
-                        </button>
-                        <span className="ml-2 text-xs text-green-400">
-                          {copied.phone1 ? "Copied" : ""}
-                        </span>
+                        <Tooltip {...(copied.phone1 ? { open: true } : {})}>
+                          <TooltipTrigger asChild>
+                            <button
+                              type="button"
+                              onClick={() => handleCopy("phone1", "+251914119689")}
+                              className="hover:underline cursor-pointer"
+                            >
+                              +251914119689
+                            </button>
+                          </TooltipTrigger>
+                          <TooltipContent side="top">
+                            {copied.phone1 ? "Copied!" : "Click to copy"}
+                          </TooltipContent>
+                        </Tooltip>
                         <div />
-                        <button
-                          type="button"
-                          onClick={() => handleCopy("phone2", "+251975818880")}
-                          className="hover:underline cursor-pointer"
-                          title="Click to copy"
-                        >
-                          +251975818880
-                        </button>
-                        <span className="ml-2 text-xs text-green-400">
-                          {copied.phone2 ? "Copied" : ""}
-                        </span>
+                        <Tooltip {...(copied.phone2 ? { open: true } : {})}>
+                          <TooltipTrigger asChild>
+                            <button
+                              type="button"
+                              onClick={() => handleCopy("phone2", "+251975818880")}
+                              className="hover:underline cursor-pointer"
+                            >
+                              +251975818880
+                            </button>
+                          </TooltipTrigger>
+                          <TooltipContent side="top">
+                            {copied.phone2 ? "Copied!" : "Click to copy"}
+                          </TooltipContent>
+                        </Tooltip>
                       </div>
                     </li>
                     <li>

@@ -24,8 +24,20 @@ const ProductDetail = ({ product, onBack }) => {
     }
   }
 
-  const formatCategory = (category) => {
-    return category.replace(/\s*CHEMICALS\s*/gi, '').trim();
+  const mapCategoryLabel = (category) => {
+    if (!category) return ''
+    const normalized = category.toUpperCase().trim()
+    const base = normalized.replace(/\s*CHEMICALS\s*$/,'')
+    const mapping = {
+      'DETERGENT/COSMETICS': 'Detergents',
+      'FOOD/BEVERAGE/BREWERY': 'Food Grade',
+      'PAINT/PIGMENT AND SOLVENTS': 'Paints',
+      'PLASTIC AND FOAM': 'Plastics',
+      'TANNERY/SHOES': 'Leather',
+      'TEXTILE': 'Textiles',
+      'WATER TREATMENT': 'Water Treatment',
+    }
+    return mapping[base] || category.replace(/\s*CHEMICALS\s*/gi, '').trim()
   }
 
   const getCategories = () => {
@@ -58,11 +70,11 @@ const ProductDetail = ({ product, onBack }) => {
             {product["Product Name"]}
           </h1>
           <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category, index) => (
-              <Badge key={index} className={`${getCategoryColor(category)} text-base px-4 py-2`}>
-                {formatCategory(category)}
-              </Badge>
-            ))}
+                          {categories.map((category, index) => (
+                <Badge key={index} className={`${getCategoryColor(category)} text-base px-4 py-2`}>
+                  {mapCategoryLabel(category)}
+                </Badge>
+              ))}
           </div>
         </div>
       </section>
@@ -89,7 +101,7 @@ const ProductDetail = ({ product, onBack }) => {
                     <div className="flex flex-wrap gap-1">
                       {categories.slice(0, 2).map((category, index) => (
                         <Badge key={index} className={getCategoryColor(category)}>
-                          {formatCategory(category)}
+                          {mapCategoryLabel(category)}
                         </Badge>
                       ))}
                     </div>
