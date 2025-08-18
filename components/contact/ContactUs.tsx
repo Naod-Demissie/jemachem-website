@@ -12,7 +12,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AlertCircle, CheckCircle } from "lucide-react";
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
+const APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
 
 const contactSchema = z.object({
   firstName: z
@@ -38,9 +39,16 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactUs = () => {
   const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<ContactFormValues>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       firstName: "",
@@ -108,42 +116,52 @@ const ContactUs = () => {
       </section>
 
       {/* Main Content */}
-      <div className="py-32">
+      <div
+        className="py-22"
+        style={{
+          backgroundImage: "url(/static/images/testimonial-background.svg)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "50%",
+          backgroundSize: "auto",
+        }}
+      >
         <div className="container mx-auto max-w-7xl">
           {/* Three Info Cards */}
-          <div className="grid gap-4 md:grid-cols-3 md:gap-8">
-            {[
-              {
-                title: "Sales",
-                desc: "Interested in learning more about our platform? Contact our sales team for more information.",
-                linkText: "Request a demo",
-              },
-              {
-                title: "Support",
-                desc: "We're here to help with any platform questions. Check out our FAQs and learn more.",
-                linkText: "Get support",
-              },
-              {
-                title: "General Inquiries",
-                desc: "For general inquiries, please reach out to us using the form below.",
-                linkText: "Contact us",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex flex-col justify-between gap-6 rounded-lg border p-6"
-              >
-                <div>
-                  <h2 className="mb-4 text-xl font-medium md:text-2xl">
-                    {item.title}
-                  </h2>
-                  <p className="text-muted-foreground">{item.desc}</p>
+          <div className="relative rounded-3xl p-8 md:p-12">
+            <div className="grid gap-4 md:grid-cols-3 md:gap-8">
+              {[
+                {
+                  title: "Sales",
+                  desc: "Interested in learning more about our platform? Contact our sales team for more information.",
+                  linkText: "Request a demo",
+                },
+                {
+                  title: "Support",
+                  desc: "We're here to help with any platform questions. Check out our FAQs and learn more.",
+                  linkText: "Get support",
+                },
+                {
+                  title: "General Inquiries",
+                  desc: "For general inquiries, please reach out to us using the form below.",
+                  linkText: "Contact us",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col justify-between gap-6 rounded-2xl border border-[#E6ECFF] bg-white/70 p-6 shadow-sm backdrop-blur-sm"
+                >
+                  <div>
+                    <h2 className="mb-4 text-xl font-medium md:text-2xl">
+                      {item.title}
+                    </h2>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                  <a href="#" className="hover:underline">
+                    {item.linkText}
+                  </a>
                 </div>
-                <a href="#" className="hover:underline">
-                  {item.linkText}
-                </a>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -250,7 +268,9 @@ const ContactUs = () => {
                         {...register("firstName")}
                       />
                       {errors.firstName && (
-                        <p className="text-red-400 text-sm">{errors.firstName.message}</p>
+                        <p className="text-red-400 text-sm">
+                          {errors.firstName.message}
+                        </p>
                       )}
                     </div>
                     <div className="space-y-2">
@@ -263,7 +283,9 @@ const ContactUs = () => {
                         {...register("lastName")}
                       />
                       {errors.lastName && (
-                        <p className="text-red-400 text-sm">{errors.lastName.message}</p>
+                        <p className="text-red-400 text-sm">
+                          {errors.lastName.message}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -278,7 +300,9 @@ const ContactUs = () => {
                       {...register("email")}
                     />
                     {errors.email && (
-                      <p className="text-red-400 text-sm">{errors.email.message}</p>
+                      <p className="text-red-400 text-sm">
+                        {errors.email.message}
+                      </p>
                     )}
                   </div>
                   <div className="space-y-2">
@@ -293,7 +317,9 @@ const ContactUs = () => {
                       {...register("phone")}
                     />
                     {errors.phone && (
-                      <p className="text-red-400 text-sm">{errors.phone.message}</p>
+                      <p className="text-red-400 text-sm">
+                        {errors.phone.message}
+                      </p>
                     )}
                   </div>
                   <div className="space-y-2">
@@ -308,7 +334,9 @@ const ContactUs = () => {
                       {...register("message")}
                     />
                     {errors.message && (
-                      <p className="text-red-400 text-sm">{errors.message.message}</p>
+                      <p className="text-red-400 text-sm">
+                        {errors.message.message}
+                      </p>
                     )}
                   </div>
 
