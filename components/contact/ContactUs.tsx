@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion, Variants } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,6 +16,30 @@ import { AlertCircle, CheckCircle } from "lucide-react";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
+
+// Animation variants (subtle, no layout impact)
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
 
 const contactSchema = z.object({
   firstName: z
@@ -102,18 +127,26 @@ const ContactUs = () => {
           />
           <div className="absolute inset-0 bg-black opacity-80" />
         </div>
-        <div className="relative z-10 flex h-full items-center justify-center pt-40 text-center text-white">
+        <motion.div
+          className="relative z-10 flex h-full items-center justify-center pt-40 text-center text-white"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="max-w-xl">
-            <div className="flex justify-center mb-3">
+            <motion.div
+              className="flex justify-center mb-3"
+              variants={fadeInUp}
+            >
               <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
                 <p className="text-sm font-normal text-white">CONTACT US</p>
               </div>
-            </div>
-            <p className="text-4xl font-medium md:text-5xl">
+            </motion.div>
+            <motion.p className="text-4xl font-medium md:text-5xl" variants={fadeInUp}>
               Get in touch with us
-            </p>
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Main Content */}
@@ -129,7 +162,13 @@ const ContactUs = () => {
         <div className="container mx-auto max-w-7xl">
           {/* Three Info Cards */}
           <div className="relative rounded-3xl p-8 md:p-12">
-            <div className="grid gap-4 md:grid-cols-3 md:gap-8">
+            <motion.div
+              className="grid gap-4 md:grid-cols-3 md:gap-8"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            >
               {[
                 {
                   title: "Sales",
@@ -147,8 +186,9 @@ const ContactUs = () => {
                   linkText: "Contact us",
                 },
               ].map((item, i) => (
-                <div
+                <motion.div
                   key={i}
+                  variants={fadeInUp}
                   className="flex flex-col justify-between gap-6 rounded-2xl border border-[#E6ECFF] bg-white/70 p-6 shadow-sm backdrop-blur-sm"
                 >
                   <div>
@@ -160,9 +200,9 @@ const ContactUs = () => {
                   <a href="#" className="hover:underline">
                     {item.linkText}
                   </a>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -172,224 +212,265 @@ const ContactUs = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
-              <h1 className="mb-4 text-3xl text-white font-bold tracking-tight sm:text-4xl md:text-5xl">
+              <motion.h1
+                className="mb-4 text-3xl text-white font-bold tracking-tight sm:text-4xl md:text-5xl"
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 Contact Us
-              </h1>
-              <p className="text-white mx-auto max-w-2xl text-lg">
+              </motion.h1>
+              <motion.p
+                className="text-white mx-auto max-w-2xl text-lg"
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 Ready to start your next project? Our team is here to help you
                 succeed. Reach out and let&#39;s discuss how we can bring your
                 ideas to life.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
         <div className="mt-24 flex items-center justify-center">
-          <Card
-            className="w-full max-w-7xl border-none text-white rounded-4xl mx-auto"
-            style={{ backgroundColor: "#0c0c0c" }}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="w-full max-w-7xl"
           >
-            <CardContent className="lg:px-18 py-12 lg:py-24">
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
-                {/* Contact Info */}
-                <div className="space-y-8 text-left">
-                  <img
-                    src="/jemachem-company-logo.webp"
-                    alt="JemaChem Logo"
-                    className="w-[170px]"
-                  />
-                  <ul className="space-y-4 text-white/80">
-                    <li>
-                      <strong>Email:</strong>{" "}
-                      <Tooltip {...(copied.email ? { open: true } : {})}>
-                        <TooltipTrigger asChild>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              handleCopy("email", "jemachemtrading@gmail.com")
-                            }
-                            className="underline hover:text-gray-300 cursor-pointer"
-                          >
-                            jemachemtrading@gmail.com
-                          </button>
-                        </TooltipTrigger>
-                        <TooltipContent side="top">
-                          {copied.email ? "Copied!" : "Click to copy"}
-                        </TooltipContent>
-                      </Tooltip>
-                    </li>
-                    <li>
-                      <strong>Phone:</strong>{" "}
-                      <div>
-                        <Tooltip {...(copied.phone1 ? { open: true } : {})}>
-                          <TooltipTrigger asChild>
-                            <button
-                              type="button"
-                              onClick={() => handleCopy("phone1", "+251914119689")}
-                              className="hover:underline cursor-pointer"
-                            >
-                              +251914119689
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent side="top">
-                            {copied.phone1 ? "Copied!" : "Click to copy"}
-                          </TooltipContent>
-                        </Tooltip>
-                        <div />
-                        <Tooltip {...(copied.phone2 ? { open: true } : {})}>
-                          <TooltipTrigger asChild>
-                            <button
-                              type="button"
-                              onClick={() => handleCopy("phone2", "+251975818880")}
-                              className="hover:underline cursor-pointer"
-                            >
-                              +251975818880
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent side="top">
-                            {copied.phone2 ? "Copied!" : "Click to copy"}
-                          </TooltipContent>
-                        </Tooltip>
-                      </div>
-                    </li>
-                    <li>
-                      <strong>Address:</strong>{" "}
-                      <div>
-                        <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
-                        <div>Fitawrari Damtew St, Kirkos Sub-City</div>
-                        <div>Addis Ababa, Ethiopia</div>
-                      </div>
-                    </li>
-                    <li>
-                      <strong>Hours:</strong> Mon–Fri, 8:30am–5:30pm EAT
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Form */}
-                <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstname" className="text-white">
-                        First Name *
-                      </Label>
-                      <Input
-                        id="firstname"
-                        className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-                        {...register("firstName")}
-                      />
-                      {errors.firstName && (
-                        <p className="text-red-400 text-sm">
-                          {errors.firstName.message}
-                        </p>
-                      )}
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastname" className="text-white">
-                        Last Name *
-                      </Label>
-                      <Input
-                        id="lastname"
-                        className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-                        {...register("lastName")}
-                      />
-                      {errors.lastName && (
-                        <p className="text-red-400 text-sm">
-                          {errors.lastName.message}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white">
-                      Email Address *
-                    </Label>
-                    <Input
-                      type="email"
-                      id="email"
-                      className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-                      {...register("email")}
-                    />
-                    {errors.email && (
-                      <p className="text-red-400 text-sm">
-                        {errors.email.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-white">
-                      Phone Number *
-                    </Label>
-                    <PhoneInput
-                      id="phone"
-                      placeholder="Placeholder"
-                      defaultCountry="TR"
-                      className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-                      {...register("phone")}
-                    />
-                    {errors.phone && (
-                      <p className="text-red-400 text-sm">
-                        {errors.phone.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-white">
-                      Message *
-                    </Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your inquiry"
-                      rows={5}
-                      className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
-                      {...register("message")}
-                    />
-                    {errors.message && (
-                      <p className="text-red-400 text-sm">
-                        {errors.message.message}
-                      </p>
-                    )}
-                  </div>
-
-                  {submitStatus === "success" && (
-                    <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950">
-                      <CheckCircle className="size-6 text-green-600 dark:text-green-400" />
-                      <span className="text-sm font-medium text-green-800 dark:text-green-200">
-                        Message sent successfully!
-                      </span>
-                    </div>
-                  )}
-                  {submitStatus === "error" && (
-                    <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 dark:border-red-800 dark:bg-red-950">
-                      <AlertCircle className="size-6 text-red-600 dark:text-red-400" />
-                      <span className="text-sm font-medium text-red-800 dark:text-red-200">
-                        Something went wrong. Please try again.
-                      </span>
-                    </div>
-                  )}
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-5 rounded-full shadow-md transition"
+            <Card
+              className="w-full max-w-7xl border-none text-white rounded-4xl mx-auto"
+              style={{ backgroundColor: "#0c0c0c" }}
+            >
+              <CardContent className="lg:px-18 py-12 lg:py-24">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
+                  {/* Contact Info */}
+                  <motion.div
+                    className="space-y-8 text-left"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
                   >
-                    {isSubmitting ? (
-                      <div className="flex items-center gap-2">
-                        <div className="size-6 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                        Sending...
+                    <motion.img
+                      src="/jemachem-company-logo.webp"
+                      alt="JemaChem Logo"
+                      className="w-[170px]"
+                      variants={fadeIn}
+                    />
+                    <motion.ul className="space-y-4 text-white/80" variants={fadeInUp}>
+                      <li>
+                        <strong>Email:</strong>{" "}
+                        <Tooltip {...(copied.email ? { open: true } : {})}>
+                          <TooltipTrigger asChild>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                handleCopy("email", "jemachemtrading@gmail.com")
+                              }
+                              className="underline hover:text-gray-300 cursor-pointer"
+                            >
+                              jemachemtrading@gmail.com
+                            </button>
+                          </TooltipTrigger>
+                          <TooltipContent side="top">
+                            {copied.email ? "Copied!" : "Click to copy"}
+                          </TooltipContent>
+                        </Tooltip>
+                      </li>
+                      <li>
+                        <strong>Phone:</strong>{" "}
+                        <div>
+                          <Tooltip {...(copied.phone1 ? { open: true } : {})}>
+                            <TooltipTrigger asChild>
+                              <button
+                                type="button"
+                                onClick={() => handleCopy("phone1", "+251914119689")}
+                                className="hover:underline cursor-pointer"
+                              >
+                                +251914119689
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent side="top">
+                              {copied.phone1 ? "Copied!" : "Click to copy"}
+                            </TooltipContent>
+                          </Tooltip>
+                          <div />
+                          <Tooltip {...(copied.phone2 ? { open: true } : {})}>
+                            <TooltipTrigger asChild>
+                              <button
+                                type="button"
+                                onClick={() => handleCopy("phone2", "+251975818880")}
+                                className="hover:underline cursor-pointer"
+                              >
+                                +251975818880
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent side="top">
+                              {copied.phone2 ? "Copied!" : "Click to copy"}
+                            </TooltipContent>
+                          </Tooltip>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Address:</strong>{" "}
+                        <div>
+                          <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
+                          <div>Fitawrari Damtew St, Kirkos Sub-City</div>
+                          <div>Addis Ababa, Ethiopia</div>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Hours:</strong> Mon–Fri, 8:30am–5:30pm EAT
+                      </li>
+                    </motion.ul>
+                  </motion.div>
+
+                  {/* Form */}
+                  <motion.form
+                    className="space-y-6"
+                    onSubmit={handleSubmit(onSubmit)}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstname" className="text-white">
+                          First Name *
+                        </Label>
+                        <Input
+                          id="firstname"
+                          className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                          {...register("firstName")}
+                        />
+                        {errors.firstName && (
+                          <p className="text-red-400 text-sm">
+                            {errors.firstName.message}
+                          </p>
+                        )}
                       </div>
-                    ) : (
-                      "Submit"
+                      <div className="space-y-2">
+                        <Label htmlFor="lastname" className="text-white">
+                          Last Name *
+                        </Label>
+                        <Input
+                          id="lastname"
+                          className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                          {...register("lastName")}
+                        />
+                        {errors.lastName && (
+                          <p className="text-red-400 text-sm">
+                            {errors.lastName.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-white">
+                        Email Address *
+                      </Label>
+                      <Input
+                        type="email"
+                        id="email"
+                        className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("email")}
+                      />
+                      {errors.email && (
+                        <p className="text-red-400 text-sm">
+                          {errors.email.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone" className="text-white">
+                        Phone Number *
+                      </Label>
+                      <PhoneInput
+                        id="phone"
+                        placeholder="Placeholder"
+                        defaultCountry="TR"
+                        className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("phone")}
+                      />
+                      {errors.phone && (
+                        <p className="text-red-400 text-sm">
+                          {errors.phone.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="message" className="text-white">
+                        Message *
+                      </Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Tell us about your inquiry"
+                        rows={5}
+                        className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
+                        {...register("message")}
+                      />
+                      {errors.message && (
+                        <p className="text-red-400 text-sm">
+                          {errors.message.message}
+                        </p>
+                      )}
+                    </div>
+
+                    {submitStatus === "success" && (
+                      <div className="flex items-center gap-2 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950">
+                        <CheckCircle className="size-6 text-green-600 dark:text-green-400" />
+                        <span className="text-sm font-medium text-green-800 dark:text-green-200">
+                          Message sent successfully!
+                        </span>
+                      </div>
                     )}
-                  </Button>
-                </form>
-              </div>
-            </CardContent>
-          </Card>
+                    {submitStatus === "error" && (
+                      <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 dark:border-red-800 dark:bg-red-950">
+                        <AlertCircle className="size-6 text-red-600 dark:text-red-400" />
+                        <span className="text-sm font-medium text-red-800 dark:text-red-200">
+                          Something went wrong. Please try again.
+                        </span>
+                      </div>
+                    )}
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-5 rounded-full shadow-md transition"
+                    >
+                      {isSubmitting ? (
+                        <div className="flex items-center gap-2">
+                          <div className="size-6 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                          Sending...
+                        </div>
+                      ) : (
+                        "Submit"
+                      )}
+                    </Button>
+                  </motion.form>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 
       {/* Map */}
-      <div className="w-full">
+      <motion.div
+        className="w-full"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.3063218156344!2d38.74478347401365!3d8.994701889526934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b851721f92e15%3A0x157d3f29df464ef7!2sJEMACHEM%20TRADING%20Plc!5e1!3m2!1sen!2set!4v1755502640690!5m2!1sen!2set"
           width="100%"
@@ -400,7 +481,7 @@ const ContactUs = () => {
           referrerPolicy="no-referrer-when-downgrade"
           title="Jemachem Location"
         />
-      </div>
+      </motion.div>
     </>
   );
 };
