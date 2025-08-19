@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Factory, Leaf, TestTube } from "lucide-react";
+import { ChevronRight, Beaker, Layers, Utensils, Paintbrush, Scissors, Droplets } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
@@ -56,7 +56,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/detergent2.png"
-              alt="Industrial Chemicals"
+              alt="Detergent and Cosmetics Chemicals"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -64,12 +64,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Factory className="h-4 w-4 sm:h-5 sm:w-5" />
-                Industrial Grade
+                <Beaker className="h-4 w-4 sm:h-5 sm:w-5" />
+                Detergent & Cosmetics
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  Powering manufacturing and production efficiency.
+                  Ingredients for soaps and personal care.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -89,7 +89,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/leather1.avif"
-              alt="Agrochemicals"
+              alt="Tannery and Shoes Chemicals"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -97,12 +97,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Leaf className="h-4 w-4 sm:h-5 sm:w-5" />
-                Farm-Ready
+                <Layers className="h-4 w-4 sm:h-5 sm:w-5" />
+                Tannery & Footwear
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  Maximize yield with precision agrochemicals.
+                  Chemicals for leather and shoes.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -122,7 +122,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/food-and-beverage.jpg"
-              alt="Laboratory Chemicals"
+              alt="Food, Beverage, and Brewery Chemicals"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -130,12 +130,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <TestTube className="h-4 w-4 sm:h-5 sm:w-5" />
-                Lab Certified
+                <Utensils className="h-4 w-4 sm:h-5 sm:w-5" />
+                Food & Beverage
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  High-purity reagents for scientific breakthroughs.
+                  Additives and cleaners for food and drinks.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -155,7 +155,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/paint1.jpg"
-              alt="Industrial Chemicals"
+              alt="Paint, Pigment and Solvents"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -163,12 +163,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Factory className="h-4 w-4 sm:h-5 sm:w-5" />
-                Industrial Grade
+                <Paintbrush className="h-4 w-4 sm:h-5 sm:w-5" />
+                Paints & Solvents
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  Powering manufacturing and production efficiency.
+                  Paint colors and solvents.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -188,7 +188,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/textile.jpg"
-              alt="Agrochemicals"
+              alt="Textile Chemicals"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -196,12 +196,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <Leaf className="h-4 w-4 sm:h-5 sm:w-5" />
-                Farm-Ready
+                <Scissors className="h-4 w-4 sm:h-5 sm:w-5" />
+                Textile
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  Maximize yield with precision agrochemicals.
+                  Dyes and finishes for fabrics.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -221,7 +221,7 @@ const Products = () => {
           >
             <Image
               src="/product-category/water-treatement1.webp"
-              alt="Laboratory Chemicals"
+              alt="Water Treatment Chemicals"
               width={400}
               height={450}
               className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
@@ -229,12 +229,12 @@ const Products = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
-                <TestTube className="h-4 w-4 sm:h-5 sm:w-5" />
-                Lab Certified
+                <Droplets className="h-4 w-4 sm:h-5 sm:w-5" />
+                Water Treatment
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  High-purity reagents for scientific breakthroughs.
+                  Chemicals to clean and treat water.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products

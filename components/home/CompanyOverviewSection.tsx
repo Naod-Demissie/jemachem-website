@@ -17,8 +17,8 @@ interface AboutProps {
 const defaultAchievements = [
   { label: "Clients Served", value: "200+" },
   { label: "Industries Covered", value: "15+" },
-  { label: "On-time Deliveries", value: "98%" },
-  { label: "Years of Experience", value: "12+" },
+  { label: "On-time Deliveries", value: "100%" },
+  { label: "Years of Experience", value: "5+" },
 ];
 
 const About = ({

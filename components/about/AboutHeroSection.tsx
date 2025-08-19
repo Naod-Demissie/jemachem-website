@@ -43,7 +43,7 @@ export default function About8() {
               </div>
               <div>
                 <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
-                  12+
+                  5+
                 </h3>
                 <p className="mt-1 font-medium text-muted-foreground">
                   Years of Expertise
@@ -51,7 +51,7 @@ export default function About8() {
               </div>
               <div>
                 <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
-                  98%
+                  100%
                 </h3>
                 <p className="mt-1 font-medium text-muted-foreground">
                   On-time Delivery Rate
