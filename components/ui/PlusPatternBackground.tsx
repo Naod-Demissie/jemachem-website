@@ -11,7 +11,7 @@ const PlusPatternBackground: React.FC<PlusPatternBackgroundProps> = ({ className
         <defs>
           {/* Smaller + with wider spacing */}
           <pattern id="plus-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
-            <text x="0" y="10" fontSize="8" fontFamily="Arial, sans-serif" fill="#999" opacity="0.3">+</text>
+            <text x="0" y="10" fontSize="8" fontFamily="Arial, sans-serif" fill="#f97316" opacity="0.3">+</text>
           </pattern>
 
           {/* Radial gradient fade (top → bottom) */}

@@ -34,7 +34,7 @@ const About = ({
       <PlusPatternBackground />
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* About Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
@@ -46,85 +46,69 @@ const About = ({
         {/* Why We Began Section */}
         <div className="mb-20 grid gap-14 lg:grid-cols-4 xl:grid-cols-4">
           {/* First: Text then Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
             className="md:col-span-2 xl:col-span-2"
           >
-            <h2 className="mb-8 text-4xl font-bold">Why We Began</h2>
+            <h2 className="mb-8 text-4xl font-bold">What set us apart</h2>
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
-              In a country where agriculture and industry are the backbone of
-              the economy, access to high-quality and reliable chemical supplies
-              has always been a challenge. We started this company to close that
-              gap — by importing trusted chemical brands and ensuring timely
-              distribution across Ethiopia.
+              Jemachem Trading PLC is a premier chemical importer company with a proven track record of sourcing and distributing high-quality chemicals from around the world. Our commitment to customer satisfaction, safety, and compliance sets us apart as a trusted partner in the industry.
               <br />
               <br />
-              Our goal is to support farmers, industrial producers,
-              laboratories, and educational institutions with essential
-              chemicals that help them grow, innovate, and succeed. We pride
-              ourselves on building long-term relationships through quality,
-              reliability, and tailored solutions.
+              At Jemachem Trading PLC, we understand the importance of delivering top-notch products and services to our clients. Our team is dedicated to providing best-in-class chemicals and ensuring that our customers receive their orders in a timely and efficient manner. With our expertise in managing logistics and supply chain, we guarantee a seamless experience for our clients.
             </p>
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
             className="md:col-span-2"
           >
             <img
-              src="/jemachem-office-1.jpeg"
+              src="/jemachem-office-1.webp"
               alt="Our Warehouse"
-              className="h-full w-full rounded-xl object-cover"
+              className="w-full h-74 md:h-96 rounded-xl object-cover"
             />
           </motion.div>
           {/* Second: Image then Paragraph (no h1) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
             className="md:col-span-2"
           >
             <img
-              src="/jemachem-office-2.jpg"
+              src="/jemachem-office-2.webp"
               alt="Our Warehouse"
-              className="h-full w-full rounded-xl object-cover"
+              className="w-full h-72 md:h-96 rounded-xl object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
             className="md:col-span-2 xl:col-span-2"
           >
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
-              In a country where agriculture and industry are the backbone of
-              the economy, access to high-quality and reliable chemical supplies
-              has always been a challenge. We started this company to close that
-              gap — by importing trusted chemical brands and ensuring timely
-              distribution across Ethiopia.
+              In addition to our exceptional products and services, we offer technical support and expertise to help our clients utilize the chemicals effectively and safely. We are committed to going above and beyond to meet all of our clients' chemical needs.
               <br />
               <br />
-              Our goal is to support farmers, industrial producers,
-              laboratories, and educational institutions with essential
-              chemicals that help them grow, innovate, and succeed. We pride
-              ourselves on building long-term relationships through quality,
-              reliability, and tailored solutions.
+              With a focus on quality, reliability, and customer satisfaction, Jemachem Trading PLC is your trusted partner for all your chemical importation needs. Thank you for choosing us as your preferred chemical supplier.
             </p>
           </motion.div>
         </div>
 
         {/* Achievements Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.9 }}
           className="mx-auto max-w-5xl"
         >
           <div className="rounded-2xl bg-gray-300/50 p-8 md:p-12 lg:p-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 1.2 }}
@@ -142,11 +126,13 @@ const About = ({
               {achievements.map((item, idx) => (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ 
-                    duration: 1.0, 
-                    ease: "easeOut", 
-                    delay: 1.5 + (idx * 0.15) 
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{
+                    duration: 1.0,
+                    ease: "easeOut",
+                    delay: 1.5 + idx * 0.15,
                   }}
                   className="flex flex-col items-center justify-center text-center"
                   key={item.label + idx}

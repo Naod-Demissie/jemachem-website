@@ -67,8 +67,8 @@ export default function About8() {
             <p className="text-lg">
               Access to high-quality chemicals and equipment shouldn't be a
               bottleneck for progress. In Ethiopia, reliable supply chains for
-              agricultural, industrial, and laboratory sectors are still catching
-              up to growing demand. That's why we exist.
+              agricultural, industrial, and laboratory sectors are still
+              catching up to growing demand. That's why we exist.
             </p>
 
             <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
@@ -76,10 +76,10 @@ export default function About8() {
             </h2>
             <p className="text-lg">
               Founded with a vision to bridge the supply gap, we've built
-              long-standing partnerships with trusted international manufacturers
-              and local institutions. Whether it's fertilizer for a cooperative,
-              reagents for a university lab, or machinery for a factory, we source
-              and deliver with precision.
+              long-standing partnerships with trusted international
+              manufacturers and local institutions. Whether it's fertilizer for
+              a cooperative, reagents for a university lab, or machinery for a
+              factory, we source and deliver with precision.
             </p>
           </div>
         </section>
@@ -93,25 +93,25 @@ export default function About8() {
           >
             <CarouselContent className="-ml-4">
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
-                <div className="relative h-[330px] lg:h-[440px] xl:h-[600px]">
+                <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
                   <img
-                    src="/warehouse.jpg"
+                    src="/truck-full-of-imported-chemicals.webp"
                     alt="Warehouse facility"
                     className="h-full w-full object-cover rounded-lg"
                   />
                 </div>
               </CarouselItem>
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
-                <div className="relative h-[330px] lg:h-[440px] xl:h-[600px]">
+                <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
                   <img
-                    src="/lab-equipment.jpg"
+                    src="/jemachem-warehouse.webp"
                     alt="Modern lab setup"
                     className="h-full w-full object-cover rounded-lg"
                   />
                 </div>
               </CarouselItem>
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
-                <div className="relative h-[330px] lg:h-[440px] xl:h-[600px]">
+                <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
                   <img
                     src="/agro-field.jpg"
                     alt="Agricultural site with chemical spraying"
@@ -127,10 +127,10 @@ export default function About8() {
         <section className="container">
           <div className="mr-0 ml-auto max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
             <p className="text-lg">
-              Our distribution network covers key industrial and agricultural hubs
-              across Ethiopia. From Addis Ababa to Hawassa, Bahir Dar to Dire Dawa
-              — we make sure chemicals and equipment arrive safely, on time, and
-              fully compliant.
+              Our distribution network covers key industrial and agricultural
+              hubs across Ethiopia. From Addis Ababa to Hawassa, Bahir Dar to
+              Dire Dawa — we make sure chemicals and equipment arrive safely, on
+              time, and fully compliant.
             </p>
 
             <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
