@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import PlusPatternBackground from "@/components/ui/PlusPatternBackground";
 
 interface AboutProps {
   achievementsTitle?: string;
@@ -29,8 +30,9 @@ const About = ({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-32">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <section ref={ref} className="py-32 relative overflow-hidden">
+      <PlusPatternBackground />
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* About Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
