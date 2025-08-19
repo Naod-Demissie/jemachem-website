@@ -54,10 +54,19 @@ const About = ({
           >
             <h2 className="mb-8 text-4xl font-bold">What set us apart</h2>
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
-              Jemachem Trading PLC is a premier chemical importer company with a proven track record of sourcing and distributing high-quality chemicals from around the world. Our commitment to customer satisfaction, safety, and compliance sets us apart as a trusted partner in the industry.
+              Jemachem Trading is a premier chemical importer company with a
+              proven track record of sourcing and distributing high-quality
+              chemicals from around the world. Our commitment to customer
+              satisfaction, safety, and compliance sets us apart as a trusted
+              partner in the industry.
               <br />
               <br />
-              At Jemachem Trading PLC, we understand the importance of delivering top-notch products and services to our clients. Our team is dedicated to providing best-in-class chemicals and ensuring that our customers receive their orders in a timely and efficient manner. With our expertise in managing logistics and supply chain, we guarantee a seamless experience for our clients.
+              At Jemachem Trading, we understand the importance of delivering
+              top-notch products and services to our clients. Our team is
+              dedicated to providing best-in-class chemicals and ensuring that
+              our customers receive their orders in a timely and efficient
+              manner. With our expertise in managing logistics and supply chain,
+              we guarantee a seamless experience for our clients.
             </p>
           </motion.div>
           <motion.div
@@ -92,10 +101,16 @@ const About = ({
             className="md:col-span-2 xl:col-span-2"
           >
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
-              In addition to our exceptional products and services, we offer technical support and expertise to help our clients utilize the chemicals effectively and safely. We are committed to going above and beyond to meet all of our clients' chemical needs.
+              In addition to our exceptional products and services, we offer
+              technical support and expertise to help our clients utilize the
+              chemicals effectively and safely. We are committed to going above
+              and beyond to meet all of our clients' chemical needs.
               <br />
               <br />
-              With a focus on quality, reliability, and customer satisfaction, Jemachem Trading PLC is your trusted partner for all your chemical importation needs. Thank you for choosing us as your preferred chemical supplier.
+              With a focus on quality, reliability, and customer satisfaction,
+              Jemachem Trading is your trusted partner for all your chemical
+              importation needs. Thank you for choosing us as your preferred
+              chemical supplier.
             </p>
           </motion.div>
         </div>

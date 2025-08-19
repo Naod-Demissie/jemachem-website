@@ -4,7 +4,7 @@
     "ID": "butyl-glycol",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS, PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "butyl-glycol.jpg",
+    "Image Path": "butyl-glycol.webp",
     "Description": "Butyl Glycol, also known as 2-butoxyethanol, is a colorless liquid with a mild ether-like odor. It serves as a solvent in paints, coatings, inks, and cleaning products due to its ability to dissolve both water-soluble and oil-based substances. It is also used in detergents and cosmetics as a coupling agent and stabilizer.",
     "Safety Notice": "Harmful if swallowed, inhaled, or in contact with skin. Causes eye and skin irritation. Use in well-ventilated areas with gloves and eye protection. Rinse with water if contacted. Dispose of per local regulations.",
     "Source Country": "India"
@@ -14,7 +14,7 @@
     "ID": "capb",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "capb.jpeg",
+    "Image Path": "capb.webp",
     "Description": "Cocamidopropyl Betaine (CAPB) is a mild amphoteric surfactant derived from coconut oil. It is used in shampoos, body washes, and detergents for its foaming, cleansing, and conditioning properties, enhancing viscosity and stability in formulations.",
     "Safety Notice": "May cause skin or eye irritation in concentrated form. Avoid prolonged contact. Wear gloves and eye protection. Rinse with water if contacted. Keep out of reach of children.",
     "Source Country": "India"
@@ -44,7 +44,7 @@
     "ID": "cdea",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "cdea.jpg",
+    "Image Path": "cdea.webp",
     "Description": "Coconut Diethanolamide (CDEA) is a non-ionic surfactant from coconut oil, used in shampoos, liquid soaps, and detergents as a foam booster, thickener, and stabilizer, enhancing texture and viscosity in formulations.",
     "Safety Notice": "May cause skin or eye irritation in concentrated form. Avoid prolonged contact. Wear gloves and eye protection. Rinse with water if contacted. Keep out of reach of children. Store in a cool, dry place.",
     "Source Country": "Indonesia"
@@ -54,7 +54,7 @@
     "ID": "ceramic-and-other-floor-cleaner",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "ceramic-and-other-floor-cleaner.png",
+    "Image Path": "ceramic-and-other-floor-cleaner.webp",
     "Description": "Ceramic and Other Floor Cleaner is a specialized solution for ceramic, porcelain, and hard floor surfaces. It removes dirt, grease, and stains, leaving a streak-free shine, suitable for household and industrial use.",
     "Safety Notice": "May cause eye irritation. Avoid eye and prolonged skin contact. Wear gloves during use. Rinse eyes with water if contacted. Keep out of reach of children. Do not mix with other cleaners unless specified.",
     "Source Country": "China"
@@ -74,7 +74,7 @@
     "ID": "cmc",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS, FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "cmc.png",
+    "Image Path": "cmc.webp",
     "Description": "Carboxymethyl Cellulose (CMC) is a water-soluble polymer used as a thickener and stabilizer in detergents, cosmetics, and food products. It enhances texture and prevents ingredient separation in toothpastes, shampoos, and emulsions.",
     "Safety Notice": "May cause eye or skin irritation as powder. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area away from moisture.",
     "Source Country": "China"
@@ -104,7 +104,7 @@
     "ID": "dolomite",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "dolomite.jpg",
+    "Image Path": "dolomite.webp",
     "Description": "Dolomite, a calcium magnesium carbonate mineral, is used in detergents and cosmetics as a filler, abrasive, or pH buffer. Its mild abrasive properties aid in removing tough stains in cleaning products.",
     "Safety Notice": "May cause respiratory irritation if inhaled as dust. Avoid inhalation and prolonged skin contact. Wear gloves, eye protection, and a dust mask. Move to fresh air if inhaled. Store in a dry area.",
     "Source Country": "Local"
@@ -134,7 +134,7 @@
     "ID": "glycerin",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "glycerin.jpg",
+    "Image Path": "glycerin.webp",
     "Description": "Glycerin, also known as glycerol, is a humectant and moisturizing agent used in cosmetics, soaps, and detergents. It retains moisture, enhances smoothness, and improves skin feel in personal care products.",
     "Safety Notice": "May cause mild skin irritation in concentrated form. Avoid eye contact. Wear gloves during handling. Rinse eyes with water if contacted. Store in a cool, dry place away from heat.",
     "Source Country": "China"
@@ -154,7 +154,7 @@
     "ID": "industrial-salt",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS, FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "industrial-salt.jpg",
+    "Image Path": "industrial-salt.webp",
     "Description": "Industrial Salt (Sodium Chloride) is used in detergents, food processing, and water treatment as a filler, stabilizer, or processing aid. It supports soap production and food preservation processes.",
     "Safety Notice": "May cause eye or skin irritation in large quantities. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": "Local"
@@ -194,7 +194,7 @@
     "ID": "liquid-detergent",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "liquid-detergent.jpg",
+    "Image Path": "liquid-detergent.webp",
     "Description": "Liquid Detergent is a versatile cleaning product for laundry, dishwashing, and surface cleaning. It contains surfactants to effectively remove dirt, grease, and stains while being gentle on fabrics and surfaces.",
     "Safety Notice": "May cause eye irritation. Avoid eye and prolonged skin contact. Wear gloves during use. Rinse eyes with water if contacted. Keep out of reach of children. Do not mix with other cleaners unless specified.",
     "Source Country": ""
@@ -204,7 +204,7 @@
     "ID": "optical-brightener-agent",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "optical-brightener-agent.jpg",
+    "Image Path": "optical-brightener-agent.webp",
     "Description": "Optical Brightener Agent is a fluorescent compound used in detergents and textiles to enhance fabric whiteness and brightness. It absorbs UV light and emits blue light, making fabrics appear cleaner.",
     "Safety Notice": "May cause skin or eye irritation in concentrated form. Avoid prolonged contact or dust inhalation. Wear gloves and eye protection. Rinse with water if contacted. Store in a cool, dry place away from light.",
     "Source Country": "China"
@@ -214,7 +214,7 @@
     "ID": "paraffin",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "paraffin.jpg",
+    "Image Path": "paraffin.webp",
     "Description": "Paraffin is a hydrocarbon used in cosmetics and detergents as an emollient, moisturizer, or lubricant. It is found in creams, lotions, and candles, providing a smooth texture and protective barrier.",
     "Safety Notice": "Flammable in liquid form. Avoid eye and prolonged skin contact. Use in well-ventilated areas. Keep away from heat and flames. Rinse with water if contacted. Store in a cool, dry place.",
     "Source Country": "Indonesia"
@@ -234,7 +234,7 @@
     "ID": "phosphoric-acid",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS, FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "phosphoric-acid.jpg",
+    "Image Path": "phosphoric-acid.webp",
     "Description": "Phosphoric Acid is a versatile acid used as a pH adjuster and flavoring agent in food and beverages, and as a cleaning agent in detergents. It is effective in removing rust and scale in industrial applications and stabilizing formulations in cosmetics.",
     "Safety Notice": "Corrosive. Causes severe burns and eye damage. Harmful if swallowed or inhaled. Wear protective gear. Use in well-ventilated areas. Rinse with water if contacted. Store away from bases and metals.",
     "Source Country": "Belgium"
@@ -264,7 +264,7 @@
     "ID": "sodium-silicate",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "sodium-silicate.jpg",
+    "Image Path": "sodium-silicate.webp",
     "Description": "Sodium Silicate, also known as water glass, is used in detergents and soaps as a stabilizer, corrosion inhibitor, and binding agent. It enhances cleaning efficiency and is also used in adhesives and construction materials.",
     "Safety Notice": "Corrosive. Causes skin and eye irritation. Wear protective gear. Use in well-ventilated areas. Rinse with water if contacted. Store in a tightly closed container away from acids.",
     "Source Country": "China"
@@ -294,7 +294,7 @@
     "ID": "tetra-chloroethylene",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS",
-    "Image Path": "tetra-chloroethylene.jpg",
+    "Image Path": "tetra-chloroethylene.webp",
     "Description": "Tetrachloroethylene, also known as perchloroethylene, is a colorless liquid solvent used in dry cleaning and industrial degreasing. It effectively removes oils, greases, and stains from fabrics and metal surfaces, making it valuable in cleaning applications.",
     "Safety Notice": "Harmful if inhaled or swallowed. May cause dizziness or skin irritation. Use in well-ventilated areas with protective gear. Avoid prolonged exposure. Store away from heat and flames.",
     "Source Country": "Belgium"
@@ -314,7 +314,7 @@
     "ID": "zeolite-4a",
     "Brand Name": "",
     "Category": "DETERGENT/COSMETICS CHEMICALS, FOOD/BEVERAGE/BREWERY CHEMICALS, PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "zeolite-4a.jpeg",
+    "Image Path": "zeolite-4a.webp",
     "Description": "Zeolite 4A is a synthetic aluminosilicate used as a water softener and builder in detergents. It enhances cleaning efficiency by removing calcium and magnesium ions, and is also used in food processing and as a catalyst in industrial applications.",
     "Safety Notice": "May cause respiratory or eye irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": "China"
@@ -324,7 +324,7 @@
     "ID": "aluminum-sulfate",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS, TANNERY/SHOES CHEMICALS",
-    "Image Path": "aluminum-sulfate.jpg",
+    "Image Path": "aluminum-sulfate.webp",
     "Description": "Aluminum Sulfate is a coagulant used in water treatment for food and beverage processing and in tanning leather. It helps clarify water by removing impurities and is also used as a mordant in textile dyeing.",
     "Safety Notice": "May cause skin or eye irritation. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area away from bases.",
     "Source Country": "Kenya"
@@ -344,7 +344,7 @@
     "ID": "antiscalant-ro",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "antiscalant-ro.png",
+    "Image Path": "antiscalant-ro.webp",
     "Description": "Antiscalant RO is a specialized chemical used in reverse osmosis systems to prevent scale formation on membranes. It is critical in food and beverage processing to maintain water purity and system efficiency by inhibiting mineral deposits.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact. Wear gloves and eye protection. Rinse with water if contacted. Keep out of reach of children. Store in a cool, dry place.",
     "Source Country": "UK"
@@ -354,7 +354,7 @@
     "ID": "activated-carbon",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "activated-carbon.png",
+    "Image Path": "activated-carbon.webp",
     "Description": "Activated Carbon is a porous material used in food and beverage processing for purification and decolorization. It effectively removes impurities, odors, and contaminants from liquids, making it ideal for water treatment and food refining.",
     "Safety Notice": "May cause respiratory irritation if inhaled as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": "India"
@@ -364,7 +364,7 @@
     "ID": "activated-bleaching-earth",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "activated-bleaching-earth.jpg",
+    "Image Path": "activated-bleaching-earth.webp",
     "Description": "Activated Bleaching Earth is a clay-based material used in food and beverage processing to refine edible oils and fats. It removes impurities, colors, and odors, improving the quality and appearance of oils for consumption.",
     "Safety Notice": "May cause respiratory or eye irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": "India"
@@ -394,7 +394,7 @@
     "ID": "calcium-chloride-77-food-grade",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "calcium-chloride-77-food-grade.jpg",
+    "Image Path": "calcium-chloride-77-food-grade.webp",
     "Description": "Calcium Chloride 77% Food Grade is a firming agent and preservative used in food processing to maintain texture in fruits and vegetables. It is also used in brewing and as a moisture absorbent in industrial applications.",
     "Safety Notice": "May cause skin or eye irritation. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area away from moisture.",
     "Source Country": "China"
@@ -484,7 +484,7 @@
     "ID": "skimmed-milk-powder",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "skimmed-milk-powder.jpg",
+    "Image Path": "skimmed-milk-powder.webp",
     "Description": "Skimmed Milk Powder is a dairy product used in food and beverage production for its nutritional content and versatility. It is added to baked goods, beverages, and confectionery to enhance flavor and texture.",
     "Safety Notice": "Generally safe but may cause respiratory irritation if inhaled as dust. Avoid inhalation. Wear a dust mask if needed. Store in a cool, dry place away from moisture.",
     "Source Country": ""
@@ -514,7 +514,7 @@
     "ID": "sodium-hypochlorite-10",
     "Brand Name": "",
     "Category": "FOOD/BEVERAGE/BREWERY CHEMICALS",
-    "Image Path": "sodium-hypochlorite-10.jpeg",
+    "Image Path": "sodium-hypochlorite-10.webp",
     "Description": "Sodium Hypochlorite 10% is a liquid disinfectant used in food and beverage processing for sanitizing surfaces and equipment. It is also used in water treatment to eliminate bacteria and ensure hygiene in production facilities.",
     "Safety Notice": "Corrosive. Causes skin and eye irritation. Harmful if swallowed or inhaled. Wear protective gear. Use in well-ventilated areas. Rinse with water if contacted. Store away from acids and heat.",
     "Source Country": "China"
@@ -564,7 +564,7 @@
     "ID": "calcium-carbonate",
     "Brand Name": "",
     "Category": "PAINT/PIGMENT AND SOLVENTS, PLASTIC AND FOAM CHEMICALS",
-    "Image Path": "calcium-carbonate.jpeg",
+    "Image Path": "calcium-carbonate.webp",
     "Description": "Calcium Carbonate is a white powder used as a filler and pigment in paints, plastics, and foams. It enhances opacity, durability, and cost-efficiency in coatings and polymer products.",
     "Safety Notice": "May cause respiratory or eye irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -574,7 +574,7 @@
     "ID": "chrome-oxide",
     "Brand Name": "",
     "Category": "PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "chrome-oxide.jpg",
+    "Image Path": "chrome-oxide.webp",
     "Description": "Chrome Oxide is a green pigment used in paints, coatings, and ceramics for its vibrant color and durability. It provides excellent UV resistance and stability in harsh environments.",
     "Safety Notice": "May cause respiratory or skin irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -624,7 +624,7 @@
     "ID": "kerosene",
     "Brand Name": "",
     "Category": "PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "kerosene.jpg",
+    "Image Path": "kerosene.webp",
     "Description": "Kerosene is a hydrocarbon solvent used in paints and coatings as a thinner and cleaner. It aids in viscosity control and surface preparation, ensuring smooth application in industrial settings.",
     "Safety Notice": "Highly flammable. Harmful if inhaled or swallowed. Causes skin irritation. Use in well-ventilated areas with protective gear. Keep away from heat and flames. Store in a cool, dry place.",
     "Source Country": ""
@@ -634,7 +634,7 @@
     "ID": "mica-powder",
     "Brand Name": "",
     "Category": "PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "mica-powder.jpg",
+    "Image Path": "mica-powder.webp",
     "Description": "Mica Powder is a shimmering pigment used in paints, coatings, and cosmetics to add sparkle and pearlescent effects. It enhances aesthetic appeal and durability in decorative finishes.",
     "Safety Notice": "May cause respiratory or eye irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -654,7 +654,7 @@
     "ID": "solvents",
     "Brand Name": "",
     "Category": "PAINT/PIGMENT AND SOLVENTS",
-    "Image Path": "solvents.jpg",
+    "Image Path": "solvents.webp",
     "Description": "Solvents are chemical substances used in paints, coatings, and adhesives to dissolve resins and adjust viscosity. They ensure smooth application, fast drying, and high-quality finishes in industrial processes.",
     "Safety Notice": "Highly flammable. Harmful if inhaled or swallowed. Causes skin and eye irritation. Use in well-ventilated areas with protective gear. Keep away from heat and flames. Store in a cool, dry place.",
     "Source Country": ""
@@ -664,7 +664,7 @@
     "ID": "ldpe",
     "Brand Name": "",
     "Category": "PLASTIC AND FOAM CHEMICALS",
-    "Image Path": "ldpe.jpg",
+    "Image Path": "ldpe.webp",
     "Description": "Low-Density Polyethylene (LDPE) is a flexible plastic used in film production, packaging, and foam manufacturing. Its durability and flexibility make it ideal for plastic bags, containers, and insulation.",
     "Safety Notice": "Non-hazardous in solid form but may release fumes if heated. Avoid inhalation of fumes. Wear gloves and eye protection during processing. Store in a cool, dry place away from heat.",
     "Source Country": "Saudi"
@@ -684,7 +684,7 @@
     "ID": "hdpe",
     "Brand Name": "",
     "Category": "PLASTIC AND FOAM CHEMICALS",
-    "Image Path": "hdpe.jpg",
+    "Image Path": "hdpe.webp",
     "Description": "High-Density Polyethylene (HDPE) is a durable plastic used in containers, pipes, and packaging. Its strength and chemical resistance make it suitable for industrial and consumer applications, including bottles and bags.",
     "Safety Notice": "Non-hazardous in solid form but may release fumes if heated. Avoid inhalation of fumes. Wear gloves and eye protection during processing. Store in a cool, dry place away from heat.",
     "Source Country": "Saudi"
@@ -694,7 +694,7 @@
     "ID": "master-batch",
     "Brand Name": "",
     "Category": "PLASTIC AND FOAM CHEMICALS",
-    "Image Path": "master-batch.jpg",
+    "Image Path": "master-batch.webp",
     "Description": "Master Batch is a concentrated mixture of pigments or additives used to color or enhance the properties of plastics. It is used in plastic manufacturing to achieve uniform color and improved performance.",
     "Safety Notice": "May cause respiratory or eye irritation as dust. Avoid inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": "Dubai"
@@ -814,7 +814,7 @@
     "ID": "sodium-bicarbonate-99",
     "Brand Name": "",
     "Category": "TANNERY/SHOES CHEMICALS",
-    "Image Path": "sodium-bicarbonate-99.jpg",
+    "Image Path": "sodium-bicarbonate-99.webp",
     "Description": "Sodium Bicarbonate 99% is used in tanneries as a pH regulator and neutralizing agent. It helps control acidity during leather processing, improving the efficiency of tanning and dyeing.",
     "Safety Notice": "Generally safe but may cause skin or eye irritation in concentrated form. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -824,7 +824,7 @@
     "ID": "sodium-meta-bisulphite",
     "Brand Name": "",
     "Category": "TANNERY/SHOES CHEMICALS",
-    "Image Path": "sodium-meta-bisulphite.jpg",
+    "Image Path": "sodium-meta-bisulphite.webp",
     "Description": "Sodium Meta Bisulphite is a reducing agent used in tanneries for leather preservation and dehairing. It prevents oxidation and microbial growth, ensuring high-quality leather production.",
     "Safety Notice": "May cause respiratory, skin, or eye irritation. Avoid inhaling dust or vapors. Wear gloves and eye protection. Rinse with water if contacted. Store in a cool, dry place away from acids.",
     "Source Country": ""
@@ -834,7 +834,7 @@
     "ID": "sodium-sulfohydrate",
     "Brand Name": "",
     "Category": "TANNERY/SHOES CHEMICALS",
-    "Image Path": "sodium-sulfohydrate.jpg",
+    "Image Path": "sodium-sulfohydrate.webp",
     "Description": "Sodium Sulfohydrate, also known as sodium hydrosulfide, is used in tanneries for dehairing and leather softening. It aids in removing hair from hides, facilitating smoother leather processing.",
     "Safety Notice": "Corrosive. Causes severe skin burns and eye damage. Harmful if inhaled. Wear protective gear and use in well-ventilated areas. Rinse with water if contacted. Store away from acids and heat.",
     "Source Country": ""
@@ -854,7 +854,7 @@
     "ID": "sulphuric-acid-98",
     "Brand Name": "",
     "Category": "TANNERY/SHOES CHEMICALS",
-    "Image Path": "sulphuric-acid-98.jpg",
+    "Image Path": "sulphuric-acid-98.webp",
     "Description": "Sulphuric Acid 98% is a strong acid used in tanneries for leather pickling and pH adjustment. It enhances tanning processes and improves leather quality by aiding in dye penetration.",
     "Safety Notice": "Highly corrosive. Causes severe burns and eye damage. Harmful if inhaled or swallowed. Wear protective gear and use in well-ventilated areas. Rinse with water if contacted. Store away from bases.",
     "Source Country": "Kenya"
@@ -864,7 +864,7 @@
     "ID": "acetic-acid-99-7",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "acetic-acid-99-7.jpg",
+    "Image Path": "acetic-acid-99-7.webp",
     "Description": "Acetic Acid 99.7% is a strong organic acid used in textile processing for pH adjustment and dye fixation. It enhances color vibrancy and ensures uniform dyeing of fabrics.",
     "Safety Notice": "Corrosive. Causes severe burns and eye damage. Harmful if inhaled or swallowed. Wear protective gear and use in well-ventilated areas. Rinse with water if contacted. Store away from bases.",
     "Source Country": ""
@@ -884,7 +884,7 @@
     "ID": "detergent-wetting-agent",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "detergent-wetting-agent.png",
+    "Image Path": "detergent-wetting-agent.webp",
     "Description": "Detergent/Wetting Agent is used in textile processing to enhance the wetting and cleaning of fabrics. It reduces surface tension, ensuring better penetration of dyes and chemicals.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact. Wear gloves and eye protection. Rinse with water if contacted. Keep out of reach of children. Store in a cool, dry place.",
     "Source Country": ""
@@ -894,7 +894,7 @@
     "ID": "dyestuffs",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "dyestuffs.jpg",
+    "Image Path": "dyestuffs.webp",
     "Description": "Dyestuffs are colored compounds used in textiles to impart vibrant, long-lasting colors to fabrics. They are designed for various dyeing processes, ensuring high colorfastness and uniformity.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -944,7 +944,7 @@
     "ID": "plastisol-pigments",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "plastisol-pigments.png",
+    "Image Path": "plastisol-pigments.webp",
     "Description": "Plastisol Pigments are used in textile screen printing to create vibrant, durable designs on fabrics. They are mixed with plastisol inks for high-opacity and flexible prints.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -954,7 +954,7 @@
     "ID": "printing-pigments",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "printing-pigments.jpg",
+    "Image Path": "printing-pigments.webp",
     "Description": "Printing Pigments are used in textile printing to add vibrant colors to fabrics. They provide excellent colorfastness and are suitable for various printing techniques, ensuring high-quality designs.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -974,7 +974,7 @@
     "ID": "sodium-carbonate",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "sodium-carbonate.jpg",
+    "Image Path": "sodium-carbonate.webp",
     "Description": "Sodium Carbonate, also known as soda ash, is used in textile processing as a pH regulator and dyeing auxiliary. It enhances dye fixation and fabric cleaning efficiency.",
     "Safety Notice": "May cause skin, eye, or respiratory irritation. Avoid inhaling dust. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -984,7 +984,7 @@
     "ID": "sodium-hydrosulphite-85",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "sodium-hydrosulphite-85.jpg",
+    "Image Path": "sodium-hydrosulphite-85.webp",
     "Description": "Sodium Hydrosulphite 85% is a reducing agent used in textile dyeing and bleaching to remove excess dyes and improve colorfastness. It is essential for achieving uniform fabric colors.",
     "Safety Notice": "May cause respiratory or skin irritation. Flammable in contact with water. Wear gloves and eye protection. Use in well-ventilated areas. Store in a dry, well-ventilated area away from moisture.",
     "Source Country": ""
@@ -994,7 +994,7 @@
     "ID": "sodium-sulphate-glauber-salt",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "sodium-sulphate-glauber-salt.jpg",
+    "Image Path": "sodium-sulphate-glauber-salt.webp",
     "Description": "Sodium Sulphate, also known as Glauber Salt, is used in textile dyeing as a leveling agent to promote uniform dye uptake. It enhances color consistency and dyeing efficiency.",
     "Safety Notice": "May cause eye or respiratory irritation. Avoid inhaling dust. Wear gloves and eye protection. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -1014,7 +1014,7 @@
     "ID": "stain-remover-edta",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "stain-remover-edta.jpg",
+    "Image Path": "stain-remover-edta.webp",
     "Description": "Stain Remover/EDTA is a chelating agent used in textiles to remove metal ions and stains. It enhances cleaning and prevents discoloration during dyeing and washing processes.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves and eye protection. Rinse with water if contacted. Store in a cool, dry place.",
     "Source Country": ""
@@ -1024,7 +1024,7 @@
     "ID": "textile-dyes",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "textile-dyes.jpg",
+    "Image Path": "textile-dyes.webp",
     "Description": "Textile Dyes are colorants used to impart vibrant, long-lasting colors to fabrics. They are designed for various fibers and dyeing techniques, ensuring high colorfastness and uniformity.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -1034,7 +1034,7 @@
     "ID": "textile-pigments",
     "Brand Name": "",
     "Category": "TEXTILE CHEMICALS",
-    "Image Path": "textile-pigments.jpg",
+    "Image Path": "textile-pigments.webp",
     "Description": "Textile Pigments are used in textile printing to create vibrant, durable designs on fabrics. They offer excellent opacity and are suitable for various printing techniques.",
     "Safety Notice": "May cause skin or eye irritation. Avoid prolonged contact or dust inhalation. Wear gloves, eye protection, and a dust mask. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""
@@ -1054,7 +1054,7 @@
     "ID": "copper-sulphate",
     "Brand Name": "",
     "Category": "WATER TREATMENT CHEMICALS, TANNERY/SHOES CHEMICALS",
-    "Image Path": "copper-sulphate.jpg",
+    "Image Path": "copper-sulphate.webp",
     "Description": "Copper Sulphate is a chemical used in water treatment to control algae and in tanneries as a mordant for dyeing leather. It enhances color fixation and water quality.",
     "Safety Notice": "Toxic if swallowed. Causes skin and eye irritation. Wear gloves and eye protection. Avoid inhaling dust. Rinse with water if contacted. Store in a dry, well-ventilated area.",
     "Source Country": ""

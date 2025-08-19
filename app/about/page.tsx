@@ -4,6 +4,7 @@ import { Timeline4 } from "@/components/about/ProductCategoriesTimeline";
 import { Cta11 } from "@/components/about/ContactCallToAction";
 import { Feature16 } from "@/components/about/CompanyValuesSection";
 import About8 from "@/components/about/AboutHeroSection";
+import PlusPatternBackground from "@/components/ui/PlusPatternBackground";
 
 export default function About() {
   return (
@@ -33,7 +34,8 @@ export default function About() {
           </div>
         </div>
       </section>
-      <div className="text-center">
+      <div className="relative overflow-hidden text-center">
+        <PlusPatternBackground />
         <About8 />
         <Feature16 />
         <Timeline4 />

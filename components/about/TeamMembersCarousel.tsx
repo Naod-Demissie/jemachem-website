@@ -10,18 +10,18 @@ import {
 
 const teamMembers = [
   {
-    src: "/teams/4.jpeg",
+    src: "/teams/Aymen muhaba.webp",
     title: "Aymen Muhaba",
     designation: "General Manager",
   },
   {
-    src: "/teams/1.jpeg",
-    title: "Abel Mekuria",
+    src: "/teams/Sitra muhaba.webp",
+    title: "Sitra Muhaba",
     designation: "Operations Manager",
   },
   {
-    src: "/teams/3.jpeg",
-    title: "Sara Teshome",
+    src: "/teams/Abdulhakim siraj.webp",
+    title: "Abdulhakim Siraj",
     designation: "Logistics Lead",
   },
   {
@@ -38,7 +38,9 @@ const Gallery27 = () => {
         <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
           <p className="text-sm font-normal text-white">OUR TEAM</p>
         </div>
-        <h1 className="font-calSans text-5xl text-white">The Team Behind Our Success</h1>
+        <h1 className="font-calSans text-5xl text-white">
+          The Team Behind Our Success
+        </h1>
         <p className="mt-3 max-w-xl text-gray-300 text-center mx-auto">
           These are the people handling the day-to-day—coordinating imports,
           tracking shipments, talking to suppliers, and making sure everything
