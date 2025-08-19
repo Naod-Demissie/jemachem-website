@@ -11,8 +11,25 @@ import { PhoneInput } from "@/components/ui/phone-input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
-import { AlertCircle, CheckCircle } from "lucide-react";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
+import {
+  AlertCircle,
+  CheckCircle,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  ShoppingCart,
+  FileText,
+  MessageCircle,
+  HelpCircle,
+  HeadphonesIcon,
+  LifeBuoy,
+} from "lucide-react";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbygjot0aGcbfb_vCmxiK6sqFnhKUH20rmwg9uqR8gHZtOruGjCwuark-YBmpSM-XV5x/exec";
@@ -142,7 +159,10 @@ const ContactUs = () => {
                 <p className="text-sm font-normal text-white">CONTACT US</p>
               </div>
             </motion.div>
-            <motion.p className="text-4xl font-medium md:text-5xl" variants={fadeInUp}>
+            <motion.p
+              className="text-4xl font-medium md:text-5xl"
+              variants={fadeInUp}
+            >
               Get in touch with us
             </motion.p>
           </div>
@@ -172,34 +192,34 @@ const ContactUs = () => {
               {[
                 {
                   title: "Sales",
-                  desc: "Interested in learning more about our platform? Contact our sales team for more information.",
-                  linkText: "Request a demo",
+                  desc: "Interested in our chemical products? Contact our sales team for pricing and availability.",
+                  icon: <ShoppingCart className="size-6 text-white" />,
                 },
                 {
                   title: "Support",
-                  desc: "We're here to help with any platform questions. Check out our FAQs and learn more.",
-                  linkText: "Get support",
+                  desc: "Need technical specifications, product information, or assistance with your order? Our experts are here to help.",
+                  icon: <HelpCircle className="size-6 text-white" />,
                 },
                 {
                   title: "General Inquiries",
-                  desc: "For general inquiries, please reach out to us using the form below.",
-                  linkText: "Contact us",
+                  desc: "For partnerships, bulk orders, or general questions, reach out to us.",
+                  icon: <MessageCircle className="size-6 text-white" />,
                 },
               ].map((item, i) => (
                 <motion.div
                   key={i}
                   variants={fadeInUp}
-                  className="flex flex-col justify-between gap-6 rounded-2xl border border-[#E6ECFF] bg-white/70 p-6 shadow-sm backdrop-blur-sm"
+                  className="flex flex-col items-center text-center gap-4 rounded-2xl border border-[#E6ECFF] bg-white/70 p-6 shadow-sm backdrop-blur-sm"
                 >
+                  <div className="flex-shrink-0 bg-orange-500 rounded-full p-3">
+                    {item.icon}
+                  </div>
                   <div>
                     <h2 className="mb-4 text-xl font-medium md:text-2xl">
                       {item.title}
                     </h2>
                     <p className="text-muted-foreground">{item.desc}</p>
                   </div>
-                  <a href="#" className="hover:underline">
-                    {item.linkText}
-                  </a>
                 </motion.div>
               ))}
             </motion.div>
@@ -228,9 +248,9 @@ const ContactUs = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
               >
-                Ready to start your next project? Our team is here to help you
-                succeed. Reach out and let&#39;s discuss how we can bring your
-                ideas to life.
+                Ready to source quality chemicals for your business? Our team is
+                here to help you find the right solutions. Reach out and
+                let&#39;s discuss your chemical supply needs.
               </motion.p>
             </div>
           </div>
@@ -249,7 +269,7 @@ const ContactUs = () => {
               style={{ backgroundColor: "#0c0c0c" }}
             >
               <CardContent className="lg:px-18 py-12 lg:py-24">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
                   {/* Contact Info */}
                   <motion.div
                     className="space-y-8 text-left"
@@ -264,72 +284,125 @@ const ContactUs = () => {
                       className="w-[170px]"
                       variants={fadeIn}
                     />
-                    <motion.ul className="space-y-4 text-white/80" variants={fadeInUp}>
-                      <li>
-                        <strong>Email:</strong>{" "}
-                        <Tooltip {...(copied.email ? { open: true } : {})}>
-                          <TooltipTrigger asChild>
-                            <button
-                              type="button"
-                              onClick={() =>
-                                handleCopy("email", "jemachemtrading@gmail.com")
-                              }
-                              className="underline hover:text-gray-300 cursor-pointer"
-                            >
-                              jemachemtrading@gmail.com
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent side="top">
-                            {copied.email ? "Copied!" : "Click to copy"}
-                          </TooltipContent>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <strong>Phone:</strong>{" "}
-                        <div>
-                          <Tooltip {...(copied.phone1 ? { open: true } : {})}>
+                    <motion.div className="space-y-6" variants={fadeInUp}>
+                      {/* Email */}
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 backdrop-blur-sm flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full hover:bg-white/20 transition">
+                          <Mail className="size-6 text-white" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="mb-1 flex items-center gap-2">
+                            <h3 className="font-semibold text-white/90">
+                              Email
+                            </h3>
+                          </div>
+                          <Tooltip {...(copied.email ? { open: true } : {})}>
                             <TooltipTrigger asChild>
                               <button
                                 type="button"
-                                onClick={() => handleCopy("phone1", "+251914119689")}
-                                className="hover:underline cursor-pointer"
+                                onClick={() =>
+                                  handleCopy(
+                                    "email",
+                                    "jemachemtrading@gmail.com"
+                                  )
+                                }
+                                className="text-white/70 underline hover:text-white cursor-pointer"
                               >
-                                +251914119689
+                                jemachemtrading@gmail.com
                               </button>
                             </TooltipTrigger>
                             <TooltipContent side="top">
-                              {copied.phone1 ? "Copied!" : "Click to copy"}
-                            </TooltipContent>
-                          </Tooltip>
-                          <div />
-                          <Tooltip {...(copied.phone2 ? { open: true } : {})}>
-                            <TooltipTrigger asChild>
-                              <button
-                                type="button"
-                                onClick={() => handleCopy("phone2", "+251975818880")}
-                                className="hover:underline cursor-pointer"
-                              >
-                                +251975818880
-                              </button>
-                            </TooltipTrigger>
-                            <TooltipContent side="top">
-                              {copied.phone2 ? "Copied!" : "Click to copy"}
+                              {copied.email ? "Copied!" : "Click to copy"}
                             </TooltipContent>
                           </Tooltip>
                         </div>
-                      </li>
-                      <li>
-                        <strong>Address:</strong>{" "}
-                        <div>
-                          <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
-                          <div>Fitawrari Damtew St, Kirkos Sub-City</div>
-                          <div>Addis Ababa, Ethiopia</div>
+                      </div>
+
+                      {/* Phone */}
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 backdrop-blur-sm flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full hover:bg-white/20 transition">
+                          <Phone className="size-6 text-white" />
                         </div>
-                      </li>
-                      <li>
-                        <strong>Hours:</strong> Mon–Fri, 8:30am–5:30pm EAT
-                      </li>
-                    </motion.ul>
+                        <div className="min-w-0 flex-1">
+                          <div className="mb-1 flex items-center gap-2">
+                            <h3 className="font-semibold text-white/90">
+                              Phone
+                            </h3>
+                          </div>
+                          <div className="text-white/70 text-sm">
+                            <Tooltip {...(copied.phone1 ? { open: true } : {})}>
+                              <TooltipTrigger asChild>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    handleCopy("phone1", "+251914119689")
+                                  }
+                                  className="underline hover:text-white cursor-pointer"
+                                >
+                                  +251914119689
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent side="top">
+                                {copied.phone1 ? "Copied!" : "Click to copy"}
+                              </TooltipContent>
+                            </Tooltip>
+                            <br />
+                            <Tooltip {...(copied.phone2 ? { open: true } : {})}>
+                              <TooltipTrigger asChild>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    handleCopy("phone2", "+251975818880")
+                                  }
+                                  className="underline hover:text-white cursor-pointer"
+                                >
+                                  +251975818880
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent side="top">
+                                {copied.phone2 ? "Copied!" : "Click to copy"}
+                              </TooltipContent>
+                            </Tooltip>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Address */}
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 backdrop-blur-sm flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full hover:bg-white/20 transition">
+                          <MapPin className="size-6 text-white" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="mb-1 flex items-center gap-2">
+                            <h3 className="font-semibold text-white/90">
+                              Address
+                            </h3>
+                          </div>
+                          <div className="text-white/70 text-sm">
+                            <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
+                            <div>Fitawrari Damtew St, Kirkos Sub-City</div>
+                            <div>Addis Ababa, Ethiopia</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Hours */}
+                      <div className="flex items-start gap-4">
+                        <div className="bg-white/10 backdrop-blur-sm flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full hover:bg-white/20 transition">
+                          <Clock className="size-6 text-white" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="mb-1 flex items-center gap-2">
+                            <h3 className="font-semibold text-white/90">
+                              Hours
+                            </h3>
+                          </div>
+                          <div className="text-white/70 text-sm">
+                            Mon–Fri, 8:30AM–5:30PM EAT
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
                   </motion.div>
 
                   {/* Form */}
