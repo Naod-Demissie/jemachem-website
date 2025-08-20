@@ -74,7 +74,7 @@ const ProductCard = ({ product, onViewDetails }) => {
   };
 
   return (
-    <div className="relative group overflow-hidden rounded-xl shadow-md w-[calc(100%-110px)] cursor-pointer" onClick={handleCardClick}>
+    <div className="relative group overflow-hidden rounded-xl shadow-md w-full sm:w-[calc(100%-110px)] cursor-pointer" onClick={handleCardClick}>
       {/* Image */}
       <div className="relative w-full h-[470px]">
         <div className="block w-full h-full">
