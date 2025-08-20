@@ -84,8 +84,8 @@ const ProductCard = ({ product, onViewDetails }) => {
             <Image src={`/products/${product["Image Path"]}`} alt={product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" onError={(e) => { e.target.src = 'https://via.placeholder.com/300x300?text=No+Image' }} />
           )}
         </div>
-        {/* Hover dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+        {/* Base overlay for readability (30%) and deepen on hover (50%) */}
+        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 opacity-100 transition-colors duration-300 z-10"></div>
         {/* Overlay content on image: always show name+flag; reveal badges/info/button on hover */}
         <div className="absolute inset-0 flex flex-col justify-end z-20">
           <div className="bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
