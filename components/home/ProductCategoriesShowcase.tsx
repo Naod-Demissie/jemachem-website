@@ -52,16 +52,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 1.2 }}
             href="/products/industrial"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/detergent2.png"
               alt="Detergent and Cosmetics Chemicals"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Beaker className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -85,16 +84,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 1.4 }}
             href="/products/agro"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/leather1.avif"
               alt="Tannery and Shoes Chemicals"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Layers className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -118,16 +116,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 1.6 }}
             href="/products/laboratory"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/food-and-beverage.jpg"
               alt="Food, Beverage, and Brewery Chemicals"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Utensils className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -151,16 +148,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 1.8 }}
             href="/products/industrial"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/paint1.jpg"
               alt="Paint, Pigment and Solvents"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Paintbrush className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -184,16 +180,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 2.0 }}
             href="/products/agro"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/textile.jpg"
               alt="Textile Chemicals"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Scissors className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -217,16 +212,15 @@ const Products = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             href="/products/laboratory"
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
               src="/product-category/water-treatement1.webp"
               alt="Water Treatment Chemicals"
-              width={400}
-              height={450}
-              className="h-full max-h-[450px] w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              fill
+              className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-black/50 rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between text-white">
               <span className="ml-auto flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 sm:px-4 py-2 sm:py-2.5 text-sm font-semibold backdrop-blur-sm">
                 <Droplets className="h-4 w-4 sm:h-5 sm:w-5" />
