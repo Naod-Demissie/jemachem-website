@@ -15,6 +15,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination'
+import { motion } from 'framer-motion'
 
 const ProductGrid = ({ products }) => {
   const router = useRouter()
@@ -22,6 +23,20 @@ const ProductGrid = ({ products }) => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 12
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    },
+  }
+
+  const staggerContainer = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.06 } },
+  }
 
   // Extract all unique categories from products
   const allCategories = useMemo(() => {
@@ -129,15 +144,21 @@ const ProductGrid = ({ products }) => {
 
       {/* Product Grid */}
       {currentProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-y-4 gap-x-0 justify-items-center">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-y-4 gap-x-0 justify-items-center"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {currentProducts.map((product) => (
-            <ProductCard
-              key={product.ID}
-              product={product}
-              onViewDetails={(product) => router.push(`/products/${product.ID}`)}
-            />
+            <motion.div key={product.ID} variants={fadeInUp} className="w-full flex justify-center">
+              <ProductCard
+                product={product}
+                onViewDetails={(product) => router.push(`/products/${product.ID}`)}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       ) : (
         <div className="text-center py-12">
           <div className="text-gray-400 text-6xl mb-4">🔍</div>

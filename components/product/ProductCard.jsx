@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge'
+import { motion } from 'framer-motion'
 
 const ProductCard = ({ product, onViewDetails }) => {
   const getCategoryColor = (category) => {
@@ -74,7 +75,12 @@ const ProductCard = ({ product, onViewDetails }) => {
   };
 
   return (
-    <div className="relative group overflow-hidden rounded-xl shadow-md w-full sm:w-[calc(100%-110px)] cursor-pointer" onClick={handleCardClick}>
+    <motion.div
+      className="relative group overflow-hidden rounded-xl shadow-md w-full sm:w-[calc(100%-110px)] cursor-pointer"
+      onClick={handleCardClick}
+      whileHover={{ y: -4 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+    >
       {/* Image */}
       <div className="relative w-full h-[470px]">
         <div className="block w-full h-full">
@@ -118,7 +124,7 @@ const ProductCard = ({ product, onViewDetails }) => {
       </div>
 
       
-    </div>
+    </motion.div>
   );
 };
 
