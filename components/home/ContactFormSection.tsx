@@ -310,8 +310,7 @@ const Contact = () => {
                       </Label>
                       <PhoneInput
                         id="phone"
-                        placeholder="Placeholder"
-                        defaultCountry="TR"
+                        defaultCountry="ET"
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
                         {...register("phone")}
                       />

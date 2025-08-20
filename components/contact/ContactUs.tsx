@@ -468,8 +468,7 @@ const ContactUs = () => {
                       </Label>
                       <PhoneInput
                         id="phone"
-                        placeholder="Placeholder"
-                        defaultCountry="TR"
+                        defaultCountry="ET"
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
                         {...register("phone")}
                       />
@@ -485,7 +484,6 @@ const ContactUs = () => {
                       </Label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us about your inquiry"
                         rows={5}
                         className="bg-[#141416] border-[#272729] text-white placeholder:text-gray-400"
                         {...register("message")}
