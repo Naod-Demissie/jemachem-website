@@ -84,44 +84,40 @@ const ProductCard = ({ product, onViewDetails }) => {
             <Image src={`/products/${product["Image Path"]}`} alt={product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" onError={(e) => { e.target.src = 'https://via.placeholder.com/300x300?text=No+Image' }} />
           )}
         </div>
-      </div>
-
-      {/* Category Badges - Show on hover at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-30 bg-gradient-to-t from-black/80 to-transparent">
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category, index) => (
-            <Badge key={index} className={`${getCategoryColor(category)} text-xs px-3 py-1 rounded-full border backdrop-blur-sm`}>
-              {mapCategoryLabel(category)}
-            </Badge>
-          ))}
-        </div>
-      </div>
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 z-10"></div>
-
-      {/* Details & Button (hidden off-canvas, slide up on hover) */}
-      <div className="absolute bottom-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20 bg-gradient-to-t from-black/60 to-transparent">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-white flex-1">
-            <div><span className="font-medium text-blue-200">Brand:</span> <span className="ml-1">{formatBrand(product["Brand Name"])}</span></div>
-            <div><span className="font-medium text-green-200">Origin:</span> <span className="ml-1">{formatCountry(product["Source Country"])}</span></div>
+        {/* Hover dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+        {/* Overlay content on image: always show name+flag; reveal badges/info/button on hover */}
+        <div className="absolute inset-0 flex flex-col justify-end z-20">
+          <div className="bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+            <div className="flex items-center justify-between text-white">
+              <h3 className="text-xl font-semibold">{product["Product Name"]}</h3>
+              <div className="text-2xl">{getCountryFlag(product["Source Country"])}</div>
+            </div>
+            <div className="overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-out max-h-0 opacity-0 translate-y-2 pointer-events-none group-hover:max-h-72 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto will-change-transform">
+              <div className="mt-3 flex flex-wrap gap-2">
+                {categories.map((category, index) => (
+                  <Badge key={index} className={`${getCategoryColor(category)} text-xs px-3 py-1 rounded-full border backdrop-blur-sm`}>
+                    {mapCategoryLabel(category)}
+                  </Badge>
+                ))}
+              </div>
+              <div className="mt-3 flex items-start justify-between gap-4 text-white">
+                <div className="text-sm flex-1">
+                  <div><span className="font-medium text-blue-200">Brand:</span> <span className="ml-1">{formatBrand(product["Brand Name"])}</span></div>
+                  <div><span className="font-medium text-green-200">Origin:</span> <span className="ml-1">{formatCountry(product["Source Country"])}</span></div>
+                </div>
+                <div className="bg-orange-500/90 backdrop-blur-sm rounded-full p-3 hover:bg-orange-600/90 transition-all duration-300 hover:scale-110 shadow-lg shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="bg-orange-500/90 backdrop-blur-sm rounded-full p-3 hover:bg-orange-600/90 transition-all duration-300 hover:scale-110 ml-4 shadow-lg">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </div>
         </div>
       </div>
 
-      {/* Product Name & Country (pushed up on hover) */}
-      <div className="absolute bottom-0 w-full p-4 flex items-center justify-between text-white transition-transform duration-300 group-hover:-translate-y-20 z-20">
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold">{product["Product Name"]}</h3>
-        </div>
-        <div className="text-2xl">{getCountryFlag(product["Source Country"])}</div>
-      </div>
+      
     </div>
   );
 };

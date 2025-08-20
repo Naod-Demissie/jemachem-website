@@ -1,6 +1,14 @@
 "use client";
 
-import { ChevronRight, Beaker, Layers, Utensils, Paintbrush, Scissors, Droplets } from "lucide-react";
+import {
+  ChevronRight,
+  Beaker,
+  Layers,
+  Utensils,
+  Paintbrush,
+  Scissors,
+  Droplets,
+} from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
