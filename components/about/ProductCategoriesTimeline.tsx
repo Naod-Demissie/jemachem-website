@@ -1,4 +1,4 @@
-import { Factory, Leaf, TestTube } from "lucide-react";
+import { Factory, Leaf, TestTube, Droplets, Scissors, Beaker } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -6,46 +6,89 @@ import { Badge } from "@/components/ui/badge";
 
 const DATA = [
   {
-    title: "Industrial Chemicals",
+    title: "Detergents",
     description:
-      "Powering manufacturing and production efficiency with high-quality industrial grade chemicals for various industries.",
-    icon: Factory,
+      "High-quality chemicals for soaps, detergents, and cosmetic formulations with superior cleaning performance.",
+    icon: Beaker,
     image: {
-      src: "/industrial-chemicals.jpg",
-      alt: "Industrial Chemicals",
+      src: "/product-category/detergent-cosmetics-chemicals-jemachem-trading.webp",
+      alt: "Detergent & Cosmetics Chemicals",
     },
   },
   {
-    title: "Agrochemicals",
+    title: "Food Grade",
     description:
-      "Maximize agricultural yield with precision agrochemicals designed for modern farming practices and crop protection.",
-    icon: Leaf,
+      "Food-safe additives and processing chemicals for beverage, brewery, and food manufacturing industries.",
+    icon: TestTube,
     image: {
-      src: "/agro-chemicals.jpg",
-      alt: "Agrochemicals",
+      src: "/product-category/food-beverage-chemicals-jemachem-trading.webp",
+      alt: "Food & Beverage Chemicals",
     },
     reverse: true,
   },
   {
-    title: "Laboratory Chemicals",
+    title: "Paints",
     description:
-      "High-purity reagents and laboratory chemicals for scientific research, testing, and breakthrough discoveries.",
-    icon: TestTube,
+      "Premium pigments, solvents, and paint chemicals for industrial coatings and artistic applications.",
+    icon: Factory,
     image: {
-      src: "/laboratory-chemicals.png",
-      alt: "Laboratory Chemicals",
+      src: "/product-category/paints-solvents-chemicals-jemachem-trading.webp",
+      alt: "Paints & Solvents Chemicals",
     },
+  },
+  {
+    title: "Plastics",
+    description:
+      "Specialized chemicals for plastic manufacturing, foam production, and polymer processing industries.",
+    icon: Leaf,
+    image: {
+      src: "/product-category/detergent-cosmetics-chemicals-jemachem-trading.webp",
+      alt: "Plastic & Foam Chemicals",
+    },
+    reverse: true,
+  },
+  {
+    title: "Leather",
+    description:
+      "Professional tannery chemicals and footwear processing solutions for leather manufacturing excellence.",
+    icon: Scissors,
+    image: {
+      src: "/product-category/leather-footwear-chemicals-jemachem-trading.webp",
+      alt: "Tannery & Footwear Chemicals",
+    },
+  },
+  {
+    title: "Textiles",
+    description:
+      "Advanced dyes, finishes, and textile chemicals for fabric processing and garment manufacturing.",
+    icon: Droplets,
+    image: {
+      src: "/product-category/textile-dyes-finishes-chemicals-jemachem-trading.webp",
+      alt: "Textile Chemicals",
+    },
+    reverse: true,
   },
 ];
 
 const Timeline4 = () => {
   return (
     <section className="bg-gray-100">
-      <div className="container mx-auto overflow-hidden pb-20 lg:pt-5 [&>*:last-child]:pb-5 [&>div>div:first-child]:pt-5!">
+      <div className="container mx-auto overflow-hidden py-16 sm:py-20 lg:py-28">
+        {/* Section Title */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground mb-3 sm:mb-4 tracking-[-0.96px] sm:tracking-[-1.28px] lg:tracking-[-1.6px]">
+            Our Product Categories
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4 tracking-[-0.32px] sm:tracking-[-0.4px]">
+            As a premier chemical importer, we source and distribute high-quality chemicals from around the world, 
+            serving diverse industry sectors with our comprehensive range of solutions.
+          </p>
+        </div>
+
         {DATA.map((item, index) => (
-          <div key={index} className="relative flex">
+          <div key={index} className="relative flex mb-8 sm:mb-12 lg:mb-16">
             <div
-              className={`flex w-full justify-center px-1 py-5 text-end md:gap-6 lg:gap-10 ${
+              className={`flex w-full justify-center px-4 sm:px-6 lg:px-8 text-end md:gap-8 lg:gap-12 ${
                 item?.reverse ? "lg:flex-row-reverse lg:text-start" : ""
               } `}
             >
@@ -59,15 +102,15 @@ const Timeline4 = () => {
                   {item.description}
                 </p>
               </div>
-              <div className="flex items-start justify-center">
-                <div className="rounded-full border bg-gray-200 p-[5px] shadow-md w-12 h-12 flex items-center justify-center">
-                    <item.icon className="size-5 shrink-0" />
+              <div className="flex items-start justify-center relative z-10">
+                <div className="rounded-full border bg-gray-200 p-[5px] shadow-md w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                    <item.icon className="size-4 sm:size-5 shrink-0" />
                 </div>
               </div>
-              <div className="flex-1 max-lg:-translate-x-4">
-                <div className="text-start lg:pointer-events-none lg:hidden">
-                  <h3 className="text-2xl tracking-[-0.96px]">{item.title}</h3>
-                  <p className="mt-2.5 mb-10 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground">
+              <div className="flex-1 max-lg:ml-4 sm:max-lg:ml-6">
+                <div className="text-start lg:pointer-events-none lg:hidden mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl tracking-[-0.72px] sm:tracking-[-0.96px]">{item.title}</h3>
+                  <p className="mt-2 sm:mt-2.5 max-w-[280px] sm:max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground text-sm sm:text-base">
                     {item.description}
                   </p>
                 </div>
@@ -75,7 +118,7 @@ const Timeline4 = () => {
                   <div className={` ${item?.reverse ? "lg:ml-auto" : ""}`}>
                     <div className="relative">
                       {/* Product Card Style Image Container */}
-                      <div className="group relative overflow-hidden rounded-xl shadow-lg w-[400px] h-[400px]">
+                      <div className="group relative overflow-hidden rounded-xl shadow-lg w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px]">
                         <img
                           src={item.image.src}
                           width={400}
@@ -91,14 +134,14 @@ const Timeline4 = () => {
               </div>
             </div>
             <div
-              className={`absolute z-[-2] h-full w-[3px] translate-x-5 rounded-full lg:left-1/2 lg:-translate-x-1/2 ${
+              className={`absolute z-[-1] h-full w-[2px] sm:w-[3px] translate-x-5 sm:translate-x-6 rounded-full lg:left-1/2 lg:-translate-x-1/2 ${
                 index === DATA.length - 1
                   ? "bg-gradient-to-b from-foreground/10 via-foreground/10 to-transparent"
                   : "bg-foreground/10"
               }`}
             >
               {index == 0 && (
-                <div className="h-4 w-[3px] -translate-y-full bg-gradient-to-b from-transparent to-foreground/10"></div>
+                <div className="h-4 w-[2px] sm:w-[3px] -translate-y-full bg-gradient-to-b from-transparent to-foreground/10"></div>
               )}
             </div>
           </div>
