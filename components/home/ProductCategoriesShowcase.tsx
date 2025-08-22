@@ -63,8 +63,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/detergent2.png"
-              alt="Detergent and Cosmetics Chemicals"
+              src="/product-category/detergent-cosmetics-chemicals-jemachem-trading.webp"
+              alt="Chemicals for detergents and cosmetics by Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -76,7 +76,7 @@ const Products = () => {
               </span>
               <div className="flex flex-col gap-3 sm:gap-4 text-left">
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                  Ingredients for soaps and personal care.
+                  Ingredients for soaps and detergent.
                 </h4>
                 <p className="flex items-center gap-1 font-medium text-sm sm:text-base">
                   Explore all products
@@ -95,8 +95,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/leather1.avif"
-              alt="Tannery and Shoes Chemicals"
+              src="/product-category/leather-footwear-chemicals-jemachem-trading.webp"
+              alt="Chemicals for leather processing and footwear manufacturing by Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -127,8 +127,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/food-and-beverage.jpg"
-              alt="Food, Beverage, and Brewery Chemicals"
+              src="/product-category/food-beverage-chemicals-jemachem-trading.webp"
+              alt="Additives and cleaners for food and beverage industry by Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -159,8 +159,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/paint1.jpg"
-              alt="Paint, Pigment and Solvents"
+              src="/product-category/paints-solvents-chemicals-jemachem-trading.webp"
+              alt="Paints, colors, and solvent chemicals supplied by Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -191,8 +191,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/textile.jpg"
-              alt="Textile Chemicals"
+              src="/product-category/textile-dyes-finishes-chemicals-jemachem-trading.webp"
+              alt="Textile dyes and finishing chemicals provided by Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -223,8 +223,8 @@ const Products = () => {
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
-              src="/product-category/water-treatement1.webp"
-              alt="Water Treatment Chemicals"
+              src="/product-category/water-treatment-chemicals-jemachem-trading.webp"
+              alt="Chemicals to clean and treat water from Jemachem Trading"
               fill
               className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
             />

@@ -10,27 +10,30 @@ import {
 
 const teamMembers = [
   {
-    src: "/teams/Aymen muhaba.webp",
+    src: "/teams/aymen-muhaba-general-manager-jemachem-trading-chemicals.webp",
     title: "Aymen Muhaba",
     designation: "General Manager",
+    alt: "Aymen Muhaba - General Manager at Jemachem Trading Chemical Import Company",
   },
   {
-    src: "/teams/Sitra muhaba.webp",
+    src: "/teams/sitra-muhaba-operational-manager-jemachem-trading-chemicals.webp",
     title: "Sitra Muhaba",
-    designation: "Operations Manager",
+    designation: "Operational Manager",
+    alt: "Sitra Muhaba - Operational Manager overseeing chemical imports at Jemachem Trading",
   },
   {
-    src: "/teams/Abdulhakim siraj.webp",
+    src: "/teams/abdulhakim-siraj-marketing-manager-jemachem-trading-chemicals.webp",
     title: "Abdulhakim Siraj",
-    designation: "Logistics Lead",
+    designation: "Marketing Manager",
+    alt: "Abdulhakim Siraj - Marketing Manager for chemical distribution at Jemachem Trading",
   },
   {
-    src: "/teams/2.jpeg",
-    title: "Lidya Bekele",
-    designation: "Quality Control",
+    src: "/teams/samuel-assefa-logistics-manager-jemachem-trading-chemicals.webp",
+    title: "Samuel Assefa",
+    designation: "Logistics Manager",
+    alt: "Samuel Assefa - Logistics Manager handling chemical supply chain at Jemachem Trading",
   },
 ];
-
 const Gallery27 = () => {
   return (
     <section className="py-32 bg-black text-white">
@@ -69,7 +72,7 @@ const Gallery27 = () => {
                 <div className="group">
                   <img
                     src={member.src}
-                    alt={member.title}
+                    alt={member.alt}
                     className="h-92 w-full object-cover transition-all duration-300 group-hover:translate-y-[-10px]"
                   />
                   <h3 className="mt-4 text-2xl font-semibold">

@@ -1,5 +1,5 @@
 import Gallery27 from "@/components/about/TeamMembersCarousel";
-import { Logos10 } from "@/components/about/PartnerLogosCarousel";
+import { PartnerLogosCarousel } from "@/components/about/PartnerLogosCarousel";
 import { Timeline4 } from "@/components/about/ProductCategoriesTimeline";
 import { Cta11 } from "@/components/about/ContactCallToAction";
 import { Feature16 } from "@/components/about/CompanyValuesSection";
@@ -40,7 +40,7 @@ export default function About() {
         <Feature16 />
         <Timeline4 />
         <Gallery27 />
-        <Logos10 />
+        <PartnerLogosCarousel />
 
         <Cta11 />
       </div>

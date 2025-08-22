@@ -1,75 +1,67 @@
 "use client";
 
+import Image from "next/image";
+
 const ITEMS = [
   {
-    name: "our-partners-abyssinia-integrated-steel",
-    src: "/partners/our-partners-abyssinia-integrated-steel.jpg",
+    src: "/partners/our-partner-kuriftu-resorts-hospitality-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Kuriftu Resorts hospitality partner with Jemachem Trading",
   },
   {
-    name: "our-partners-bahirdar-textile",
-    src: "/partners/our-partners-bahirdar-textile.jpg",
+    src: "/partners/our-partner-moha-soft-drinks-beverage-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Moha Soft Drinks beverage partner with Jemachem Trading",
   },
   {
-    name: "our-partners-aarti-steel",
-    src: "/partners/our-partners-aarti-steel.png",
+    src: "/partners/our-partner-buluko-textile-fabric-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Buluko Textile fabric and textile industry partner with Jemachem Trading",
   },
   {
-    name: "our-partners-ovid-construction",
-    src: "/partners/our-partners-ovid-construction.jpeg",
+    src: "/partners/our-partner-abyssinia-kojj-food-complex-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Abyssinia Kojj Food Complex food industry partner with Jemachem Trading",
   },
   {
-    name: "our-partners-repi-detergent",
-    src: "/partners/our-partners-repi-detergent.png",
+    src: "/partners/our-partner-abyssinia-integrated-steel-industry-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Abyssinia Integrated Steel industry partner with Jemachem Trading",
   },
   {
-    name: "our-partners-moha-soft-drinks",
-    src: "/partners/our-partners-moha-soft-drinks.jpeg",
+    src: "/partners/our-partner-bahirdar-textile-garment-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Bahir Dar Textile garment and fabric partner with Jemachem Trading",
   },
   {
-    name: "our-partners-kuriftu-resorts",
-    src: "/partners/our-partners-kuriftu-resorts.png",
+    src: "/partners/our-partner-ethiopian-pharmaceutical-supply-healthcare-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Ethiopian Pharmaceutical Supply healthcare partner with Jemachem Trading",
   },
   {
-    name: "our-partners-ethiopian-pharmaceutical-supply",
-    src: "/partners/our-partners-ethiopian-pharmaceutical-supply.jpg",
+    src: "/partners/our-partner-ovid-construction-infrastructure-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Ovid Construction infrastructure partner with Jemachem Trading",
   },
   {
-    name: "our-partners-abyssinia-kojj-food-complex",
-    src: "/partners/our-partners-abyssinia-kojj-food-complex.jpeg",
+    src: "/partners/our-partner-repi-detergent-cleaning-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Repi Detergent cleaning products partner with Jemachem Trading",
   },
   {
-    name: "our-partners-buluko-textile",
-    src: "/partners/our-partners-buluko-textile.png",
+    src: "/partners/our-partner-aarti-steel-manufacturing-jemachem-trading.webp",
     width: 150,
     height: 100,
-    href: "#",
+    alt: "Aarti Steel manufacturing partner with Jemachem Trading",
   },
 ];
 
@@ -92,29 +84,35 @@ const Logos = () => {
             {/* First marquee group */}
             <div className="flex shrink-0 animate-marquee items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
               {ITEMS.map((logo, index) => (
-                <a target="_blank" key={`first-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
-                  <img
+                <div
+                  key={`first-${index}`}
+                  className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6"
+                >
+                  <Image
                     src={logo.src}
-                    alt={logo.name}
+                    alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    className="h-12 w-auto object-contain transition-opacity hover:opacity-70 sm:h-16 md:h-20 lg:h-24 xl:h-28"
+                    className="h-20 w-auto object-contain transition-opacity hover:opacity-70 sm:h-16 md:h-20 lg:h-24 xl:h-28"
                   />
-                </a>
+                </div>
               ))}
             </div>
             {/* Second marquee group for infinite scroll */}
             <div className="flex shrink-0 animate-marquee items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
               {ITEMS.map((logo, index) => (
-                <a target="_blank" key={`second-${index}`} className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">
-                  <img
+                <div
+                  key={`second-${index}`}
+                  className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6"
+                >
+                  <Image
                     src={logo.src}
-                    alt={logo.name}
+                    alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    className="h-12 w-auto object-contain transition-opacity hover:opacity-70 sm:h-16 md:h-20 lg:h-24 xl:h-28"
+                    className="h-20 w-auto object-contain transition-opacity hover:opacity-70 sm:h-16 md:h-20 lg:h-24 xl:h-28"
                   />
-                </a>
+                </div>
               ))}
             </div>
           </div>

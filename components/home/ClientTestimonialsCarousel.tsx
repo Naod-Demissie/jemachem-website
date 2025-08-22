@@ -14,46 +14,40 @@ import {
 
 const testimonials = [
   {
-    name: "Mekdes Alemu",
-    avatar:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
+    name: "Fetiya Mohammed",
+    src: "/testimonials/3.webp",
     content:
-      "We've worked with many suppliers, but none have matched the consistency and quality we get here. Truly dependable.",
+      "We've tried several suppliers before, but these guys are reliable. Quality is consistent and no surprises with deliveries.",
   },
   {
     name: "Abel Hailemariam",
-    avatar:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
+    src: "/testimonials/1.webp",
     content:
-      "High-quality products and great communication. Highly recommended!",
+      "Good quality products and they know what they're doing. Fair prices every time.",
   },
   {
     name: "Selam Tesfaye",
-    avatar:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
+    src: "/testimonials/4.webp",
     content:
-      "Their attention to detail and care in packaging is unmatched. Everything arrives in perfect condition every time.",
+      "Professional packaging and handling. Had one small issue last year and they fixed it immediately.",
   },
   {
     name: "Yared Mengistu",
-    avatar:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
-    content: "Very impressed with the speed and accuracy of their deliveries.",
+    src: "/testimonials/5.webp",
+    content:
+      "Fast delivery, even for urgent orders. They've saved us from production delays more than once.",
   },
   {
     name: "Hanna Tsegaye",
-    avatar:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp",
+    src: "/testimonials/6.webp",
     content:
-      "From inquiry to delivery, everything was smooth. The team was responsive and genuinely helpful. This is how a supplier should operate.",
+      "Their team actually understands our needs and gives good technical advice. It's not just about making a sale.",
   },
-
   {
     name: "Samuel Assefa",
-    avatar:
-      "https://lh3.googleusercontent.com/a-/ALV-UjXfMZ91H9BIpG3EWdEcol5NTNIMiGmmBB6sIS_azhrOu6U2gvw=w73-h73-p-rp-mo-br100",
+    src: "/testimonials/7.webp",
     content:
-      "Highly impressed with the quality and variety of chemicals offered by this company. Their customer service is top-notch, always responsive and helpful. Orders are always delivered on time and in perfect condition. I highly recommend this company for all your chemical needs.",
+      "Been with them for three years now. Consistent quality and the sales team keeps us informed about any changes. Solid supplier.",
   },
 ];
 
@@ -71,7 +65,7 @@ const Testimonial = () => {
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-1 text-sm font-semibold text-white">
             <Zap className="h-6 w-auto fill-white" />
-            Rated 5 stars by 1000+ clients
+            Rated 5 stars by our clients
           </div>
           <h2 className="text-center text-3xl font-semibold lg:text-4xl text-white">
             Meet our happy clients
@@ -100,7 +94,7 @@ const Testimonial = () => {
                       <div className="mb-4 flex gap-4">
                         <Avatar className="size-14 rounded-full ring-1 ring-input">
                           <AvatarImage
-                            src={testimonial.avatar}
+                            src={testimonial.src}
                             alt={testimonial.name}
                           />
                         </Avatar>
