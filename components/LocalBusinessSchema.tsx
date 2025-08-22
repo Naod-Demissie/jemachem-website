@@ -41,14 +41,14 @@ export default function LocalBusinessSchema() {
       "@type": "OfferCatalog",
       "name": "Chemical Products",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Detergents & Cosmetics", "description": "Surfactants, emulsifiers, fragrances, preservatives" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Food & Beverage", "description": "Food additives, sweeteners, acidulants, colorants, preservatives" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Paints & Solvents", "description": "Resins, solvents, pigments, plasticizers" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Plastics & Foam", "description": "Polymer inputs, PU foam chemicals, EPS foam chemicals" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Water Treatment", "description": "Coagulants, flocculants, antiscalants, disinfectants" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Leather & Footwear", "description": "Tanning agents and auxiliaries" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Textiles", "description": "Dyes and auxiliaries" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Laboratory Reagents", "description": "Analytical and laboratory chemicals" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Detergents & Cosmetics", "description": "Surfactants, emulsifiers, fragrances, preservatives" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Food & Beverage", "description": "Food additives, sweeteners, acidulants, colorants, preservatives" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Paints & Solvents", "description": "Resins, solvents, pigments, plasticizers" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Plastics & Foam", "description": "Polymer inputs, PU foam chemicals, EPS foam chemicals" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Water Treatment", "description": "Coagulants, flocculants, antiscalants, disinfectants" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Leather & Footwear", "description": "Tanning agents and auxiliaries" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Textiles", "description": "Dyes and auxiliaries" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Category", "name": "Laboratory Reagents", "description": "Analytical and laboratory chemicals" } }
       ]
     },
     "areaServed": {

@@ -103,6 +103,12 @@ export default function ProductDetailPage() {
                     url: `${baseUrl}/products/${id}`,
                     availability: "https://schema.org/InStock",
                     priceCurrency: "ETB",
+                    price: "Contact for pricing",
+                    seller: {
+                      "@type": "Organization",
+                      name: "Jemachem Trading",
+                      url: baseUrl,
+                    },
                   },
                   manufacturer: {
                     "@type": "Organization",

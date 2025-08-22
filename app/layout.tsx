@@ -103,9 +103,14 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
   icons: {
-    icon: "/jemachem-company-logo.webp",
-    shortcut: "/jemachem-company-logo.webp",
-    apple: "/jemachem-company-logo.webp",
+    icon: [
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
   },
 };
 
@@ -117,6 +122,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <meta name="msapplication-TileColor" content="#0c0c0c" />
+        <meta name="theme-color" content="#0c0c0c" />
         <StructuredData />
         <LocalBusinessSchema />
         <FAQSchema />
