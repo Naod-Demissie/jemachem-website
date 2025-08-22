@@ -11,8 +11,8 @@ interface Cta11Props {
 }
 
 const Cta11 = ({
-  heading = "Call to Action",
-  description = "Build faster with our collection of pre-built blocks. Speed up your development and ship features in record time.",
+  heading = "Ready to Partner with Us?",
+  description = "Connect with Jemachem Trading for premium chemical solutions.\nOur expert team is ready to meet your industry needs.",
   imageSrc = "/jemachem-company-logo.webp",
   imageAlt = "Company logo",
   buttonText = "Contact Us",

@@ -30,30 +30,29 @@ interface FooterProps {
 
 const defaultSections = [
   {
-    title: "Products",
+    title: "Product Categories",
     links: [
-      { name: "Industrial Chemicals", href: "/products/industrial" },
-      { name: "Agrochemicals", href: "/products/agrochemical" },
-      { name: "Laboratory Reagents", href: "/products/laboratory" },
-      { name: "All Products", href: "/products" },
+      { name: "Detergents & Cosmetics", href: "/products" },
+      { name: "Food & Beverage", href: "/products" },
+      { name: "Paints & Solvents", href: "/products" },
+      { name: "Plastics & Foam", href: "/products" },
     ],
   },
   {
-    title: "Industries Served",
+    title: "More Categories",
     links: [
-      { name: "Agriculture", href: "/industries/agriculture" },
-      { name: "Manufacturing", href: "/industries/manufacturing" },
-      { name: "Research & Labs", href: "/industries/labs" },
-      { name: "Education", href: "/industries/education" },
+      { name: "Water Treatment", href: "/products" },
+      { name: "Leather & Footwear", href: "/products" },
+      { name: "Textiles", href: "/products" },
     ],
   },
   {
-    title: "Support",
+    title: "Pages",
     links: [
-      { name: "Contact Us", href: "/contact" },
-      { name: "Request Quote", href: "/contact#quote" },
-      { name: "Delivery Info", href: "/support/delivery" },
-      { name: "FAQs", href: "/support/faqs" },
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Products", href: "/products" },
+      { name: "Contact", href: "/contact" },
     ],
   },
 ];

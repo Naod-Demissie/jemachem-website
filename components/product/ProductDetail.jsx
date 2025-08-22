@@ -71,7 +71,7 @@ const ProductDetail = ({ product, onBack }) => {
           </h1>
           <div className="flex flex-wrap gap-2 justify-center">
                           {categories.map((category, index) => (
-                <Badge key={index} className={`${getCategoryColor(category)} text-base px-4 py-2`}>
+                <Badge key={index} className={`${getCategoryColor(category)} text-xs px-3 py-1 rounded-full border backdrop-blur-sm`}>
                   {mapCategoryLabel(category)}
                 </Badge>
               ))}
@@ -88,7 +88,7 @@ const ProductDetail = ({ product, onBack }) => {
             {/* Left Column - Product Image */}
             <div className="space-y-4">
               <Card className="overflow-hidden" style={{ backgroundColor: "#0c0c0c", borderColor: "#272729" }}>
-                <div className="relative aspect-square">
+                <div className="relative aspect-square max-h-[540px]">
                   <img
                     src={`/products/${product["Image Path"]}`}
                     alt={product["Product Name"]}
@@ -97,15 +97,7 @@ const ProductDetail = ({ product, onBack }) => {
                       e.target.src = 'https://via.placeholder.com/600x600?text=No+Image+Available'
                     }}
                   />
-                  <div className="absolute top-4 right-4">
-                    <div className="flex flex-wrap gap-1">
-                      {categories.slice(0, 2).map((category, index) => (
-                        <Badge key={index} className={getCategoryColor(category)}>
-                          {mapCategoryLabel(category)}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+
                 </div>
               </Card>
             </div>

@@ -1,4 +1,4 @@
-import { Factory, Leaf, TestTube, Droplets, Scissors, Beaker } from "lucide-react";
+import { Factory, Leaf, TestTube, Droplets, Scissors, Beaker, Utensils, Paintbrush, Package, Zap, Layers } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,7 @@ const DATA = [
     title: "Food Grade",
     description:
       "Food-safe additives and processing chemicals for beverage, brewery, and food manufacturing industries.",
-    icon: TestTube,
+    icon: Utensils,
     image: {
       src: "/product-category/food-beverage-chemicals-jemachem-trading.webp",
       alt: "Food & Beverage Chemicals",
@@ -30,20 +30,20 @@ const DATA = [
     title: "Paints",
     description:
       "Premium pigments, solvents, and paint chemicals for industrial coatings and artistic applications.",
-    icon: Factory,
+    icon: Paintbrush,
     image: {
       src: "/product-category/paints-solvents-chemicals-jemachem-trading.webp",
       alt: "Paints & Solvents Chemicals",
     },
   },
   {
-    title: "Plastics",
+    title: "Water Treatment",
     description:
-      "Specialized chemicals for plastic manufacturing, foam production, and polymer processing industries.",
-    icon: Leaf,
+      "Chemicals to clean and treat water for industrial, municipal, and environmental applications.",
+    icon: Droplets,
     image: {
-      src: "/product-category/detergent-cosmetics-chemicals-jemachem-trading.webp",
-      alt: "Plastic & Foam Chemicals",
+      src: "/product-category/water-treatment-chemicals-jemachem-trading.webp",
+      alt: "Water Treatment Chemicals",
     },
     reverse: true,
   },
@@ -51,7 +51,7 @@ const DATA = [
     title: "Leather",
     description:
       "Professional tannery chemicals and footwear processing solutions for leather manufacturing excellence.",
-    icon: Scissors,
+    icon: Layers,
     image: {
       src: "/product-category/leather-footwear-chemicals-jemachem-trading.webp",
       alt: "Tannery & Footwear Chemicals",
@@ -61,7 +61,7 @@ const DATA = [
     title: "Textiles",
     description:
       "Advanced dyes, finishes, and textile chemicals for fabric processing and garment manufacturing.",
-    icon: Droplets,
+    icon: Scissors,
     image: {
       src: "/product-category/textile-dyes-finishes-chemicals-jemachem-trading.webp",
       alt: "Textile Chemicals",

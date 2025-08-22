@@ -37,12 +37,16 @@ const contactInfo: ContactInfo[] = [
     description: "Mon-Sat, 9AM-6PM",
     value: (
       <>
-        <span>+251914119689</span>
+        <span>+251913119689</span>
         <br />
         <span>+251975818880</span>
+        <br />
+        <span>+251988177960</span>
+        <br />
+        <span>+251973939090</span>
       </>
     ),
-    href: "tel:+251914119689",
+    href: "tel:+251913119689",
   },
   {
     icon: <MapPin className="size-6 invert" />,
@@ -158,9 +162,8 @@ const Contact = () => {
                 Contact Us
               </h1>
               <p className="text-white mx-auto max-w-2xl text-lg">
-                Ready to start your next project? Our team is here to help you
-                succeed. Reach out and let&#39;s discuss how we can bring your
-                ideas to life.
+                Ready to source quality chemicals for your business? Our team is here to help 
+                you find the right solutions. Let's discuss your needs.
               </p>
             </div>
 
@@ -210,10 +213,10 @@ const Contact = () => {
                                 <TooltipTrigger asChild>
                                   <button
                                     type="button"
-                                    onClick={() => handleCopy("phone1", "+251914119689")}
+                                    onClick={() => handleCopy("phone1", "+251913119689")}
                                     className="hover:underline cursor-pointer"
                                   >
-                                    +251914119689
+                                    +251913119689
                                   </button>
                                 </TooltipTrigger>
                                 <TooltipContent side="top">
@@ -233,6 +236,36 @@ const Contact = () => {
                                 </TooltipTrigger>
                                 <TooltipContent side="top">
                                   {copied.phone2 ? "Copied!" : "Click to copy"}
+                                </TooltipContent>
+                              </Tooltip>
+                              <br />
+                              <Tooltip {...(copied.phone3 ? { open: true } : {})}>
+                                <TooltipTrigger asChild>
+                                  <button
+                                    type="button"
+                                    onClick={() => handleCopy("phone3", "+251988177960")}
+                                    className="hover:underline cursor-pointer"
+                                  >
+                                    +251988177960
+                                  </button>
+                                </TooltipTrigger>
+                                <TooltipContent side="top">
+                                  {copied.phone3 ? "Copied!" : "Click to copy"}
+                                </TooltipContent>
+                              </Tooltip>
+                              <br />
+                              <Tooltip {...(copied.phone4 ? { open: true } : {})}>
+                                <TooltipTrigger asChild>
+                                  <button
+                                    type="button"
+                                    onClick={() => handleCopy("phone4", "+251973939090")}
+                                    className="hover:underline cursor-pointer"
+                                  >
+                                    +251973939090
+                                  </button>
+                                </TooltipTrigger>
+                                <TooltipContent side="top">
+                                  {copied.phone4 ? "Copied!" : "Click to copy"}
                                 </TooltipContent>
                               </Tooltip>
                             </div>

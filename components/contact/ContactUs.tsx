@@ -335,11 +335,11 @@ const ContactUs = () => {
                                 <button
                                   type="button"
                                   onClick={() =>
-                                    handleCopy("phone1", "+251914119689")
+                                    handleCopy("phone1", "+251913119689")
                                   }
                                   className="underline hover:text-white cursor-pointer"
                                 >
-                                  +251914119689
+                                  +251913119689
                                 </button>
                               </TooltipTrigger>
                               <TooltipContent side="top">
@@ -361,6 +361,40 @@ const ContactUs = () => {
                               </TooltipTrigger>
                               <TooltipContent side="top">
                                 {copied.phone2 ? "Copied!" : "Click to copy"}
+                              </TooltipContent>
+                            </Tooltip>
+                            <br />
+                            <Tooltip {...(copied.phone3 ? { open: true } : {})}>
+                              <TooltipTrigger asChild>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    handleCopy("phone3", "+251988177960")
+                                  }
+                                  className="underline hover:text-white cursor-pointer"
+                                >
+                                  +251988177960
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent side="top">
+                                {copied.phone3 ? "Copied!" : "Click to copy"}
+                              </TooltipContent>
+                            </Tooltip>
+                            <br />
+                            <Tooltip {...(copied.phone4 ? { open: true } : {})}>
+                              <TooltipTrigger asChild>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    handleCopy("phone4", "+251973939090")
+                                  }
+                                  className="underline hover:text-white cursor-pointer"
+                                >
+                                  +251973939090
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent side="top">
+                                {copied.phone4 ? "Copied!" : "Click to copy"}
                               </TooltipContent>
                             </Tooltip>
                           </div>

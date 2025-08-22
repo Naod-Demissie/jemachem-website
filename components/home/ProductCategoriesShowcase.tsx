@@ -44,8 +44,8 @@ const Products = () => {
           transition={{ duration: 1.0, ease: "easeOut", delay: 0.6 }}
           className="text-white max-w-2xl mx-auto px-4"
         >
-          Explore our wide range of trusted industrial, agricultural, and
-          laboratory chemicals—imported with precision and delivered with care.
+          Discover our comprehensive chemical solutions for diverse industries—we 
+          import and distribute quality chemicals that power your business success.
         </motion.p>
 
         <motion.div

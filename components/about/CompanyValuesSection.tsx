@@ -21,9 +21,8 @@ const Feature16 = () => {
               On-Time Delivery
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              We understand that timing is critical. Our well-coordinated
-              logistics and strong supply chain partnerships ensure that your
-              chemicals are delivered promptly—every time, without exception.
+              Our coordinated logistics and supply chain partnerships ensure 
+              prompt delivery of your chemicals—every time, without exception.
             </p>
           </div>
           <div className="w-full max-w-[400px] h-[350px] rounded-lg bg-[#0c0c0c] p-6 flex flex-col hover:scale-101 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 ease-in-out cursor-pointer">
@@ -34,10 +33,8 @@ const Feature16 = () => {
               Uncompromised Quality
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              Our products undergo rigorous quality control and adhere to
-              international standards. From industrial solvents to laboratory
-              reagents, we deliver consistent performance and purity you can
-              trust.
+              All products undergo rigorous quality control and meet international 
+              standards. We deliver consistent performance and purity you can trust.
             </p>
           </div>
           <div className="w-full max-w-[400px] h-[350px] rounded-lg bg-[#0c0c0c] p-6 flex flex-col hover:scale-101 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 ease-in-out cursor-pointer">
@@ -45,12 +42,11 @@ const Feature16 = () => {
               <Zap className="size-6 text-white" />
             </span>
             <h3 className="mb-4 text-xl font-medium text-white text-left">
-              Forward Thinking
+              Industry Leader
             </h3>
             <p className="leading-7 text-gray-300 text-left flex-grow">
-              We don’t just follow trends—we set them. By embracing cutting-edge
-              sourcing, eco-friendly packaging, and digital service tools, we’re
-              shaping a smarter and more sustainable future for chemical supply.
+              With years of experience and deep industry knowledge, we lead 
+              the way in chemical sourcing, quality standards, and customer service excellence.
             </p>
           </div>
         </div>

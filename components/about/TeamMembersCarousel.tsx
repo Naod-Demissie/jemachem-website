@@ -45,9 +45,9 @@ const Gallery27 = () => {
           The Team Behind Our Success
         </h1>
         <p className="mt-3 max-w-xl text-gray-300 text-center mx-auto">
-          These are the people handling the day-to-day—coordinating imports,
-          tracking shipments, talking to suppliers, and making sure everything
-          runs smoothly.
+          Our team handles all the details behind successful chemical sourcing.
+          <br />
+          We work with suppliers, manage shipments, and keep everything running smoothly.
         </p>
         <Carousel
           opts={{
