@@ -65,7 +65,7 @@ const ProductDetail = ({ product, onBack }) => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-20 relative flex min-h-[40vh] w-full overflow-hidden bg-[url('/laboratory-chemicals.png')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/60 after:content-['']">
+      <section className="pt-20 relative flex min-h-[40vh] w-full overflow-hidden bg-[url('/laboratory-chemicals.webp')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/60 after:content-['']">
         <div className="relative z-30 m-auto flex max-w-[46.25rem] flex-col items-center justify-center gap-6 px-5">
           <h1 className="text-white text-center font-sans text-3xl leading-tight md:text-4xl lg:text-5xl max-w-4xl font-extrabold">
             {product["Product Name"]}

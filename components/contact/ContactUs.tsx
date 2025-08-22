@@ -136,7 +136,7 @@ const ContactUs = () => {
       <section className="relative min-h-[400px] w-full">
         <div className="absolute inset-0">
           <Image
-            src="/contact-us-banner.jpg"
+            src="/contact-us-banner.webp"
             alt="Contact Us Banner"
             fill
             className="object-cover"

@@ -78,9 +78,9 @@ export default function About8() {
             <p className="text-lg">
               Founded with a vision to bridge the supply gap, we&#39;ve built
               long-standing partnerships with trusted international
-              manufacturers and local institutions. Whether it&#39;s fertilizer for
-              a cooperative, reagents for a university lab, or machinery for a
-              factory, we source and deliver with precision.
+              manufacturers and local institutions. Whether it&#39;s fertilizer
+              for a cooperative, reagents for a university lab, or machinery for
+              a factory, we source and deliver with precision.
             </p>
           </div>
         </section>
@@ -118,7 +118,7 @@ export default function About8() {
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
                 <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
                   <Image
-                    src="/agro-field.jpg"
+                    src="/agro-field.webp"
                     alt="Agricultural site with chemical spraying"
                     fill
                     className="object-cover rounded-lg"

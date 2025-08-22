@@ -10,7 +10,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us - Chemical Import Company Ethiopia",
-  description: "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality industrial, agricultural, and laboratory chemicals across Ethiopia.",
+  description:
+    "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality industrial, agricultural, and laboratory chemicals across Ethiopia.",
   keywords: [
     "about Jemachem Trading",
     "chemical import company Ethiopia",
@@ -36,15 +37,16 @@ export const metadata: Metadata = {
     "chemical warehouse Addis Ababa",
     "chemical sourcing Ethiopia",
     "import chemicals Ethiopia",
-    "chemical logistics Ethiopia"
+    "chemical logistics Ethiopia",
   ],
   openGraph: {
     title: "About Us - Chemical Import Company Ethiopia",
-    description: "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality chemicals across Ethiopia.",
+    description:
+      "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality chemicals across Ethiopia.",
     url: "https://jemachem.com/about",
   },
   alternates: {
-    canonical: '/about',
+    canonical: "/about",
   },
 };
 
@@ -55,7 +57,7 @@ export default function About() {
       <section className="relative min-h-[400px] w-full">
         <div className="absolute inset-0">
           <Image
-            src="/contact-us-banner.jpg"
+            src="/contact-us-banner.webp"
             alt="About Us Banner"
             fill
             className="object-cover"
