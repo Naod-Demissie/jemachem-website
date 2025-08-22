@@ -104,10 +104,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
     ],
-    shortcut: '/favicon/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/favicon/apple-touch-icon.png',
   },
 };
@@ -121,7 +121,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <meta name="msapplication-TileColor" content="#0c0c0c" />
