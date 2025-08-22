@@ -6,7 +6,7 @@ import { Feature16 } from "@/components/about/CompanyValuesSection";
 import About8 from "@/components/about/AboutHeroSection";
 import PlusPatternBackground from "@/components/ui/PlusPatternBackground";
 import type { Metadata } from "next";
-import Image from "next/image";
+import { AboutBanner } from "@/components/about/AboutBanner";
 
 export const metadata: Metadata = {
   title: "About Us - Chemical Import Company Ethiopia",
@@ -53,33 +53,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      {/* Banner Section */}
-      <section className="relative min-h-[400px] w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="/contact-us-banner.webp"
-            alt="About Us Banner"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black opacity-80" />
-        </div>
-        <div className="relative z-10 flex h-full items-center justify-center pt-40 text-center text-white">
-          <div className="max-w-2xl">
-            <div className="flex justify-center mb-3">
-              <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
-                <p className="text-sm font-normal text-white">ABOUT US</p>
-              </div>
-            </div>
-            <h1 className="text-4xl font-semibold tracking-tight md:text-3xl lg:text-4xl">
-              Powering Ethiopia&#39;s Growth
-              <br />
-              One Chemical at a Time.
-            </h1>
-          </div>
-        </div>
-      </section>
+      <AboutBanner />
       <div className="relative overflow-hidden text-center">
         <PlusPatternBackground />
         <About8 />

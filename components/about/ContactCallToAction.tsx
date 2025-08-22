@@ -1,5 +1,44 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+
+// Animation variants
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeInLeft: Variants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeInRight: Variants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 interface Cta11Props {
   heading?: string;
@@ -21,11 +60,15 @@ const Cta11 = ({
   return (
     <section className="py-32 bg-black">
       <div className="container mx-auto max-w-7xl px-4">
-        <div
+        <motion.div
           className="bg-[#0c0c0c] flex w-full flex-col gap-8 overflow-hidden rounded-lg p-8 md:rounded-xl lg:flex-row lg:items-center lg:p-12 mx-auto max-w-7xl"
           style={{ backgroundColor: "#0c0c0c" }}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="flex-1 text-left">
+          <motion.div className="flex-1 text-left" variants={fadeInLeft}>
             <h3 className="mb-3 text-2xl font-semibold text-white md:mb-4 md:text-4xl lg:mb-6 text-left">
               {heading}
             </h3>
@@ -38,16 +81,18 @@ const Cta11 = ({
             >
               <a href={buttonHref}>{buttonText}</a>
             </Button>
-          </div>
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={170}
-            height={60}
-            className="w-[170px] h-auto"
-            priority
-          />
-        </div>
+          </motion.div>
+          <motion.div variants={fadeInRight}>
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={170}
+              height={60}
+              className="w-[170px] h-auto"
+              priority
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

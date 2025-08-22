@@ -1,6 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+
+// Animation variants
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const logos = [
   {
@@ -69,15 +85,27 @@ const PartnerLogosCarousel = () => {
   return (
     <section className="py-16 md:py-24 lg:py-32">
       <div className="container px-4 mx-auto">
-        <div className="text-center max-w-4xl mx-auto">
+        <motion.div
+          className="text-center max-w-4xl mx-auto"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2 className="text-3xl md:text-xl lg:text-4xl xl:text-4xl font-semibold tracking-tight">
             Trusted by Leading{" "}
             <span className="text-muted-foreground/60">Industries</span> Across
             Ethiopia
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="relative mx-auto flex items-center justify-center pt-8">
+        <motion.div
+          className="relative mx-auto flex items-center justify-center pt-8"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="relative overflow-hidden">
             <div className="flex w-full">
               {/* First marquee group */}
@@ -118,7 +146,7 @@ const PartnerLogosCarousel = () => {
           </div>
           <div className="bg-gradient-to-r from-background absolute inset-y-0 left-0 w-32 to-transparent"></div>
           <div className="bg-gradient-to-l from-background absolute inset-y-0 right-0 w-32 to-transparent"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
