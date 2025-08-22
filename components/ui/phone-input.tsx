@@ -9,7 +9,8 @@ export interface PhoneInputProps
 }
 
 const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
-  ({ defaultCountry, ...props }, ref) => {
+  ({ defaultCountry: _defaultCountry, ...props }, ref) => {
+    void _defaultCountry;
     return <Input ref={ref} type="tel" {...props} />;
   }
 );

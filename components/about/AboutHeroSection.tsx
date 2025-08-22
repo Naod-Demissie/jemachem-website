@@ -3,6 +3,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export default function About8() {
   return (
@@ -12,7 +13,7 @@ export default function About8() {
         <section className="flex justify-center items-center py-10 md:py-12 lg:py-15">
           <div className="max-w-5xl text-center">
             <p className="mt-4 max-w-2xl text-2xl text-muted-foreground md:text-3xl mx-auto">
-              We're dedicated to delivering reliable chemical and equipment
+              We&#39;re dedicated to delivering reliable chemical and equipment
               solutions that drive agriculture, science, and industry forward.
             </p>
           </div>
@@ -65,19 +66,19 @@ export default function About8() {
         <section className="container max-w-5xl py-10 md:py-12 lg:py-15">
           <div className="max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
             <p className="text-lg">
-              Access to high-quality chemicals and equipment shouldn't be a
+              Access to high-quality chemicals and equipment shouldn&#39;t be a
               bottleneck for progress. In Ethiopia, reliable supply chains for
               agricultural, industrial, and laboratory sectors are still
-              catching up to growing demand. That's why we exist.
+              catching up to growing demand. That&#39;s why we exist.
             </p>
 
             <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
-              We're not just importers. We're enablers of progress.
+              We&#39;re not just importers. We&#39;re enablers of progress.
             </h2>
             <p className="text-lg">
-              Founded with a vision to bridge the supply gap, we've built
+              Founded with a vision to bridge the supply gap, we&#39;ve built
               long-standing partnerships with trusted international
-              manufacturers and local institutions. Whether it's fertilizer for
+              manufacturers and local institutions. Whether it&#39;s fertilizer for
               a cooperative, reagents for a university lab, or machinery for a
               factory, we source and deliver with precision.
             </p>
@@ -94,28 +95,34 @@ export default function About8() {
             <CarouselContent className="-ml-4">
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
                 <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
-                  <img
+                  <Image
                     src="/truck-full-of-imported-chemicals.webp"
                     alt="Warehouse facility"
-                    className="h-full w-full object-cover rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
                 <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
-                  <img
+                  <Image
                     src="/jemachem-warehouse.webp"
                     alt="Modern lab setup"
-                    className="h-full w-full object-cover rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
               <CarouselItem className="basis-[80%] lg:basis-1/3 xl:basis-[40%]">
                 <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
-                  <img
+                  <Image
                     src="/agro-field.jpg"
                     alt="Agricultural site with chemical spraying"
-                    className="h-full w-full object-cover rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -141,7 +148,7 @@ export default function About8() {
               Under the leadership of our General Manager,{" "}
               <strong>Aymen Muhaba</strong>, our team brings together technical
               expertise, international sourcing knowledge, and a strong
-              understanding of local industry needs. We're here to empower
+              understanding of local industry needs. We&#39;re here to empower
               Ethiopian businesses to thrive.
             </p>
           </div>

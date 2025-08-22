@@ -1,5 +1,4 @@
-import { FaTiktok, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
+ 
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 

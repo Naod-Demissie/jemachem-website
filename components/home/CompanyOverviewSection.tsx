@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import PlusPatternBackground from "@/components/ui/PlusPatternBackground";
+import Image from "next/image";
 
 interface AboutProps {
   achievementsTitle?: string;
@@ -75,11 +75,15 @@ const About = ({
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
             className="md:col-span-2"
           >
-            <img
-              src="/jemachem-office-1.webp"
-              alt="Our Warehouse"
-              className="w-full h-74 md:h-96 rounded-xl object-cover"
-            />
+            <div className="relative w-full h-74 md:h-96">
+              <Image
+                src="/jemachem-office-1.webp"
+                alt="Our Warehouse"
+                fill
+                className="object-cover rounded-xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </motion.div>
           {/* Second: Image then Paragraph (no h1) */}
           <motion.div
@@ -88,11 +92,15 @@ const About = ({
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
             className="md:col-span-2"
           >
-            <img
-              src="/jemachem-office-2.webp"
-              alt="Our Warehouse"
-              className="w-full h-72 md:h-96 rounded-xl object-cover"
-            />
+            <div className="relative w-full h-72 md:h-96">
+              <Image
+                src="/jemachem-office-2.webp"
+                alt="Our Warehouse"
+                fill
+                className="object-cover rounded-xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -104,7 +112,7 @@ const About = ({
               In addition to our exceptional products and services, we offer
               technical support and expertise to help our clients utilize the
               chemicals effectively and safely. We are committed to going above
-              and beyond to meet all of our clients' chemical needs.
+              and beyond to meet all of our clients&#39; chemical needs.
               <br />
               <br />
               With a focus on quality, reliability, and customer satisfaction,

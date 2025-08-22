@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const logos = [
   {
     src: "/partners/our-partner-kuriftu-resorts-hospitality-jemachem-trading.webp",
@@ -85,7 +87,7 @@ const PartnerLogosCarousel = () => {
                     key={`first-${logo.alt}`}
                     className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6"
                   >
-                    <img
+                    <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={logo.width}
@@ -102,7 +104,7 @@ const PartnerLogosCarousel = () => {
                     key={`second-${logo.alt}`}
                     className="p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6"
                   >
-                    <img
+                    <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={logo.width}

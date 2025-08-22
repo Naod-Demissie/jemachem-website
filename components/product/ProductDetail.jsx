@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ArrowLeft, Package, MapPin, Building2, Info } from 'lucide-react'
+import Image from 'next/image'
 
 const ProductDetail = ({ product, onBack }) => {
   if (!product) return null
@@ -89,12 +90,14 @@ const ProductDetail = ({ product, onBack }) => {
             <div className="space-y-4">
               <Card className="overflow-hidden" style={{ backgroundColor: "#0c0c0c", borderColor: "#272729" }}>
                 <div className="relative aspect-square max-h-[540px]">
-                  <img
+                  <Image
                     src={`/products/${product["Image Path"]}`}
                     alt={product["Product Name"]}
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 540px"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/600x600?text=No+Image+Available'
+                      // fallback not supported directly by next/image; keep container consistent
                     }}
                   />
 

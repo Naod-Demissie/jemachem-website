@@ -7,14 +7,101 @@ import "@fontsource/poppins/700.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import FAQSchema from "@/components/FAQSchema";
+import PerformanceOptimization from "@/components/PerformanceOptimization";
 
 export const metadata: Metadata = {
   title: {
-    default: "Jemachem Trading",
-    template: "%s | Jemachem Trading",
+    default: "Jemachem Trading - Ethiopia's Premier Chemical Import & Distribution Company",
+    template: "%s | Jemachem Trading - Chemical Import & Distribution Ethiopia",
   },
   description:
-    "Jemachem Trading - Ethiopia's premier importer, supplier, and distributor of industrial, agro, and laboratory chemicals and equipment. Delivering quality solutions for Ethiopia's growing industries with reliable products and exceptional service.",
+    "Jemachem Trading is Ethiopia's leading importer, supplier, and distributor of chemicals across categories including Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory reagents. We provide high-quality chemical solutions for manufacturing, agriculture, and research across Ethiopia with reliable delivery and expert support.",
+  keywords: [
+    "chemical import Ethiopia",
+    "industrial chemicals Ethiopia",
+    "agricultural chemicals Ethiopia", 
+    "laboratory chemicals Ethiopia",
+    "chemical supplier Ethiopia",
+    "chemical distributor Ethiopia",
+    "detergent chemicals Ethiopia",
+    "cosmetics chemicals Ethiopia",
+    "surfactants Ethiopia",
+    "fragrances Ethiopia",
+    "emulsifiers Ethiopia",
+    "food additives Ethiopia",
+    "preservatives Ethiopia",
+    "sweeteners Ethiopia",
+    "acidulants Ethiopia",
+    "food colorants Ethiopia",
+    "food grade chemicals Ethiopia",
+    "paint chemicals Ethiopia",
+    "industrial resins Ethiopia",
+    "solvents Ethiopia",
+    "pigments Ethiopia",
+    "plasticizers Ethiopia",
+    "water treatment chemicals Ethiopia",
+    "coagulants Ethiopia",
+    "flocculants Ethiopia",
+    "antiscalants Ethiopia",
+    "disinfectants Ethiopia",
+    "leather chemicals Ethiopia",
+    "tanning agents Ethiopia",
+    "textile chemicals Ethiopia",
+    "textile dyes Ethiopia",
+    "textile auxiliaries Ethiopia",
+    "polymer chemicals Ethiopia",
+    "plastics and foam chemicals Ethiopia",
+    "polyurethane foam chemicals Ethiopia",
+    "EPS foam chemicals Ethiopia",
+    "chemical trading Ethiopia",
+    "chemical import company Ethiopia",
+    "chemical warehouse Ethiopia"
+  ],
+  authors: [{ name: "Jemachem Trading" }],
+  creator: "Jemachem Trading",
+  publisher: "Jemachem Trading",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://jemachem.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://jemachem.com',
+    siteName: 'Jemachem Trading',
+    title: 'Jemachem Trading - Ethiopia\'s Premier Chemical Import & Distribution Company',
+    description: 'Importer and distributor of chemicals in Ethiopia across Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.',
+    images: [
+      {
+        url: '/jemachem-company-logo.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Jemachem Trading - Chemical Import Company Ethiopia',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
   icons: {
     icon: "/jemachem-company-logo.webp",
     shortcut: "/jemachem-company-logo.webp",
@@ -29,6 +116,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+        <LocalBusinessSchema />
+        <FAQSchema />
+        <PerformanceOptimization />
+      </head>
       <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>

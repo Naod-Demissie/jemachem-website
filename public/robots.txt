@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jemachem.com/sitemap.xml
+
+
+# Allow all other content
+Allow: /products/
+Allow: /about/
+Allow: /contact/

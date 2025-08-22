@@ -53,14 +53,7 @@ const ProductCard = ({ product, onViewDetails }) => {
   const formatBrand = (brand) => Array.isArray(brand) ? brand.join(', ') : (brand || 'Various brands')
   const formatCountry = (country) => Array.isArray(country) ? country.join(', ') : (country || 'Multiple origins')
 
-  const isExternalImage = (url) => {
-    if (!url) return false
-    const externalDomains = [
-      'cdn.globalso.com','5.imimg.com','i0.wp.com','image.made-in-china.com','www.gopani.com',
-      'www.chinabentonite.net','image.chukouplus.com','m.media-amazon.com','www.hatenboer-water.com'
-    ]
-    return externalDomains.some(domain => url.includes(domain))
-  }
+  
 
   // Parse categories from the new format
   const getCategories = () => {
@@ -84,11 +77,7 @@ const ProductCard = ({ product, onViewDetails }) => {
       {/* Image */}
       <div className="relative w-full h-[470px]">
         <div className="block w-full h-full">
-          {isExternalImage(product.imageURL) ? (
-            <img src={product.imageURL} alt={product["Product Name"]} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onError={(e) => { e.target.src = 'https://via.placeholder.com/300x300?text=No+Image' }} />
-          ) : (
-            <Image src={`/products/${product["Image Path"]}`} alt={product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" onError={(e) => { e.target.src = 'https://via.placeholder.com/300x300?text=No+Image' }} />
-          )}
+          <Image src={`/products/${product["Image Path"]}`} alt={product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" />
         </div>
         {/* Base overlay for readability (30%) and deepen on hover (50%) */}
         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 opacity-100 transition-colors duration-300 z-10"></div>

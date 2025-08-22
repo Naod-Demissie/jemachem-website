@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -24,11 +25,8 @@ import {
   MapPin,
   Clock,
   ShoppingCart,
-  FileText,
   MessageCircle,
   HelpCircle,
-  HeadphonesIcon,
-  LifeBuoy,
 } from "lucide-react";
 
 const APPS_SCRIPT_URL =
@@ -115,7 +113,7 @@ const ContactUs = () => {
       // With no-cors, the response is opaque; assume success if no network error thrown
       setSubmitStatus("success");
       reset();
-    } catch (err) {
+    } catch (_err) {
       setSubmitStatus("error");
     }
   };
@@ -137,10 +135,12 @@ const ContactUs = () => {
       {/* Banner Section */}
       <section className="relative min-h-[400px] w-full">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/contact-us-banner.jpg"
             alt="Contact Us Banner"
-            className="h-full w-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-black opacity-80" />
         </div>
@@ -278,12 +278,16 @@ const ContactUs = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                   >
-                    <motion.img
-                      src="/jemachem-company-logo.webp"
-                      alt="JemaChem Logo"
-                      className="w-[170px]"
-                      variants={fadeIn}
-                    />
+                    <motion.div variants={fadeIn}>
+                      <Image
+                        src="/jemachem-company-logo.webp"
+                        alt="JemaChem Logo"
+                        width={170}
+                        height={60}
+                        className="w-[170px] h-auto"
+                        priority
+                      />
+                    </motion.div>
                     <motion.div className="space-y-6" variants={fadeInUp}>
                       {/* Email */}
                       <div className="flex items-start gap-4">

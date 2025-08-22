@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import ProductDetail from "@/components/product/ProductDetail";
 import productsData from "../products.json";
+import SEOHead from "@/components/SEOHead";
 
 // Define the product type based on the new JSON structure
 type Product = {
@@ -56,6 +57,64 @@ export default function ProductDetailPage() {
 
   return (
     <div className="min-h-screen">
+      {/* Dynamic SEO for product detail */}
+      {(() => {
+        const baseUrl = "https://jemachem.com";
+        const id = product.ID;
+        const title = `${product["Product Name"]} - Chemical Supplier Ethiopia`;
+        const description = `${product.Description?.slice(0, 155) || product["Product Name"]} Available in Ethiopia with reliable sourcing and delivery.`;
+        const ogImage = `/products/${product["Image Path"]}`;
+        const keywords = [
+          product["Product Name"],
+          ...(product.Category ? product.Category.split(",").map((c) => c.trim()) : []),
+          product["Brand Name"] || "",
+          product["Source Country"] || "",
+          "chemical supplier Ethiopia",
+          "chemical importer Ethiopia",
+          "Addis Ababa",
+        ].filter(Boolean);
+
+        return (
+          <>
+            <SEOHead
+              title={title}
+              description={description}
+              keywords={keywords}
+              canonical={`/products/${id}`}
+              ogImage={ogImage}
+              ogType="product"
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Product",
+                  name: product["Product Name"],
+                  sku: product.ID,
+                  image: `${baseUrl}/products/${product["Image Path"]}`,
+                  description: product.Description,
+                  brand: product["Brand Name"] ? { "@type": "Brand", name: product["Brand Name"] } : undefined,
+                  category: product.Category,
+                  countryOfOrigin: product["Source Country"],
+                  url: `${baseUrl}/products/${id}`,
+                  offers: {
+                    "@type": "Offer",
+                    url: `${baseUrl}/products/${id}`,
+                    availability: "https://schema.org/InStock",
+                    priceCurrency: "ETB",
+                  },
+                  manufacturer: {
+                    "@type": "Organization",
+                    name: "Jemachem Trading",
+                    url: baseUrl,
+                  },
+                }),
+              }}
+            />
+          </>
+        );
+      })()}
       <ProductDetail product={product} onBack={handleBackToProducts} />
     </div>
   );

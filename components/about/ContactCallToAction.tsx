@@ -39,10 +39,13 @@ const Cta11 = ({
               <a href={buttonHref}>{buttonText}</a>
             </Button>
           </div>
-          <img
-            src="/jemachem-company-logo.webp"
-            alt="JemaChem Logo"
-            className="w-[170px]"
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={170}
+            height={60}
+            className="w-[170px] h-auto"
+            priority
           />
         </div>
       </div>

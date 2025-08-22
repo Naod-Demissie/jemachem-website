@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaTelegramPlane,
-  FaTiktok,
-  FaEnvelope,
-} from "react-icons/fa";
+import Image from "next/image";
+import { FaTelegramPlane, FaTiktok, FaEnvelope } from "react-icons/fa";
 
 interface FooterProps {
   logo?: {
@@ -98,10 +92,13 @@ const Footer = ({
               {/* Logo */}
               <div className="flex items-center justify-center lg:justify-start">
                 <a href={logo.url} className="flex items-center">
-                  <img
+                  <Image
                     src="/jemachem-company-logo.webp"
                     alt="JemaChem Logo"
-                    className="w-[190px] h-auto"
+                    width={190}
+                    height={60}
+                    className="h-auto w-[190px]"
+                    priority
                   />
                 </a>
               </div>

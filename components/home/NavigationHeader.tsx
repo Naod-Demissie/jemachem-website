@@ -34,10 +34,13 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Link href="/">
-          <img
+          <Image
             src="/jemachem-company-logo.webp"
             alt="JemaChem Logo"
-            className="w-[120px]"
+            width={120}
+            height={40}
+            className="w-[120px] h-auto"
+            priority
           />
         </Link>
       </div>

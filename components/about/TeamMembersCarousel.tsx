@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -70,11 +71,15 @@ const Gallery27 = () => {
             {teamMembers.map((member, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
                 <div className="group">
-                  <img
-                    src={member.src}
-                    alt={member.alt}
-                    className="h-92 w-full object-cover transition-all duration-300 group-hover:translate-y-[-10px]"
-                  />
+                  <div className="relative h-92 w-full">
+                    <Image
+                      src={member.src}
+                      alt={member.alt}
+                      fill
+                      className="object-cover transition-all duration-300 group-hover:translate-y-[-10px]"
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                  </div>
                   <h3 className="mt-4 text-2xl font-semibold">
                     {member.title}
                   </h3>

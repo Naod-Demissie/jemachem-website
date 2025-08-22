@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -47,7 +48,7 @@ const Hero = () => {
             asChild
             className="bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-6 rounded-full shadow-md transition"
           >
-            <a href="/products">Explore Products</a>
+            <Link href="/products/">Explore Products</Link>
           </Button>
           <div className="relative group">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#fe9b2b] via-[#fdc57e] to-[#6f4ba4] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[1px]">

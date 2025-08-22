@@ -122,18 +122,12 @@ const Contact = () => {
       // With no-cors, the response is opaque; assume success if no network error thrown
       setSubmitStatus("success");
       reset();
-    } catch (error) {
+    } catch (_error) {
       setSubmitStatus("error");
     }
   };
 
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch (error) {
-      console.error("Copy failed", error);
-    }
-  };
+  
 
   const handleCopy = async (key: string, text: string) => {
     try {
@@ -163,7 +157,7 @@ const Contact = () => {
               </h1>
               <p className="text-white mx-auto max-w-2xl text-lg">
                 Ready to source quality chemicals for your business? Our team is here to help 
-                you find the right solutions. Let's discuss your needs.
+                you find the right solutions. Let&#39;s discuss your needs.
               </p>
             </div>
 

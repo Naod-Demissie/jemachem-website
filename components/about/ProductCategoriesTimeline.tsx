@@ -1,8 +1,7 @@
-import { Factory, Leaf, TestTube, Droplets, Scissors, Beaker, Utensils, Paintbrush, Package, Zap, Layers } from "lucide-react";
+import { Droplets, Scissors, Beaker, Utensils, Paintbrush, Layers } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-
-import { Badge } from "@/components/ui/badge";
+ 
+import Image from "next/image";
 
 const DATA = [
   {
@@ -119,12 +118,12 @@ const Timeline4 = () => {
                     <div className="relative">
                       {/* Product Card Style Image Container */}
                       <div className="group relative overflow-hidden rounded-xl shadow-lg w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px]">
-                        <img
+                        <Image
                           src={item.image.src}
-                          width={400}
-                          height={400}
                           alt={item.image.alt}
-                          className="h-full w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                          fill
+                          className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                          sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, (max-width: 1024px) 360px, 400px"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl transition-opacity duration-300 group-hover:opacity-100" />
                       </div>
