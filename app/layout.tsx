@@ -14,7 +14,8 @@ import PerformanceOptimization from "@/components/PerformanceOptimization";
 
 export const metadata: Metadata = {
   title: {
-    default: "Jemachem Trading - Ethiopia's Premier Chemical Import & Distribution Company",
+    default:
+      "Jemachem Trading - Ethiopia's Premier Chemical Import & Distribution Company",
     template: "%s | Jemachem Trading - Chemical Import & Distribution Ethiopia",
   },
   description:
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   keywords: [
     "chemical import Ethiopia",
     "industrial chemicals Ethiopia",
-    "agricultural chemicals Ethiopia", 
+    "agricultural chemicals Ethiopia",
     "laboratory chemicals Ethiopia",
     "chemical supplier Ethiopia",
     "chemical distributor Ethiopia",
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     "EPS foam chemicals Ethiopia",
     "chemical trading Ethiopia",
     "chemical import company Ethiopia",
-    "chemical warehouse Ethiopia"
+    "chemical warehouse Ethiopia",
   ],
   authors: [{ name: "Jemachem Trading" }],
   creator: "Jemachem Trading",
@@ -68,23 +69,25 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://jemachem.com'),
+  metadataBase: new URL("https://jemachem.com"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://jemachem.com',
-    siteName: 'Jemachem Trading',
-    title: 'Jemachem Trading - Ethiopia\'s Premier Chemical Import & Distribution Company',
-    description: 'Importer and distributor of chemicals in Ethiopia across Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.',
+    type: "website",
+    locale: "en_US",
+    url: "https://jemachem.com",
+    siteName: "Jemachem Trading",
+    title:
+      "Jemachem Trading - Ethiopia's Premier Chemical Import & Distribution Company",
+    description:
+      "Importer and distributor of chemicals in Ethiopia across Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.",
     images: [
       {
-        url: '/jemachem-company-logo.webp',
+        url: "/jemachem-company-logo.webp",
         width: 1200,
         height: 630,
-        alt: 'Jemachem Trading - Chemical Import Company Ethiopia',
+        alt: "Jemachem Trading - Chemical Import Company Ethiopia",
       },
     ],
   },
@@ -94,21 +97,21 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: "your-google-verification-code", // Add your Google Search Console verification code
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/favicon/apple-touch-icon.png',
+    shortcut: "/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
 };
 
@@ -124,6 +127,12 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link
+          rel="preload"
+          href="/Jemachem Product Brochure.pdf"
+          as="document"
+          type="application/pdf"
+        />
         <meta name="msapplication-TileColor" content="#0c0c0c" />
         <meta name="theme-color" content="#0c0c0c" />
         <StructuredData />

@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Allow brochure access
+Allow: /Jemachem%20Product%20Brochure.pdf
+
+
 # Sitemap location
 Sitemap: https://jemachem.com/sitemap.xml
 
