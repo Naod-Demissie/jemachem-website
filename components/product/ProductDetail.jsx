@@ -92,7 +92,7 @@ const ProductDetail = ({ product, onBack }) => {
                 <div className="relative aspect-square max-h-[540px]">
                   <Image
                     src={`/products/${product["Image Path"]}`}
-                    alt={product["Product Name"]}
+                    alt={product["SEO Alt Text"] || product["Product Name"]}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 540px"
@@ -118,6 +118,9 @@ const ProductDetail = ({ product, onBack }) => {
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
                     {product.Description || 'High-quality chemical product suitable for various industrial, agricultural, and laboratory applications. Contact us for detailed specifications and technical data sheets.'}
+                    {product.Description && (
+                      <span className="text-gray-300"> {product["Product Name"]} is carefully sourced and distributed by Jemachem Trading PLC, maintaining our commitment to quality and reliability in chemical supply.</span>
+                    )}
                   </p>
                 </CardContent>
               </Card>

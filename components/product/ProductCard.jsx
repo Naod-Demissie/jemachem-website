@@ -77,7 +77,7 @@ const ProductCard = ({ product, onViewDetails }) => {
       {/* Image */}
       <div className="relative w-full h-[470px]">
         <div className="block w-full h-full">
-          <Image src={`/products/${product["Image Path"]}`} alt={product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" />
+          <Image src={`/products/${product["Image Path"]}`} alt={product["SEO Alt Text"] || product["Product Name"]} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 560px" />
         </div>
         {/* Base overlay for readability (30%) and deepen on hover (50%) */}
         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 opacity-100 transition-colors duration-300 z-10"></div>
