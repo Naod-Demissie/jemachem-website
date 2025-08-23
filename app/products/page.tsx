@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import ProductsPageContent from "@/components/products/ProductsPageContent";
 
 export const metadata: Metadata = {
-  title: "Chemical Products - Industrial, Agricultural & Laboratory Chemicals Ethiopia",
-  description: "Explore Detergents & Cosmetics, Food & Beverage additives, Paints & Solvents, Plastics & Foam inputs, Water Treatment chemicals, Leather & Footwear tanning agents, Textile dyes & auxiliaries, and Laboratory reagents. Jemachem Trading supplies high-quality chemicals for Ethiopia's industries.",
+  title:
+    "Chemical Products - Industrial, Agricultural & Laboratory Chemicals in Ethiopia",
+  description:
+    "Explore Detergents & Cosmetics, Food & Beverage additives, Paints & Solvents, Plastics & Foam inputs, Water Treatment chemicals, Leather & Footwear tanning agents, Textile dyes & auxiliaries, and Laboratory reagents. Jemachem Trading supplies high-quality chemicals for Ethiopia's industries.",
   keywords: [
     "chemical products Ethiopia",
     "industrial chemicals Ethiopia",
@@ -37,15 +39,17 @@ export const metadata: Metadata = {
     "textile dyes Ethiopia",
     "textile auxiliaries Ethiopia",
     "chemical catalog Ethiopia",
-    "chemical supplier products Ethiopia"
+    "chemical supplier products Ethiopia",
   ],
   openGraph: {
-    title: "Chemical Products - Industrial, Agricultural, Laboratory & Category-Specific Chemicals",
-    description: "Explore category-specific chemicals: Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.",
+    title:
+      "Chemical Products - Industrial, Agricultural, Laboratory & Category-Specific Chemicals",
+    description:
+      "Explore category-specific chemicals: Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.",
     url: "https://jemachem.com/products",
   },
   alternates: {
-    canonical: '/products',
+    canonical: "/products",
   },
 };
 

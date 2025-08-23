@@ -2,8 +2,9 @@ import { ContactUs } from "@/components/contact/ContactUs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Chemical Import Company Ethiopia",
-  description: "Get in touch with Jemachem Trading, Ethiopia's premier chemical import company. Contact us for industrial, agricultural, and laboratory chemical solutions across Ethiopia.",
+  title: "Contact Us - Chemical Import Company in Ethiopia",
+  description:
+    "Get in touch with Jemachem Trading, Ethiopia's premier chemical import company. Contact us for industrial, agricultural, and laboratory chemical solutions across Ethiopia.",
   keywords: [
     "contact Jemachem Trading",
     "chemical import company contact Ethiopia",
@@ -24,15 +25,16 @@ export const metadata: Metadata = {
     "water treatment chemicals contact Ethiopia",
     "leather tanning chemicals contact",
     "textile dyes auxiliaries contact Ethiopia",
-    "laboratory reagents supplier contact Ethiopia"
+    "laboratory reagents supplier contact Ethiopia",
   ],
   openGraph: {
-    title: "Contact Us - Chemical Import Company Ethiopia",
-    description: "Get in touch with Jemachem Trading for chemical solutions across Ethiopia.",
+    title: "Contact Us - Chemical Import Company in Ethiopia",
+    description:
+      "Get in touch with Jemachem Trading for chemical solutions across Ethiopia.",
     url: "https://jemachem.com/contact",
   },
   alternates: {
-    canonical: '/contact',
+    canonical: "/contact",
   },
 };
 

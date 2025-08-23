@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { AboutBanner } from "@/components/about/AboutBanner";
 
 export const metadata: Metadata = {
-  title: "About Us - Chemical Import Company Ethiopia",
+  title: "About Us - Chemical Import Company in Ethiopia",
   description:
     "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality industrial, agricultural, and laboratory chemicals across Ethiopia.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "chemical logistics Ethiopia",
   ],
   openGraph: {
-    title: "About Us - Chemical Import Company Ethiopia",
+    title: "About Us - Chemical Import Company in Ethiopia",
     description:
       "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality chemicals across Ethiopia.",
     url: "https://jemachem.com/about",

@@ -75,12 +75,35 @@ const Cta11 = ({
             <p className="text-gray-300 max-w-xl lg:text-lg text-left mb-6">
               {description}
             </p>
-            <Button
-              asChild
-              className="bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-6 rounded-full shadow-md transition"
-            >
-              <a href={buttonHref}>{buttonText}</a>
-            </Button>
+            <div className="flex gap-4">
+              <Button
+                asChild
+                className="bg-orange-500 text-gray-100 text-1xl hover:bg-orange-600 font-semibold px-6 py-6 rounded-full shadow-md transition"
+              >
+                <a href={buttonHref}>{buttonText}</a>
+              </Button>
+              
+              {/* Brochure Download Button - Same styling as Contact Us button */}
+              <div className="relative group">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#fe9b2b] via-[#fdc57e] to-[#6f4ba4] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[1px]">
+                  <div className="w-full h-full rounded-full bg-black/80 group-hover:bg-black/90 transition-colors duration-300"></div>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="relative border-gray-200 text-white hover:text-white font-semibold px-6 py-6 rounded-full shadow-sm transition-all duration-300 bg-transparent hover:bg-transparent z-10 group-hover:border-transparent border"
+                >
+                  <a 
+                    href="/Jemachem Product Brochure.pdf" 
+                    download="Jemachem-Product-Brochure.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                     Get Brochure
+                  </a>
+                </Button>
+              </div>
+            </div>
           </motion.div>
           <motion.div variants={fadeInRight}>
             <Image

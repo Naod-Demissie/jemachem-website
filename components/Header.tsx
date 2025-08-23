@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,8 +54,8 @@ export default function Header() {
         </Link>
       </div>
 
-      {/* Desktop Navigation Links */}
-      <div className="hidden md:flex gap-8 text-white font-medium text-lg">
+      {/* Desktop Navigation Links - Centered */}
+      <div className="hidden md:flex gap-8 text-white font-medium text-lg absolute left-1/2 transform -translate-x-1/2">
         <Link
           href="/"
           className={`relative pb-2 hover:text-orange-200 transition-colors ${
@@ -99,6 +100,27 @@ export default function Header() {
 
       {/* Desktop Social Icons */}
       <div className="hidden md:flex items-center gap-3">
+        {/* Get Brochure Button - Same height as social media icons */}
+        <div className="relative group mr-2">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#fe9b2b] via-[#fdc57e] to-[#6f4ba4] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[1px]">
+            <div className="w-full h-full rounded-full bg-black/80 group-hover:bg-black/90 transition-colors duration-300"></div>
+          </div>
+          <Button
+            asChild
+            variant="outline"
+            className="relative border-gray-200 text-white hover:text-white font-semibold px-4 h-10 rounded-full shadow-sm transition-all duration-300 bg-transparent hover:bg-transparent z-10 group-hover:border-transparent border text-sm"
+          >
+            <a 
+              href="/Jemachem Product Brochure.pdf" 
+              download="Jemachem-Product-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Brochure
+            </a>
+          </Button>
+        </div>
+        
         {socialLinks.map(({ href, icon, alt }) => (
           <a
             key={alt}
@@ -192,6 +214,30 @@ export default function Header() {
               >
                 Contact
               </Link>
+            </div>
+
+            {/* Mobile Get Brochure Button - Exact same as desktop version */}
+            <div className="flex justify-center items-center mb-6">
+              <div className="relative group">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#fe9b2b] via-[#fdc57e] to-[#6f4ba4] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[1px]">
+                  <div className="w-full h-full rounded-full bg-black/80 group-hover:bg-black/90 transition-colors duration-300"></div>
+                </div>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="relative border-gray-200 text-white hover:text-white font-semibold px-6 py-6 rounded-full shadow-sm transition-all duration-300 bg-transparent hover:bg-transparent z-10 group-hover:border-transparent border text-1xl"
+                >
+                  <a 
+                    href="/Jemachem Product Brochure.pdf" 
+                    download="Jemachem-Product-Brochure.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
+                    Get Brochure
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Mobile Social Icons - Bottom of menu */}
