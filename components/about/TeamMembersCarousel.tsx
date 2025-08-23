@@ -10,6 +10,24 @@ import {
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
+// Custom CSS for responsive team member images
+const teamImageStyles = `
+  @media (max-width: 768px) {
+    .team-member-image[alt*="Samuel"] {
+      object-position: center 14% !important;
+    }
+    .team-member-image[alt*="Sitra"] {
+      object-position: center 23% !important;
+    }
+    .team-member-image[alt*="Abdulhakim"] {
+      object-position: center 25% !important;
+    }
+    .team-member-image[alt*="Aymen"] {
+      object-position: center 2% !important;
+    }
+  }
+`;
+
 // Animation variants
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -72,7 +90,9 @@ const teamMembers = [
 
 const Gallery27 = () => {
   return (
-    <section className="py-32 bg-black text-white">
+    <>
+      <style dangerouslySetInnerHTML={{ __html: teamImageStyles }} />
+      <section className="py-32 bg-black text-white">
       <div className="container max-w-7xl mx-auto">
         <motion.div
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium"
@@ -141,7 +161,13 @@ const Gallery27 = () => {
                         src={member.src}
                         alt={member.alt}
                         fill
-                        className="object-cover transition-all duration-300 group-hover:translate-y-[-10px]"
+                        className="object-cover transition-all duration-300 group-hover:translate-y-[-10px] team-member-image"
+                        style={{
+                          objectPosition: member.title === "Samuel Assefa" ? "center 25%" :
+                                         member.title === "Sitra Muhaba" ? "center 30%" :
+                                         member.title === "Abdulhakim Siraj" ? "center 35%" :
+                                         member.title === "Aymen Muhaba" ? "center 20%" : "center 25%"
+                        }}
                         sizes="(max-width: 768px) 100vw, 25vw"
                       />
                     </div>
@@ -157,6 +183,7 @@ const Gallery27 = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 
