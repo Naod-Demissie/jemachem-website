@@ -136,8 +136,8 @@ const ContactUs = () => {
       <section className="relative min-h-[400px] w-full">
         <div className="absolute inset-0">
           <Image
-            src="/contact-us-banner.webp"
-            alt="Contact Us Banner"
+            src="/jemachem-trading-banner-image.webp"
+            alt="Jemachem Trading  Banner Image"
             fill
             className="object-cover"
             priority

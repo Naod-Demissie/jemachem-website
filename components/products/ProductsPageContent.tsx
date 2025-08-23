@@ -24,7 +24,7 @@ export default function ProductsPageContent() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-20 relative flex min-h-[50vh] w-full overflow-hidden bg-[url('/laboratory-chemicals.webp')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/80 after:content-['']">
+      <section className="pt-20 relative flex min-h-[50vh] w-full overflow-hidden bg-[url('/jemachem-trading-banner-image.webp')] bg-cover bg-center bg-no-repeat font-sans after:absolute after:left-0 after:top-0 after:z-10 after:h-full after:w-full after:bg-black/80 after:content-['']">
         <motion.div
           className="relative z-30 m-auto flex max-w-[46.25rem] flex-col items-center justify-center gap-6 px-5"
           variants={staggerContainer}

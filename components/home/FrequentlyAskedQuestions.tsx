@@ -23,45 +23,50 @@ const Faq = ({
       id: "faq-1",
       question: "What types of chemicals do you supply?",
       answer:
-        "We supply industrial chemicals, agrochemicals, and laboratory-grade chemicals. This includes solvents, reagents, fertilizers, pesticides, analytical standards, and more.",
+        "We supply chemicals across eight major categories including Detergent and Cosmetics, Food and Beverage, Paint and Pigments, Plastic and Foam, Tannery and Shoes, Laboratory Chemicals, Textile Chemicals, and Water Treatment Chemicals. Our portfolio includes over 200 high-quality chemical products.",
     },
     {
       id: "faq-2",
       question: "Do you import directly from manufacturers?",
       answer:
-        "Yes, we import chemicals directly from reputable global manufacturers, ensuring high quality and compliance with international standards.",
+        "Yes, we import chemicals directly from reputable global manufacturers, ensuring high quality and compliance with international standards. Our direct partnerships allow us to offer competitive pricing and reliable supply.",
     },
     {
       id: "faq-3",
       question:
         "Are your products certified and compliant with local regulations?",
       answer:
-        "All our chemicals are certified and comply with Ethiopian and international safety, transport, and handling standards. We also provide Safety Data Sheets (SDS) for every product.",
+        "All our chemicals are certified and comply with Ethiopian and international safety, transport, and handling standards. We provide Safety Data Sheets (SDS) for every product and ensure full regulatory compliance.",
     },
     {
       id: "faq-4",
-      question: "Who are your main customers?",
+      question: "What industries do you serve?",
       answer:
-        "Our clients include manufacturing industries, agricultural companies, government institutions, research labs, universities, and private laboratories.",
+        "We serve diverse industries including agriculture, food processing, textiles, plastics, paint manufacturing, cosmetics, water treatment, and laboratory research. Our chemicals support both industrial and commercial applications.",
     },
     {
       id: "faq-5",
-      question: "Do you provide bulk purchasing or custom orders?",
+      question: "Do you provide technical support and expertise?",
       answer:
-        "Yes, we handle both retail and bulk orders. We also accommodate custom sourcing requests for hard-to-find or specialty chemicals.",
+        "Yes, we offer comprehensive technical support and expertise to help clients utilize chemicals effectively and safely. Our team provides guidance on chemical applications, safety protocols, and best practices.",
     },
     {
       id: "faq-6",
       question: "How do you ensure safe transportation and storage?",
       answer:
-        "We follow strict protocols for chemical handling, transportation, and warehousing in line with GHS and national safety regulations.",
+        "We follow strict protocols for chemical handling, transportation, and warehousing in line with GHS and national safety regulations. Our logistics expertise ensures safe delivery across Ethiopia.",
     },
-
     {
-      id: "faq-8",
+      id: "faq-7",
       question: "Do you offer delivery services?",
       answer:
-        "Yes, we deliver chemicals to customers throughout Ethiopia and neighboring regions, depending on order size and compliance requirements.",
+        "Yes, we deliver chemicals to customers throughout Ethiopia, covering key industrial and agricultural hubs from Addis Ababa to Hawassa, Bahir Dar to Dire Dawa, with full compliance and safety measures.",
+    },
+    {
+      id: "faq-8",
+      question: "Can you source specialty or hard-to-find chemicals?",
+      answer:
+        "Absolutely. Our global sourcing network and expertise in chemical importation allow us to source specialty chemicals and accommodate custom requests for specific industry needs.",
     },
   ],
 }: Faq1Props) => {

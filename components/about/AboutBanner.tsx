@@ -31,8 +31,8 @@ export const AboutBanner = () => {
     <section className="relative min-h-[400px] w-full">
       <div className="absolute inset-0">
         <Image
-          src="/contact-us-banner.webp"
-          alt="About Us Banner"
+          src="/jemachem-trading-banner-image.webp"
+          alt="Jemachem Trading  Banner Image"
           fill
           className="object-cover"
           priority
@@ -46,10 +46,7 @@ export const AboutBanner = () => {
         animate="visible"
       >
         <div className="max-w-2xl">
-          <motion.div
-            className="flex justify-center mb-3"
-            variants={fadeInUp}
-          >
+          <motion.div className="flex justify-center mb-3" variants={fadeInUp}>
             <div className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium">
               <p className="text-sm font-normal text-white">ABOUT US</p>
             </div>
