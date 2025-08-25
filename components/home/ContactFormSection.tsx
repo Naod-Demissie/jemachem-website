@@ -112,12 +112,22 @@ const Contact = () => {
   const onSubmit = async (values: ContactFormValues) => {
     setSubmitStatus("idle");
     try {
-      await fetch(APPS_SCRIPT_URL, {
+      // Send to Google Apps Script (do not change to avoid breaking Sheets logging)
+      const appsScriptPromise = fetch(APPS_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(values),
       });
+
+      // Also notify our API to send an email via Nodemailer
+      const emailPromise = fetch("/api/contact-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      }).catch(() => undefined);
+
+      await Promise.allSettled([appsScriptPromise, emailPromise]);
 
       // With no-cors, the response is opaque; assume success if no network error thrown
       setSubmitStatus("success");
