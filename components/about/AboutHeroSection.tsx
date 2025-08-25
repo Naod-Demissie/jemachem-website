@@ -138,13 +138,13 @@ export default function About8() {
               className="text-2xl font-medium tracking-tight md:text-3xl"
               variants={fadeInUp}
             >
-              We're not just importers. We're enablers of progress.
+              We&#39;re not just importers. We&#39;re enablers of progress.
             </motion.h2>
             <motion.p className="text-lg" variants={fadeInUp}>
               In addition to our exceptional products and services, we offer
               technical support and expertise to help our clients utilize the
               chemicals effectively and safely. We are committed to going above
-              and beyond to meet all of our clients' chemical needs, serving
+              and beyond to meet all of our clients&#39; chemical needs, serving
               industries from agriculture and food processing to textiles and
               water treatment.
             </motion.p>

@@ -4,14 +4,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 // Animation variants
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
+// Removed unused variant 'fadeInUp'
 
 const fadeInLeft: Variants = {
   hidden: { opacity: 0, x: -30 },

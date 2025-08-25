@@ -123,7 +123,7 @@ const ContactUs = () => {
       // With no-cors, the response is opaque; assume success if no network error thrown
       setSubmitStatus("success");
       reset();
-    } catch (_err) {
+    } catch {
       setSubmitStatus("error");
     }
   };
