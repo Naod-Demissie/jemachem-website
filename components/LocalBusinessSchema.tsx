@@ -10,7 +10,7 @@ export default function LocalBusinessSchema() {
     "email": "jemachemtrading@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Aynalem Beze Bldg, 2nd Fl, Office No. 401, Fitawrari Damtew St, Kirkos Sub-City",
+      "streetAddress": "Aynalem Beze Bldg, 2nd Fl, Office No. 216, Bulgaria Mazoria, Kirkos Sub-City",
       "addressLocality": "Addis Ababa",
       "addressRegion": "Addis Ababa",
       "postalCode": "1000",
@@ -35,7 +35,7 @@ export default function LocalBusinessSchema() {
     },
     "sameAs": [
       "https://t.me/Jemachem",
-      "https://www.tiktok.com/@jemachemtrading"
+      "https://www.tiktok.com/@jemachem.trading"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

@@ -18,7 +18,7 @@ export default function Header() {
   const socialLinks = [
     { href: "https://t.me/Jemachem", icon: "/telegram.svg", alt: "Telegram" },
     {
-      href: "https://www.tiktok.com/@jemachemtrading",
+      href: "https://www.tiktok.com/@jemachem.trading",
       icon: "/tiktok.svg",
       alt: "TikTok",
     },

@@ -54,9 +54,9 @@ const contactInfo: ContactInfo[] = [
     description: "Schedule an in-person meeting",
     value: (
       <>
-        <span>Aynalem Beze Bldg, 2nd Fl, Office No. 401</span>
+        <span>Aynalem Beze Bldg, 2nd Fl, Office No. 216</span>
         <br />
-        <span>Fitawrari Damtew St, Kirkos Sub-City</span>
+        <span>Bulgaria Mazoria, Kirkos Sub-City</span>
         <br />
         <span>Addis Ababa, Ethiopia</span>
       </>

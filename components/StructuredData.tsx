@@ -10,7 +10,7 @@ export default function StructuredData() {
     "image": "https://jemachem.com/jemachem-warehouse.webp",
     "sameAs": [
       "https://t.me/Jemachem",
-      "https://www.tiktok.com/@jemachemtrading"
+      "https://www.tiktok.com/@jemachem.trading"
     ],
     "contactPoint": {
       "@type": "ContactPoint",

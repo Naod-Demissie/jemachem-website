@@ -427,8 +427,8 @@ const ContactUs = () => {
                             </h3>
                           </div>
                           <div className="text-white/70 text-sm">
-                            <div>Aynalem Beze Bldg, 2nd Fl, Office No. 401</div>
-                            <div>Fitawrari Damtew St, Kirkos Sub-City</div>
+                            <div>Aynalem Beze Bldg, 2nd Fl, Office No. 216</div>
+                            <div>Bulgaria Mazoria, Kirkos Sub-City</div>
                             <div>Addis Ababa, Ethiopia</div>
                           </div>
                         </div>

@@ -59,7 +59,7 @@ const defaultSocialLinks = [
   },
   {
     icon: <FaTiktok className="size-6" />,
-    href: "https://www.tiktok.com/@jemachemtrading",
+    href: "https://www.tiktok.com/@jemachem.trading",
     label: "TikTok",
   },
   {
