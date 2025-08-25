@@ -36,14 +36,7 @@ const fadeIn: Variants = {
   visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const staggerContainer: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
+// Removed unused variant 'staggerContainer'
 
 const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -89,7 +82,7 @@ const Gallery27 = () => {
       <div className="container max-w-7xl mx-auto">
         <motion.div
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2 text-white text-sm font-medium"
-          variants={fadeInUp}
+          variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -98,7 +91,7 @@ const Gallery27 = () => {
         </motion.div>
         <motion.h1
           className="font-calSans text-5xl text-white"
-          variants={fadeInUp}
+          variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -107,7 +100,7 @@ const Gallery27 = () => {
         </motion.h1>
         <motion.p
           className="mt-3 max-w-xl text-gray-300 text-center mx-auto"
-          variants={fadeInUp}
+          variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
