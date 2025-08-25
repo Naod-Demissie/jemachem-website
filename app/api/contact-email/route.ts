@@ -33,8 +33,6 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const origin = request.headers.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "https://jemachem.com";
-    const logoUrl = `${origin}/jemachem-company-logo.webp`;
 
     const subject = `New Contact Form Submission — ${firstName} ${lastName}`.trim();
 
@@ -43,7 +41,7 @@ export async function POST(request: NextRequest) {
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px; margin:0 auto; background:#ffffff; border:1px solid #e6ecff; border-radius:12px; overflow:hidden;">
           <tr>
             <td style="padding:24px; text-align:center; background:#f8fafc; border-bottom:1px solid #e6ecff;">
-              <img src="${logoUrl}" alt="Jemachem Trading" style="height:48px; width:auto; display:inline-block;" />
+              <div style="font-size:22px; font-weight:700; color:#0b57d0; letter-spacing:0.3px;">Jemachem Trading Contact Form Submission</div>
             </td>
           </tr>
           <tr>
