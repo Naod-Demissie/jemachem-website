@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     template: "%s | Jemachem Trading - Chemical Import & Distribution Ethiopia",
   },
   description:
-    "Jemachem Trading is Ethiopia's leading importer, supplier, and distributor of chemicals across categories including Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory reagents. We provide high-quality chemical solutions for manufacturing, agriculture, and research across Ethiopia with reliable delivery and expert support.",
+    "Jemachem Trading is Ethiopia's leading importer, supplier, and distributor of chemicals across categories including Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory reagents. We provide high-quality chemical solutions for manufacturing and research across Ethiopia with reliable delivery and expert support.",
   keywords: [
     "chemical import Ethiopia",
     "industrial chemicals Ethiopia",
-    "agricultural chemicals Ethiopia",
+
     "laboratory chemicals Ethiopia",
     "chemical supplier Ethiopia",
     "chemical distributor Ethiopia",

@@ -86,12 +86,12 @@ const Products = () => {
             </div>
           </motion.a>
 
-          {/* Agrochemicals Card */}
+          {/* Leather & Footwear Chemicals Card */}
           <motion.a
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 1.4 }}
-            href="/products/agro"
+            href="/products/leather"
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image
@@ -182,12 +182,12 @@ const Products = () => {
             </div>
           </motion.a>
 
-          {/* Agrochemicals Card (Duplicate) */}
+          {/* Textile Chemicals Card */}
           <motion.a
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 2.0 }}
-            href="/products/agro"
+            href="/products/textile"
             className="group relative overflow-hidden rounded-xl shadow-lg h-[350px] sm:h-[380px]"
           >
             <Image

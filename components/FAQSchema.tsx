@@ -8,7 +8,7 @@ export default function FAQSchema() {
         "name": "What types of chemicals does Jemachem Trading supply?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Jemachem Trading supplies industrial chemicals, agricultural chemicals, laboratory chemicals, detergent chemicals, food-grade chemicals, paint chemicals, water treatment chemicals, leather chemicals, and textile chemicals for various industries across Ethiopia."
+          "text": "Jemachem Trading supplies industrial chemicals, laboratory chemicals, detergent chemicals, food-grade chemicals, paint chemicals, water treatment chemicals, leather chemicals, and textile chemicals for various industries across Ethiopia."
         }
       },
       {
@@ -16,7 +16,7 @@ export default function FAQSchema() {
         "name": "Does Jemachem Trading deliver chemicals across Ethiopia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide reliable chemical distribution services across Ethiopia, ensuring timely delivery to manufacturing facilities, agricultural operations, and research laboratories throughout the country."
+          "text": "Yes, we provide reliable chemical distribution services across Ethiopia, ensuring timely delivery to manufacturing facilities and research laboratories throughout the country."
         }
       },
       {
@@ -40,7 +40,7 @@ export default function FAQSchema() {
         "name": "What industries does Jemachem Trading serve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We serve manufacturing, agriculture, research laboratories, food processing, textile manufacturing, leather processing, water treatment, and many other industries that require high-quality chemical solutions."
+          "text": "We serve manufacturing, research laboratories, food processing, textile manufacturing, leather processing, water treatment, and many other industries that require high-quality chemical solutions."
         }
       }
     ]

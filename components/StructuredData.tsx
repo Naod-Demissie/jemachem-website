@@ -4,7 +4,7 @@ export default function StructuredData() {
     "@type": "Organization",
     "name": "Jemachem Trading",
     "alternateName": "Jemachem",
-    "description": "Ethiopia's premier importer, supplier, and distributor of industrial, agricultural, and laboratory chemicals and equipment.",
+    "description": "Ethiopia's premier importer, supplier, and distributor of industrial and laboratory chemicals and equipment.",  
     "url": "https://jemachem.com",
     "logo": "https://jemachem.com/jemachem-company-logo.webp",
     "image": "https://jemachem.com/jemachem-warehouse.webp",
@@ -53,7 +53,7 @@ export default function StructuredData() {
       "Chemical Import",
       "Chemical Distribution",
       "Industrial Chemicals",
-      "Agricultural Chemicals",
+
       "Laboratory Chemicals",
       "Chemical Safety",
       "Supply Chain Management",

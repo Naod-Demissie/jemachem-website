@@ -77,7 +77,7 @@ const Footer = ({
     title: "JemaChem Trading",
   },
   sections = defaultSections,
-  description = "We import and supply high-quality industrial, agricultural, and laboratory chemicals across Ethiopia, supporting key industries with trusted solutions.",
+  description = "We import and supply high-quality industrial and laboratory chemicals across Ethiopia, supporting key industries with trusted solutions.",
   socialLinks = defaultSocialLinks,
   copyright = "© 2025 JemaChem Trading. All rights reserved.",
 }: FooterProps) => {

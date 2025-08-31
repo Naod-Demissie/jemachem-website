@@ -11,7 +11,7 @@ import { AboutBanner } from "@/components/about/AboutBanner";
 export const metadata: Metadata = {
   title: "About Us - Chemical Import Company in Ethiopia",
   description:
-    "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality industrial, agricultural, and laboratory chemicals across Ethiopia.",
+    "Learn about Jemachem Trading, Ethiopia's premier chemical import company. Discover our mission, team, and commitment to delivering high-quality industrial and laboratory chemicals across Ethiopia.",
   keywords: [
     "about Jemachem Trading",
     "chemical import company Ethiopia",

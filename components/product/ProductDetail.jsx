@@ -117,7 +117,7 @@ const ProductDetail = ({ product, onBack }) => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    {product.Description || 'High-quality chemical product suitable for various industrial, agricultural, and laboratory applications. Contact us for detailed specifications and technical data sheets.'}
+                    {product.Description || 'High-quality chemical product suitable for various industrial and laboratory applications. Contact us for detailed specifications and technical data sheets.'}
                     {product.Description && (
                       <span className="text-gray-300"> {product["Product Name"]} is carefully sourced and distributed by Jemachem Trading PLC, maintaining our commitment to quality and reliability in chemical supply.</span>
                     )}

@@ -145,7 +145,7 @@ export default function About8() {
               technical support and expertise to help our clients utilize the
               chemicals effectively and safely. We are committed to going above
               and beyond to meet all of our clients&#39; chemical needs, serving
-              industries from agriculture and food processing to textiles and
+              industries from food processing to textiles and
               water treatment.
             </motion.p>
           </motion.div>
@@ -191,7 +191,7 @@ export default function About8() {
                   <div className="relative h-[400px] lg:h-[500px] xl:h-[600px]">
                     <Image
                       src="/jemachem-imported-chemical-2.webp"
-                      alt="Agricultural site with chemical spraying"
+                      alt="Chemical storage and distribution facility"
                       fill
                       className="object-cover rounded-lg"
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -223,8 +223,8 @@ export default function About8() {
             <p className="text-lg">
               With a focus on quality, reliability, and customer satisfaction,
               Jemachem Trading is your trusted partner for all your chemical
-              importation needs. Our distribution network covers key industrial
-              and agricultural hubs across Ethiopia, ensuring that businesses
+              importation needs.               Our distribution network covers key industrial
+              hubs across Ethiopia, ensuring that businesses
               have access to the chemicals they need to thrive and grow.
             </p>
           </div>

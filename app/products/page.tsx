@@ -3,13 +3,13 @@ import ProductsPageContent from "@/components/products/ProductsPageContent";
 
 export const metadata: Metadata = {
   title:
-    "Chemical Products - Industrial, Agricultural & Laboratory Chemicals in Ethiopia",
+    "Chemical Products - Industrial & Laboratory Chemicals in Ethiopia",
   description:
     "Explore Detergents & Cosmetics, Food & Beverage additives, Paints & Solvents, Plastics & Foam inputs, Water Treatment chemicals, Leather & Footwear tanning agents, Textile dyes & auxiliaries, and Laboratory reagents. Jemachem Trading supplies high-quality chemicals for Ethiopia's industries.",
   keywords: [
     "chemical products Ethiopia",
     "industrial chemicals Ethiopia",
-    "agricultural chemicals Ethiopia",
+
     "laboratory chemicals Ethiopia",
     "detergent chemicals Ethiopia",
     "cosmetics chemicals Ethiopia",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Chemical Products - Industrial, Agricultural, Laboratory & Category-Specific Chemicals",
+      "Chemical Products - Industrial, Laboratory & Category-Specific Chemicals",
     description:
       "Explore category-specific chemicals: Detergents & Cosmetics, Food & Beverage, Paints & Solvents, Plastics & Foam, Water Treatment, Leather & Footwear, Textiles, and Laboratory.",
     url: "https://jemachem.com/products",

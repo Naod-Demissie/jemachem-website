@@ -42,7 +42,7 @@ const Faq = ({
       id: "faq-4",
       question: "What industries do you serve?",
       answer:
-        "We serve diverse industries including agriculture, food processing, textiles, plastics, paint manufacturing, cosmetics, water treatment, and laboratory research. Our chemicals support both industrial and commercial applications.",
+        "We serve diverse industries including food processing, textiles, plastics, paint manufacturing, cosmetics, water treatment, and laboratory research. Our chemicals support both industrial and commercial applications.",
     },
     {
       id: "faq-5",
@@ -60,7 +60,7 @@ const Faq = ({
       id: "faq-7",
       question: "Do you offer delivery services?",
       answer:
-        "Yes, we deliver chemicals to customers throughout Ethiopia, covering key industrial and agricultural hubs from Addis Ababa to Hawassa, Bahir Dar to Dire Dawa, with full compliance and safety measures.",
+        "Yes, we deliver chemicals to customers throughout Ethiopia, covering key industrial hubs from Addis Ababa to Hawassa, Bahir Dar to Dire Dawa, with full compliance and safety measures.",
     },
     {
       id: "faq-8",

@@ -23,7 +23,7 @@ const defaultAchievements = [
 
 const About = ({
   achievementsTitle = "Trusted by Ethiopia's Leading Sectors",
-  achievementsDescription = "Delivering high-quality industrial, agricultural, and laboratory chemicals to meet the demands of science, farming, and manufacturing across Ethiopia.",
+  achievementsDescription = "Delivering high-quality industrial and laboratory chemicals to meet the demands of science, research, and manufacturing across Ethiopia.",
   achievements = defaultAchievements,
 }: AboutProps = {}) => {
   const ref = useRef(null);

@@ -34,7 +34,7 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
           className="text-white text-[18px] text-center font-thin font-sans"
         >
-          Delivering high-quality chemicals for agriculture, industry, and
+          Delivering high-quality chemicals for industry and
           laboratories with unmatched reliability and expert care.
         </motion.p>
 

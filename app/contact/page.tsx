@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us - Chemical Import Company in Ethiopia",
   description:
-    "Get in touch with Jemachem Trading, Ethiopia's premier chemical import company. Contact us for industrial, agricultural, and laboratory chemical solutions across Ethiopia.",
+    "Get in touch with Jemachem Trading, Ethiopia's premier chemical import company. Contact us for industrial and laboratory chemical solutions across Ethiopia.",
   keywords: [
     "contact Jemachem Trading",
     "chemical import company contact Ethiopia",
